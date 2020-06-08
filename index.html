@@ -64,6 +64,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-LRU" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/08/LRU/" class="article-date">
+  <time datetime="2020-06-08T09:24:57.000Z" itemprop="datePublished">2020-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/08/LRU/">LRU</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h1 id="LRU和LFU算法解析"><a href="#LRU和LFU算法解析" class="headerlink" title="LRU和LFU算法解析"></a>LRU和LFU算法解析</h1><h2 id="1-LRU"><a href="#1-LRU" class="headerlink" title="1. LRU"></a>1. LRU</h2><h3 id="1-1-LRU概念"><a href="#1-1-LRU概念" class="headerlink" title="1.1 LRU概念"></a>1.1 LRU概念</h3><p>LRU（The Least Recently Used，最近最少未使用）是一种常见内存管理算法，最早应用于Linux操作系统，在Redis中也有广泛使用的。</p>
+<p>LRU算法有这样一种假设：<strong>如果某个数据长期不被使用，在未来被用到的几率也不大；因此缓存容量达到上限时，应在写入新数据之前删除最久未使用的数据值</strong>，从而为新数据腾出空间。</p>
+<h3 id="1-2-LRU算法实现"><a href="#1-2-LRU算法实现" class="headerlink" title="1.2 LRU算法实现"></a>1.2 LRU算法实现</h3><h4 id="1-2-1-LRU算法描述"><a href="#1-2-1-LRU算法描述" class="headerlink" title="1.2.1 LRU算法描述"></a>1.2.1 LRU算法描述</h4><p>需要设计一种数据结构，并且提供以下接口：</p>
+<ul>
+<li>构造函数，确定初始容量大小</li>
+<li><code>get(key)</code>：如果关键字key存于缓存中，则获取其对应的值；否则返回-1</li>
+<li><code>put(key, val)</code>：<ul>
+<li>如果关键字key已经存在，则更改其对应的值为<code>val</code>；</li>
+<li>如果关键字不存在，则插入（key,val）</li>
+<li>当缓存容量达到上限时，最久没有访问的数据应该被置换。</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-2-LRU算法图示"><a href="#1-2-2-LRU算法图示" class="headerlink" title="1.2.2 LRU算法图示"></a>1.2.2 LRU算法图示</h4><p>我们可以使用<strong>双向链表</strong>+<strong>哈希表</strong>来模拟实现LRU算法：</p>
+<ul>
+<li>哈希表用来快速查找某个key是否存于缓存中</li>
+<li>链表用来表示使用数据项的时间先后次序</li>
+</ul>
+<p><strong>LRU存储图示</strong></p>
+<p><img src="https://note.youdao.com/yws/public/resource/e3fc3461326ad97a8b168c0e134aca90/xmlnote/CBE1631F985746BC9976839B89B08D25/23172" alt="LRU存储"></p>
+<p>当LRU的容量未到达上限时，对某个数据进行访问（包括添加，读取，修改），则只需要在链表头部插入新节点即可。</p>
+<p>当LRU的容量到达上限时，需要添加某个数据，则需要移除链表最末端的键值（最久未使用），然后头插新节点。</p>
+<p><img src="https://note.youdao.com/yws/public/resource/e3fc3461326ad97a8b168c0e134aca90/xmlnote/815D409572AF4D2383440531B979A823/23197" alt="容量未满，插入新值"></p>
+<p><img src="https://note.youdao.com/yws/public/resource/e3fc3461326ad97a8b168c0e134aca90/xmlnote/D74FE617A4E842A1B48B337676A37435/23202" alt="容量上限，插入新值"></p>
+<p><img src="https://note.youdao.com/yws/public/resource/e3fc3461326ad97a8b168c0e134aca90/xmlnote/12BA95A1948948F5974302CCE2A104DE/23209" alt="访问数据"></p>
+<h4 id="1-2-3-LRU-C-代码"><a href="#1-2-3-LRU-C-代码" class="headerlink" title="1.2.3 LRU C++代码"></a>1.2.3 LRU C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 键值节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> key;</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        Node(<span class="keyword">int</span> k, <span class="keyword">int</span> v):key(k), val(v)&#123;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">using</span> node_iter = <span class="built_in">list</span>&lt;Node&gt;::iterator;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    LRUCache(<span class="keyword">int</span> capacity) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;cap = capacity;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> it = mp.find(key);</span><br><span class="line">        <span class="keyword">if</span>(it == mp.end()) <span class="keyword">return</span> <span class="number">-1</span>;       <span class="comment">// 节点不存在</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> val = it-&gt;second-&gt;val;</span><br><span class="line">            l.erase(it-&gt;second);            <span class="comment">// list通过迭代器删除节点</span></span><br><span class="line">            l.push_front(Node(key, val));   <span class="comment">// 头插最近访问节点</span></span><br><span class="line">            mp[key] = l.begin();            <span class="comment">// 更新哈希表中 key对应的 list迭代器</span></span><br><span class="line">            <span class="keyword">return</span> val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> it = mp.find(key);</span><br><span class="line">        <span class="keyword">if</span>(it == mp.end())&#123;</span><br><span class="line">            <span class="keyword">if</span>(cap == mp.size())&#123;</span><br><span class="line">                <span class="comment">// 容量达到上限且需要添加, 移除最久未使用的</span></span><br><span class="line">                mp.erase(l.back().key); l.pop_back(); </span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">// 容量达到上限，则可以直接添加</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// key存于缓存，需要修改</span></span><br><span class="line">            l.erase(it-&gt;second);</span><br><span class="line">        &#125;</span><br><span class="line">        l.push_front(Node(key, value));     <span class="comment">// 头插最近访问节点</span></span><br><span class="line">        mp[key] = l.begin();                <span class="comment">// 更新哈希表中 key对应的 list迭代器</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, node_iter&gt; mp;       <span class="comment">// 哈希表</span></span><br><span class="line">    <span class="built_in">list</span>&lt;Node&gt; l;                           <span class="comment">// 双向链表</span></span><br><span class="line">    <span class="keyword">int</span> cap;                                <span class="comment">// 缓存容量上限</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-4-代码测试"><a href="#1-2-4-代码测试" class="headerlink" title="1.2.4 代码测试"></a>1.2.4 代码测试</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> capacity = <span class="number">3</span>;</span><br><span class="line">	<span class="function">LRUCache <span class="title">cache</span><span class="params">(capacity)</span></span>;</span><br><span class="line"></span><br><span class="line">	cache.put(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">	cache.put(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回  1</span></span><br><span class="line">	cache.put(<span class="number">3</span>, <span class="number">3</span>);    </span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">2</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回  2 </span></span><br><span class="line">	cache.put(<span class="number">4</span>, <span class="number">4</span>);							  <span class="comment">// 该操作会使得关键字 1 作废</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 -1 (未找到)</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">3</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回  3</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">4</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回  4</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    out:</span></span><br><span class="line"><span class="comment">    1 2 -1 3 4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-LFU"><a href="#2-LFU" class="headerlink" title="2. LFU"></a>2. LFU</h2><h3 id="2-1-LFU概念"><a href="#2-1-LFU概念" class="headerlink" title="2.1 LFU概念"></a>2.1 LFU概念</h3><p>LFU（）</p>
+<h3 id="2-2-LFU算法实现"><a href="#2-2-LFU算法实现" class="headerlink" title="2.2 LFU算法实现"></a>2.2 LFU算法实现</h3><h4 id="2-2-1-LFU算法描述"><a href="#2-2-1-LFU算法描述" class="headerlink" title="2.2.1 LFU算法描述"></a>2.2.1 LFU算法描述</h4><h4 id="2-2-2-LFU算法图示"><a href="#2-2-2-LFU算法图示" class="headerlink" title="2.2.2 LFU算法图示"></a>2.2.2 LFU算法图示</h4><h4 id="2-2-3-LFU-C-代码"><a href="#2-2-3-LFU-C-代码" class="headerlink" title="2.2.3 LFU C++代码"></a>2.2.3 LFU C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-4-代码测试"><a href="#2-2-4-代码测试" class="headerlink" title="2.2.4 代码测试"></a>2.2.4 代码测试</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/08/LRU/" data-id="ckb6ainw700002snl74t28htj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/08/hello-world/" class="article-date">
@@ -123,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/08/hello-world/" data-id="ckb6afdtp0000uwnl3oq48ijk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/08/hello-world/" data-id="ckb6ainwd00012snl5zj36dco" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,6 +231,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/06/08/LRU/">LRU</a>
+          </li>
         
           <li>
             <a href="/2020/06/08/hello-world/">hello-world</a>
