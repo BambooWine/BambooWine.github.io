@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>LRU和LFU算法 | BambooWine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="缓存算法">
+    <meta name="description" content="LRU和LFU算法解析LRULRU概念LRU（The Least Recently Used，最近最少未使用）是一种常见内存管理算法，最早应用于Linux操作系统，在Redis中也有广泛使用的。 LRU算法有这样一种假设：如果某个数据长期不被使用，在未来被用到的几率也不大；因此缓存容量达到上限时，应在写入新数据之前删除最久未使用的数据值，从而为新数据腾出空间。 LRU算法实现LRU算法描述需要设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LRU和LFU算法">
+<meta property="og:url" content="http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="BambooWine">
+<meta property="og:description" content="LRU和LFU算法解析LRULRU概念LRU（The Least Recently Used，最近最少未使用）是一种常见内存管理算法，最早应用于Linux操作系统，在Redis中也有广泛使用的。 LRU算法有这样一种假设：如果某个数据长期不被使用，在未来被用到的几率也不大；因此缓存容量达到上限时，应在写入新数据之前删除最久未使用的数据值，从而为新数据腾出空间。 LRU算法实现LRU算法描述需要设计">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Store.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Insert1.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Insert2.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Visit.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610134226961.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610134635589.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610135240758.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610135906353.png">
+<meta property="article:published_time" content="2020-06-08T09:24:57.000Z">
+<meta property="article:modified_time" content="2020-06-10T07:59:27.887Z">
+<meta property="article:author" content="BambooWine">
+<meta property="article:tag" content="缓存算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Store.png">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">BambooWine</h5>
+          <a href="mailto:2278816117@qq.com" title="2278816117@qq.com" class="mail">2278816117@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/qq_42138623?t=1" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                CSDN
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/BambooWine" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=_cvLzsHByM-IyM65iIjXmpaU" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-envelope"></i>
+                联系我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-link"></i>
+                保留
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">LRU和LFU算法</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">LRU和LFU算法</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-08T09:24:57.000Z" itemprop="datePublished" class="page-time">
+  2020-06-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#LRU和LFU算法解析"><span class="post-toc-number">1.</span> <span class="post-toc-text">LRU和LFU算法解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LRU"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">LRU</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LRU概念"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">LRU概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LRU算法实现"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">LRU算法实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LRU算法描述"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">LRU算法描述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LRU算法图示"><span class="post-toc-number">1.1.2.2.</span> <span class="post-toc-text">LRU算法图示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LRU-C-代码"><span class="post-toc-number">1.1.2.3.</span> <span class="post-toc-text">LRU C++代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码测试"><span class="post-toc-number">1.1.2.4.</span> <span class="post-toc-text">代码测试</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LFU"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">LFU</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LFU概念"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">LFU概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LFU算法实现"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">LFU算法实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LFU算法描述"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">LFU算法描述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LFU算法图示"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">LFU算法图示</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LFU-C-代码"><span class="post-toc-number">1.2.2.3.</span> <span class="post-toc-text">LFU C++代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码测试-1"><span class="post-toc-number">1.2.2.4.</span> <span class="post-toc-text">代码测试</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#总结"><span class="post-toc-number">2.</span> <span class="post-toc-text">总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-LRU和LFU算法"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">LRU和LFU算法</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-08 17:24:57" datetime="2020-06-08T09:24:57.000Z"  itemprop="datePublished">2020-06-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="LRU和LFU算法解析"><a href="#LRU和LFU算法解析" class="headerlink" title="LRU和LFU算法解析"></a>LRU和LFU算法解析</h1><h2 id="LRU"><a href="#LRU" class="headerlink" title="LRU"></a>LRU</h2><h3 id="LRU概念"><a href="#LRU概念" class="headerlink" title="LRU概念"></a>LRU概念</h3><p>LRU（The Least Recently Used，最近最少未使用）是一种常见内存管理算法，最早应用于Linux操作系统，在Redis中也有广泛使用的。</p>
+<p>LRU算法有这样一种假设：<strong>如果某个数据长期不被使用，在未来被用到的几率也不大；因此缓存容量达到上限时，应在写入新数据之前删除最久未使用的数据值</strong>，从而为新数据腾出空间。</p>
+<h3 id="LRU算法实现"><a href="#LRU算法实现" class="headerlink" title="LRU算法实现"></a>LRU算法实现</h3><h4 id="LRU算法描述"><a href="#LRU算法描述" class="headerlink" title="LRU算法描述"></a>LRU算法描述</h4><p>需要设计一种数据结构，并且提供以下接口：</p>
+<ul>
+<li>构造函数，确定初始容量大小</li>
+<li><code>get(key)</code>：如果关键字key存于缓存中，则获取其对应的值；否则返回-1</li>
+<li><code>put(key, val)</code>：<ul>
+<li>如果关键字key已经存在，则更改其对应的值为<code>val</code>；</li>
+<li>如果关键字不存在，则插入（key,val）</li>
+<li>当缓存容量达到上限时，最久没有访问的数据应该被置换。</li>
+</ul>
+</li>
+</ul>
+<h4 id="LRU算法图示"><a href="#LRU算法图示" class="headerlink" title="LRU算法图示"></a>LRU算法图示</h4><p>我们可以使用<strong>双向链表</strong>+<strong>哈希表</strong>来模拟实现LRU算法：</p>
+<ul>
+<li>哈希表用来快速查找某个key是否存于缓存中</li>
+<li>链表用来表示使用数据项的时间先后次序</li>
+</ul>
+<p><strong>LRU存储图示</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Store.png" alt="LRU_Store" title="">
+                </div>
+                <div class="image-caption">LRU_Store</div>
+            </figure>
+
+
+<p>当LRU的容量未到达上限时，对某个数据进行访问（包括添加，读取，修改），则只需要在链表头部插入新节点即可。</p>
+<p>当LRU的容量到达上限时，需要添加某个数据，则需要移除链表最末端的键值（最久未使用），然后头插新节点。</p>
+<p><strong>容量未满，插入新值003</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Insert1.png" alt="容量未满，插入新值" title="">
+                </div>
+                <div class="image-caption">容量未满，插入新值</div>
+            </figure>
+
+
+
+<p><strong>容量上限，插入新值004</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Insert2.png" alt="容量上限，插入新值" title="">
+                </div>
+                <div class="image-caption">容量上限，插入新值</div>
+            </figure>
+
+
+
+<p><strong>访问数据003</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/LRU_Visit.png" alt="访问数据003" title="">
+                </div>
+                <div class="image-caption">访问数据003</div>
+            </figure>
+
+
+
+<h4 id="LRU-C-代码"><a href="#LRU-C-代码" class="headerlink" title="LRU C++代码"></a>LRU C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 键值节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> key;</span><br><span class="line">        <span class="keyword">int</span> val;</span><br><span class="line">        Node(<span class="keyword">int</span> k, <span class="keyword">int</span> v):key(k), val(v)&#123;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">using</span> node_iter = <span class="built_in">list</span>&lt;Node&gt;::iterator;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    LRUCache(<span class="keyword">int</span> capacity) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;cap = capacity;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> it = mp.find(key);</span><br><span class="line">        <span class="keyword">if</span>(it == mp.end()) <span class="keyword">return</span> <span class="number">-1</span>;       <span class="comment">// 节点不存在</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> val = it-&gt;second-&gt;val;</span><br><span class="line">            l.erase(it-&gt;second);            <span class="comment">// list通过迭代器删除节点</span></span><br><span class="line">            l.push_front(Node(key, val));   <span class="comment">// 头插最近访问节点</span></span><br><span class="line">            mp[key] = l.begin();            <span class="comment">// 更新哈希表中 key对应的 list迭代器</span></span><br><span class="line">            <span class="keyword">return</span> val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> it = mp.find(key);</span><br><span class="line">        <span class="keyword">if</span>(it == mp.end())&#123;</span><br><span class="line">            <span class="keyword">if</span>(cap == mp.size())&#123;</span><br><span class="line">                <span class="comment">// 容量达到上限且需要添加, 移除最久未使用的</span></span><br><span class="line">                mp.erase(l.back().key); l.pop_back(); </span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">// 容量达到上限，则可以直接添加</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// key存于缓存，需要修改</span></span><br><span class="line">            l.erase(it-&gt;second);</span><br><span class="line">        &#125;</span><br><span class="line">        l.push_front(Node(key, value));     <span class="comment">// 头插最近访问节点</span></span><br><span class="line">        mp[key] = l.begin();                <span class="comment">// 更新哈希表中 key对应的 list迭代器</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, node_iter&gt; mp;       <span class="comment">// 哈希表</span></span><br><span class="line">    <span class="built_in">list</span>&lt;Node&gt; l;                           <span class="comment">// 双向链表</span></span><br><span class="line">    <span class="keyword">int</span> cap;                                <span class="comment">// 缓存容量上限</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> capacity = <span class="number">3</span>;</span><br><span class="line">    <span class="function">LRUCache <span class="title">cache</span><span class="params">(capacity)</span></span>;</span><br><span class="line"></span><br><span class="line">    cache.put(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">    cache.put(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;		<span class="comment">// 返回 1</span></span><br><span class="line">    cache.put(<span class="number">3</span>, <span class="number">3</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">2</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;		<span class="comment">// 返回 2 </span></span><br><span class="line">    cache.put(<span class="number">4</span>, <span class="number">4</span>);                     		<span class="comment">// 该操作会使得关键字 1 作废</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;		<span class="comment">// 返回 -1 (未找到)</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">3</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;		<span class="comment">// 返回 3</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">4</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;		<span class="comment">// 返回  4</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    out:</span></span><br><span class="line"><span class="comment">    1 2 -1 3 4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="LFU"><a href="#LFU" class="headerlink" title="LFU"></a>LFU</h2><h3 id="LFU概念"><a href="#LFU概念" class="headerlink" title="LFU概念"></a>LFU概念</h3><p>LFU（The Least Frequently Used，最不经常使用）也是一种常见的缓存算法。</p>
+<p>和LRU类似，LFU同样有这样的假设：<strong>如果一个数据在最近一段时间很少被访问到，那么可以认为在将来它被访问的可能性也很小。因此，当空间满时，最小频率访问的数据最先被淘汰；当存在两个或者更多个键具有相同的使用频次时，应该淘汰最久未使用的数据。（类比LRU）</strong></p>
+<h3 id="LFU算法实现"><a href="#LFU算法实现" class="headerlink" title="LFU算法实现"></a>LFU算法实现</h3><h4 id="LFU算法描述"><a href="#LFU算法描述" class="headerlink" title="LFU算法描述"></a>LFU算法描述</h4><p>需要设计一种数据结构，并且提供一下接口：</p>
+<ul>
+<li>构造函数，确定初始缓存容量</li>
+<li><code>get(key)</code> ：如果键存在于缓存中，则获取键的值，否则返回 -1。</li>
+<li><code>put(key, value)</code> - 如果键已存在，则变更其值；如果键不存在，请插入键值对。当缓存达到其容量时，则应该在插入新项之前，移除最不经常使用的项。<strong>当存在两个或者更多个键具有相同的使用频次时，应该移除最久未使用的键</strong>。</li>
+</ul>
+<h4 id="LFU算法图示"><a href="#LFU算法图示" class="headerlink" title="LFU算法图示"></a>LFU算法图示</h4><p>我们可以使用<strong>双哈希表 + 双链表</strong>来模拟实现LFU算法：</p>
+<ul>
+<li><code>key_table</code>：用来快速查找某个key是否存于缓存中</li>
+<li><code>freq_table</code>：以使用频次为键，存储相同使用频次的节点</li>
+</ul>
+<p><strong>LFU存储图示</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610134226961.png" alt="LFU存储图示" title="">
+                </div>
+                <div class="image-caption">LFU存储图示</div>
+            </figure>
+
+
+
+<p>当LFU的容量未到达上限时，对某个数据进行访问（包括添加，读取，修改），其使用频次加一，则只需要在对应链表头部插入新节点即可。</p>
+<p>当LFU的容量到达上限时，需要添加某个数据，则需要移除当前使用频次最低的链表最末端的键值（最久未使用），然后在频次为1的链表头插新节点。</p>
+<p><strong>容量未满，插入新值005</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610134635589.png" alt="容量未满，插入新值" title="">
+                </div>
+                <div class="image-caption">容量未满，插入新值</div>
+            </figure>
+
+
+
+<p><strong>访问数据001</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610135240758.png" alt="访问数据001" title="">
+                </div>
+                <div class="image-caption">访问数据001</div>
+            </figure>
+
+
+
+<p><strong>容量上限，插入新值006</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200610135906353.png" alt="容量上限，插入新值" title="">
+                </div>
+                <div class="image-caption">容量上限，插入新值</div>
+            </figure>
+
+<h4 id="LFU-C-代码"><a href="#LFU-C-代码" class="headerlink" title="LFU C++代码"></a>LFU C++代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LFUCache</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 键值节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> &#123;</span></span><br><span class="line">        <span class="keyword">int</span> key, val, freq;</span><br><span class="line">        Node(<span class="keyword">int</span> _key,<span class="keyword">int</span> _val,<span class="keyword">int</span> _freq): key(_key), val(_val), freq(_freq)&#123;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    LFUCache(<span class="keyword">int</span> capacity) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;cap = capacity;</span><br><span class="line">        min_freq = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!cap) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">auto</span> it = key_table.find(key);			 </span><br><span class="line">        <span class="comment">// 节点不存在</span></span><br><span class="line">        <span class="keyword">if</span>(it == key_table.end())&#123;					</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">auto</span> key_iter = it-&gt;second;</span><br><span class="line">            Node* node = *key_iter;</span><br><span class="line">            <span class="keyword">int</span> val = node-&gt;val, freq = node-&gt;freq;</span><br><span class="line">            freq_table[freq].erase(key_iter);</span><br><span class="line">            <span class="comment">// 如果 freq 对应的链表为空，则移除</span></span><br><span class="line">            <span class="keyword">if</span>(freq_table[freq].size() == <span class="number">0</span>)&#123;		</span><br><span class="line">                freq_table.erase(freq);</span><br><span class="line">                <span class="comment">// 更新最小使用频次，为当前节点使用频次 ferq + 1</span></span><br><span class="line">                <span class="keyword">if</span>(min_freq == freq) min_freq = freq + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            node-&gt;freq += <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// freq + 1 频次对应链表进行头插</span></span><br><span class="line">            freq_table[freq + <span class="number">1</span>].push_front(node);</span><br><span class="line">            <span class="comment">// 更新 key 对应的list迭代器</span></span><br><span class="line">            key_table[key] = freq_table[freq + <span class="number">1</span>].begin();</span><br><span class="line">            <span class="keyword">return</span> val;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!cap) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">auto</span> it = key_table.find(key);</span><br><span class="line">        <span class="keyword">if</span>(it != key_table.end())&#123;</span><br><span class="line">            <span class="comment">// key 存于缓存中</span></span><br><span class="line">            <span class="keyword">auto</span> key_iter = it-&gt;second;</span><br><span class="line">            <span class="keyword">auto</span> node = *key_iter;</span><br><span class="line">            <span class="keyword">int</span> freq = node-&gt;freq;</span><br><span class="line">            freq_table[freq].erase(key_iter);</span><br><span class="line">            <span class="keyword">if</span>(freq_table[freq].size() == <span class="number">0</span>)&#123;</span><br><span class="line">                freq_table.erase(freq);</span><br><span class="line">                <span class="comment">// 更新 min_freq</span></span><br><span class="line">                <span class="keyword">if</span>(min_freq == freq)min_freq = freq + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 修改值, 更新freq</span></span><br><span class="line">            node-&gt;freq += <span class="number">1</span>; node-&gt;val = value;</span><br><span class="line">            <span class="comment">// freq + 1 频次链表进行头插</span></span><br><span class="line">            freq_table[freq + <span class="number">1</span>].push_front(node);</span><br><span class="line">            <span class="comment">// 更新 key 对应的list迭代器</span></span><br><span class="line">            key_table[key] = freq_table[freq + <span class="number">1</span>].begin();</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// 容量达到上限</span></span><br><span class="line">            <span class="keyword">if</span>(key_table.size() == cap)&#123;</span><br><span class="line">                <span class="comment">// 获取使用频次最小且最久未使用的节点</span></span><br><span class="line">                Node* del_node = freq_table[min_freq].back();</span><br><span class="line">                freq_table[min_freq].pop_back();</span><br><span class="line">                <span class="keyword">if</span>(freq_table[min_freq].size() == <span class="number">0</span>)&#123;</span><br><span class="line">                    freq_table.erase(min_freq);</span><br><span class="line">                &#125;</span><br><span class="line">                key_table.erase(del_node-&gt;key);</span><br><span class="line">                <span class="keyword">delete</span> del_node;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 头插新节点</span></span><br><span class="line">            freq_table[<span class="number">1</span>].push_front(<span class="keyword">new</span> Node(key, value, <span class="number">1</span>));</span><br><span class="line">            key_table[key] = freq_table[<span class="number">1</span>].begin();</span><br><span class="line">            <span class="comment">// 当前最小使用频次为1</span></span><br><span class="line">            min_freq = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="comment">// 缓存上限</span></span><br><span class="line">    <span class="keyword">int</span> cap;</span><br><span class="line">    <span class="comment">// 当前最低使用频次</span></span><br><span class="line">    <span class="keyword">int</span> min_freq;</span><br><span class="line">    <span class="comment">// 根据key建立哈希表</span></span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="built_in">list</span>&lt;Node*&gt;::iterator&gt; key_table;</span><br><span class="line">    <span class="comment">// 按照使用频次建立哈希表</span></span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="built_in">list</span>&lt;Node*&gt;&gt; freq_table;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码测试-1"><a href="#代码测试-1" class="headerlink" title="代码测试"></a>代码测试</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> capacity = <span class="number">2</span>;</span><br><span class="line"> 	<span class="function">LFUCache <span class="title">cache</span><span class="params">(capacity)</span></span>;</span><br><span class="line">    </span><br><span class="line">    cache.put(<span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">    cache.put(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 1</span></span><br><span class="line">	cache.put(<span class="number">3</span>, <span class="number">3</span>);    						  <span class="comment">// 此操作会使关键字 2 作废</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">2</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 -1 (未找到key 2)</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">3</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 3</span></span><br><span class="line">	cache.put(<span class="number">4</span>, <span class="number">4</span>);    						  <span class="comment">// 此操作会使关键字 1 作废</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">1</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 -1 (未找到 key 1)</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">3</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 3</span></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; cache.get(<span class="number">4</span>) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;       <span class="comment">// 返回 4</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	out:</span></span><br><span class="line"><span class="comment">	1 -1 3 -1 3 4</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>LRU和LFU的算法暂时就介绍到这里了，作者水平有限，可能会存在疏漏之处，欢迎指正。</p>
+<p>关于其他的缓存算法，例如<strong>FIFO</strong>，<strong>ARC</strong>，<strong>MRU</strong>等，我们会在后续的文章继续探讨。</p>
+<p>谢谢~</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-06-10T07:59:27.887Z" itemprop="dateUpdated">2020-06-10 15:59:27</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="BambooWine">
+            BambooWine
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%93%E5%AD%98%E7%AE%97%E6%B3%95/" rel="tag">缓存算法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&title=《LRU和LFU算法》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&title=《LRU和LFU算法》 — BambooWine&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LRU和LFU算法》 — BambooWine&url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        很晚了，早点睡~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>BambooWine &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&title=《LRU和LFU算法》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&title=《LRU和LFU算法》 — BambooWine&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LRU和LFU算法》 — BambooWine&url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '很晚了，早点睡~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又出一个bug!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+	<!-- 鼠标点击呈现爱心效果 -->
+    <script type="text/javascript" src="//abbw.gitee.io/asset/js/click_love.js"></script>
+
+
+	<!-- 鼠标点击呈现字体效果 -->
+	<!--
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/click_text.js"></script>
+	-->
+
+
+	<!-- 鼠标点击呈现烟花爆炸效果 -->
+	<!--
+	<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/fireworks.js"></script>
+	-->
+
+
+	<!-- 背景添加动态线条效果 -->
+	<script async src="//abbw.gitee.io/asset/js/canvas-nest.min.js" color="30,100,255" opacity='0.5' zIndex="-2" count="150"></script>
+	<!--
+		color：表示线条颜色，三个数字分别为(R,G,B)，默认：（0,0,0）
+		opacity：表示线条透明度（0~1），默认：0.5
+		count：表示线条的总数量，默认：150
+		zIndex：表示背景的z-index属性，css属性用于控制所在层的位置，默认：
+	-->
+
+
+	<!-- 背景雪花效果 -->
+	<!--
+	<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/snow2.js"></script>
+	-->
+
+
+</body>
+</html>
