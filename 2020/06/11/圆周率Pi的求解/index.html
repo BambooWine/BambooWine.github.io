@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>圆周率Pi的求解 | BambooWine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="面试,蒙特卡洛算法,级数">
+    <meta name="description" content="圆周率Pi的求解 字节跳动面试时，算法部分给我丢了这个开胃小菜；当时使用的是蒙特卡洛模拟，效果还不错。  1. 蒙特卡洛模拟蒙特卡洛模拟用于模拟一个随机过程中不同结果可能出现的概率。那怎么使用蒙特卡洛模拟来求解圆周率Pi呢？ 1.1 思想蒙特卡洛模拟的思想是很简单的，比如：在以[0,0]，[1,1]为顶点的正方形内进行随机投点，如果该随机点到圆心[0,0]的距离小于1，则说明该点位于以[0,0]为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="圆周率Pi的求解">
+<meta property="og:url" content="http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/index.html">
+<meta property="og:site_name" content="BambooWine">
+<meta property="og:description" content="圆周率Pi的求解 字节跳动面试时，算法部分给我丢了这个开胃小菜；当时使用的是蒙特卡洛模拟，效果还不错。  1. 蒙特卡洛模拟蒙特卡洛模拟用于模拟一个随机过程中不同结果可能出现的概率。那怎么使用蒙特卡洛模拟来求解圆周率Pi呢？ 1.1 思想蒙特卡洛模拟的思想是很简单的，比如：在以[0,0]，[1,1]为顶点的正方形内进行随机投点，如果该随机点到圆心[0,0]的距离小于1，则说明该点位于以[0,0]为">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200611192448117.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200611192708214.png">
+<meta property="article:published_time" content="2020-06-10T16:10:44.000Z">
+<meta property="article:modified_time" content="2020-06-11T11:27:21.973Z">
+<meta property="article:author" content="BambooWine">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="蒙特卡洛算法">
+<meta property="article:tag" content="级数">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200611192448117.png">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">BambooWine</h5>
+          <a href="mailto:2278816117@qq.com" title="2278816117@qq.com" class="mail">2278816117@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/qq_42138623?t=1" target="_blank" >
+                <i class="icon icon-lg icon-book"></i>
+                CSDN
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/BambooWine" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=_cvLzsHByM-IyM65iIjXmpaU" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-envelope"></i>
+                联系我
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-link"></i>
+                保留
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">圆周率Pi的求解</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">圆周率Pi的求解</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-10T16:10:44.000Z" itemprop="datePublished" class="page-time">
+  2020-06-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#圆周率Pi的求解"><span class="post-toc-number">1.</span> <span class="post-toc-text">圆周率Pi的求解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-蒙特卡洛模拟"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1. 蒙特卡洛模拟</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-1-思想"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.1 思想</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-2-求解代码"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">1.2 求解代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-级数求解"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">2. 级数求解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-1-代码"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">2.1 代码</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-圆周率Pi的求解"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">圆周率Pi的求解</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-11 00:10:44" datetime="2020-06-10T16:10:44.000Z"  itemprop="datePublished">2020-06-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="圆周率Pi的求解"><a href="#圆周率Pi的求解" class="headerlink" title="圆周率Pi的求解"></a>圆周率Pi的求解</h1><blockquote>
+<p>字节跳动面试时，算法部分给我丢了这个开胃小菜；当时使用的是蒙特卡洛模拟，效果还不错。</p>
+</blockquote>
+<h2 id="1-蒙特卡洛模拟"><a href="#1-蒙特卡洛模拟" class="headerlink" title="1. 蒙特卡洛模拟"></a>1. 蒙特卡洛模拟</h2><p>蒙特卡洛模拟用于模拟一个随机过程中不同结果可能出现的概率。那怎么使用蒙特卡洛模拟来求解圆周率Pi呢？</p>
+<h2 id="1-1-思想"><a href="#1-1-思想" class="headerlink" title="1.1 思想"></a>1.1 思想</h2><p>蒙特卡洛模拟的思想是很简单的，比如：<strong>在以[0,0]，[1,1]为顶点的正方形内进行随机投点，如果该随机点到圆心[0,0]的距离小于1，则说明该点位于以[0,0]为圆心，1为半径的1/4圆内；当试验次数达到无穷时，位于圆内点的数目和总投点数目之比无限接近圆和正方形面积之比，即pi/4。</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200611192448117.png" alt="蒙特卡洛模拟" title="">
+                </div>
+                <div class="image-caption">蒙特卡洛模拟</div>
+            </figure>
+
+<h2 id="1-2-求解代码"><a href="#1-2-求解代码" class="headerlink" title="1.2 求解代码"></a>1.2 求解代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">float</span> <span class="title">calcPi</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> numOfPoints)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 计算随机点到原点的距离平方</span></span><br><span class="line">        <span class="keyword">auto</span> getDist = [](<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt;&amp; point)&#123;</span><br><span class="line">            <span class="keyword">return</span> point[<span class="number">0</span>] * point[<span class="number">0</span>] + point[<span class="number">1</span>] * point[<span class="number">1</span>];</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">int</span> legal_num = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;= numOfPoints; ++i)&#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; point = getNextRandom();</span><br><span class="line">            <span class="keyword">if</span>(getDist(point) &lt;= <span class="number">1.0f</span>)&#123;</span><br><span class="line">				++legal_num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 面积之比： Pi/4 ≈ legal_num/numOfPoints</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">4.0</span>*(<span class="keyword">float</span>)legal_num/(<span class="keyword">float</span>)numOfPoints;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; <span class="title">getNextRandom</span><span class="params">()</span></span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> x = rand() % <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> y = rand() % <span class="number">100</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> &#123;x/<span class="number">100.0f</span>, y/<span class="number">100.0f</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand(time(<span class="number">0</span>));</span><br><span class="line">    Solution s;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> numOfPoints = <span class="number">10</span>* <span class="number">10000</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; s.calcPi(numOfPoints) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	out:</span></span><br><span class="line"><span class="comment">	3.11112</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>从这里的输出结果可以看到，使用蒙特卡洛求解的结果精度明显不够，不过思想简单算法实现容易。</p>
+<blockquote>
+<p>我当时面试时，输出的结果差不多就是这个样子；面试官看后说，有没有办法使得结果更加精确一些呢？</p>
+<p>我说：可以增大样本点的个数；或者实验多组数据求取平均值；但是感觉这个模拟方法不太好。</p>
+<p>面试官又问：还有优化的方法么？这个随机数的生成可以优化一下么？</p>
+<p>我想：随机数的生成？什么意思？难道是在说随机数的底层生成算法上解决？虽然有接触过线性同余法，但是这水平更不不够呀。难道是说，想要保证随机数不重复？使用哈希？没想明白，就说不会了。</p>
+<p>有想法的朋友可以告知我一下哈~</p>
+</blockquote>
+<h2 id="2-级数求解"><a href="#2-级数求解" class="headerlink" title="2. 级数求解"></a>2. 级数求解</h2><p>在高中或者在大学数学中，我们可能会看到这样一个公式：</p>
+<p><code>Pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 ...</code></p>
+<p>其实这是一个<strong>交错级数</strong>（以0为极限，必收敛），是数学家莱布尼茨发现的计算圆周率Pi的公式，它的通项表达为如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200611192708214.png" alt="莱布尼茨公式" title="">
+                </div>
+                <div class="image-caption">莱布尼茨公式</div>
+            </figure>
+
+<h2 id="2-1-代码"><a href="#2-1-代码" class="headerlink" title="2.1 代码"></a>2.1 代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">calcPi</span><span class="params">(<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">double</span> sum = <span class="number">0.0</span>, symbol = <span class="number">1.0</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;=n; ++i)&#123;</span><br><span class="line">            sum += symbol/(<span class="number">2</span> * i + <span class="number">1</span>);</span><br><span class="line">            symbol = -symbol;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">4</span> * sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Solution s;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> n = <span class="number">10</span> * <span class="number">10000</span>;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; s.calcPi(n) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	out:</span></span><br><span class="line"><span class="comment">	3.1416</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>从输出结果可以看出，使用莱布尼茨级数来计算Pi值精度更好，值得一提的是该算法的求解效率大大优于蒙特卡洛模拟。</p>
+</blockquote>
+<p>好了，关于圆周率Pi的求解方法暂时介绍到这里，大家有什么更好的方法，可以在下面畅所欲言~</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-06-11T11:27:21.973Z" itemprop="dateUpdated">2020-06-11 19:27:21</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="BambooWine">
+            BambooWine
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BA%A7%E6%95%B0/" rel="tag">级数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E7%AE%97%E6%B3%95/" rel="tag">蒙特卡洛算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&title=《圆周率Pi的求解》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&title=《圆周率Pi的求解》 — BambooWine&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《圆周率Pi的求解》 — BambooWine&url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">LRU和LFU算法</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <!-- 
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+
+<!-- 评论框美化 -->
+<style>
+    .v .vwrap .vedit{
+        background: url("https://gitee.com/cungudafa/source/raw/master/img/gif/Sitich/Sitich30.gif");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .v .vwrap .vheader{
+        background: #fff7f7f7;
+    }
+    .v .vbtn.vsubmit{
+        border-radius: 30px;
+        padding: 0;
+        color: #111; 
+        line-height: 44px;
+        width:30%;
+        background:#ff9999;
+        color: #fff;
+        line-height: 2;
+        font-weight: bolder;
+        border: 1px solid #e9eff3;
+        padding: .4em .5em;
+    }
+
+</style>
+
+
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "P7epsLmtO20xdsvNr2s1VieV-gzGzoHsz",
+            appKey: "16PlE4UT2OcCWagpWjufTfmL",
+            avatar: "mm",
+            placeholder: "📢📢📢快来评论吧~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "5",
+            // 设置Bilibili表情包地址
+            emojiCDN: '//i0.hdslb.com/bfs/emote/', 
+            // 表情title和图片映射
+            emojiMaps: {
+            "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+            "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+            "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+            "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+            "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+            "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+            "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+            "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+            "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+            "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+            "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+            "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+            "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+            "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+            "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+            "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+            "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+            "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+            "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+            "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+            "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+            "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+            "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+            "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+            "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+            "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+            "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+            "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+            "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+            "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+            "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+            "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+            "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+            "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+            "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+            "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+            "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+            "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+            "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+            "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+            "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+            "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+            "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+            "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+            "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+            "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+            "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+            "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+            "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+            "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+                // ... 更多表情
+            }
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        很晚了，早点睡~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>BambooWine &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&title=《圆周率Pi的求解》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&title=《圆周率Pi的求解》 — BambooWine&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《圆周率Pi的求解》 — BambooWine&url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '很晚了，早点睡~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又出一个bug!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+	<!-- 鼠标点击呈现爱心效果 -->
+    <script type="text/javascript" src="//abbw.gitee.io/asset/js/click_love.js"></script>
+
+
+	<!-- 鼠标点击呈现字体效果 -->
+	<!--
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/click_text.js"></script>
+	-->
+
+
+	<!-- 鼠标点击呈现烟花爆炸效果 -->
+	<!--
+	<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/fireworks.js"></script>
+	-->
+
+
+	<!-- 背景添加动态线条效果 -->
+	<script async src="//abbw.gitee.io/asset/js/canvas-nest.min.js" color="30,100,255" opacity='0.5' zIndex="-2" count="150"></script>
+	<!--
+		color：表示线条颜色，三个数字分别为(R,G,B)，默认：（0,0,0）
+		opacity：表示线条透明度（0~1），默认：0.5
+		count：表示线条的总数量，默认：150
+		zIndex：表示背景的z-index属性，css属性用于控制所在层的位置，默认：
+	-->
+
+
+	<!-- 背景雪花效果 -->
+	<!--
+	<script type="text/javascript" src="//cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//abbw.gitee.io/asset/js/snow2.js"></script>
+	-->
+
+
+</body>
+</html>
