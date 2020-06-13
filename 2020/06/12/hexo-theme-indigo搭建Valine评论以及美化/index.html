@@ -29,12 +29,13 @@
 <meta property="og:description" content="indigo主题搭建Valine评论以及美化1. indigo主题搭建Valine后台评论系统Valine是基于Leancloud开发完成的，因此我们需要先注册一个Leadcloud的账号。 Leadcloud官网，点我注册  先注册；注册的时候需要身份验证和邮箱验证。 创建一个应用，名称可以随意起，不过我们还是规范些。 然后 进入应用-&gt;设置-&gt;应用key，获取你的 appid 和">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612102215624.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612151347788.png">
 <meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612104305556.png">
 <meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612140932816.png">
 <meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612141245363.png">
 <meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612142054607.png">
 <meta property="article:published_time" content="2020-06-12T01:48:03.000Z">
-<meta property="article:modified_time" content="2020-06-12T06:28:03.902Z">
+<meta property="article:modified_time" content="2020-06-12T07:13:58.864Z">
 <meta property="article:author" content="BambooWine">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -114,16 +115,23 @@
             </li>
         
             <li class="waves-block waves-effect">
+              <a href="https://bamboowine.github.io/LoveHeart/" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-heart-o"></i>
+                爱礼
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
               <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=_cvLzsHByM-IyM65iIjXmpaU" target="_blank" rel="noopener"  >
-                <i class="icon icon-lg icon-envelope"></i>
+                <i class="icon icon-lg icon-envelope-o"></i>
                 联系我
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/links"  >
                 <i class="icon icon-lg icon-link"></i>
-                保留
+                友情链接
               </a>
             </li>
         
@@ -234,6 +242,17 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Valine Comment system. https://valine.js.org</span></span><br><span class="line">valine:</span><br><span class="line">  enable: true # 如果你想使用valine，请将值设置为 true</span><br><span class="line">  appId:  # your leancloud appId</span><br><span class="line">  appKey:  # your leancloud appKey</span><br><span class="line">  notify: false # Mail notify</span><br><span class="line">  verify: false # Verify code</span><br><span class="line">  avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide</span><br><span class="line">  placeholder: 快来评论吧~ # Comment Box placeholder</span><br><span class="line">  guest_info: nick,mail,link # Comment header info</span><br><span class="line">  pageSize: 5 # comment list page size</span><br></pre></td></tr></table></figure>
 
 <ul>
+<li>请填写<code>应用&gt;设置&gt;安全设置</code>中的<code>Web 安全域名</code></li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200612151347788.png" alt="image-20200612151347788" title="">
+                </div>
+                <div class="image-caption">image-20200612151347788</div>
+            </figure>
+
+<ul>
 <li>至此就完全配置完成了</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo s # 查看效果</span><br></pre></td></tr></table></figure>
@@ -301,7 +320,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-06-12T06:28:03.902Z" itemprop="dateUpdated">2020-06-12 14:28:03</time>
+    Last updated: <time datetime="2020-06-12T07:13:58.864Z" itemprop="dateUpdated">2020-06-12 15:13:58</time>
 </span><br>
 
 
@@ -380,7 +399,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/06/12/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">高等数学</h4>
+      </a>
+    </div>
   
 
   
@@ -412,7 +438,9 @@
     <!-- 
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        -->
     <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
 
 <!-- 评论框美化 -->
@@ -425,20 +453,29 @@
     .v .vwrap .vheader{
         background: #fff7f7f7;
     }
+
     .v .vbtn.vsubmit{
         border-radius: 30px;
         padding: 0;
-        color: #111; 
         line-height: 44px;
         width:30%;
-        background:#ff9999;
         color: #fff;
         line-height: 2;
         font-weight: bolder;
-        border: 1px solid #e9eff3;
+        border: 2px;
         padding: .4em .5em;
+
+        background-color: #5f5f5f !important;
+        color: #fff !important;
     }
 
+
+	.v .vwrap{
+  		border: 2px solid black !important;
+  		border-radius: 5px !important;
+  		overflow: visible !important;
+  		counter-reset: avater;
+	}
 </style>
 
 
@@ -515,7 +552,8 @@
             "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
                 // ... 更多表情
             }
-        })
+        });
+
     </script>
     <!-- Valine Comments end -->
 

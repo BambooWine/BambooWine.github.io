@@ -113,16 +113,23 @@
             </li>
         
             <li class="waves-block waves-effect">
+              <a href="https://bamboowine.github.io/LoveHeart/" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-heart-o"></i>
+                爱礼
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
               <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=_cvLzsHByM-IyM65iIjXmpaU" target="_blank" rel="noopener"  >
-                <i class="icon icon-lg icon-envelope"></i>
+                <i class="icon icon-lg icon-envelope-o"></i>
                 联系我
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/links"  >
                 <i class="icon icon-lg icon-link"></i>
-                保留
+                友情链接
               </a>
             </li>
         
@@ -376,7 +383,9 @@
     <!-- 
     <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
     -->
+        <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        -->
     <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
 
 <!-- 评论框美化 -->
@@ -389,20 +398,29 @@
     .v .vwrap .vheader{
         background: #fff7f7f7;
     }
+
     .v .vbtn.vsubmit{
         border-radius: 30px;
         padding: 0;
-        color: #111; 
         line-height: 44px;
         width:30%;
-        background:#ff9999;
         color: #fff;
         line-height: 2;
         font-weight: bolder;
-        border: 1px solid #e9eff3;
+        border: 2px;
         padding: .4em .5em;
+
+        background-color: #5f5f5f !important;
+        color: #fff !important;
     }
 
+
+	.v .vwrap{
+  		border: 2px solid black !important;
+  		border-radius: 5px !important;
+  		overflow: visible !important;
+  		counter-reset: avater;
+	}
 </style>
 
 
@@ -479,7 +497,8 @@
             "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
                 // ... 更多表情
             }
-        })
+        });
+
     </script>
     <!-- Valine Comments end -->
 
