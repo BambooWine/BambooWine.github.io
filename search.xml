@@ -292,14 +292,69 @@
       </tags>
   </entry>
   <entry>
-    <title>auto关键字</title>
+    <title>C++11保证稳定性和兼容性</title>
     <url>/2020/06/13/auto%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="1-C-11保证稳定性和兼容性"><a href="#1-C-11保证稳定性和兼容性" class="headerlink" title="1. C++11保证稳定性和兼容性"></a>1. C++11保证稳定性和兼容性</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
       <categories>
         <category>C++ 11</category>
       </categories>
       <tags>
         <tag>C++ 11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-indigo主题添加置顶功能</title>
+    <url>/2020/06/17/hexo-indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h1 id="hexo-indigo主题添加置顶功能"><a href="#hexo-indigo主题添加置顶功能" class="headerlink" title="hexo-indigo主题添加置顶功能"></a>hexo-indigo主题添加置顶功能</h1><blockquote>
+<p>参考文章：<a href="https://www.jianshu.com/p/42a4efcdf8d7" target="_blank" rel="noopener">解决Hexo博客文章置顶问题</a></p>
+</blockquote>
+<h2 id="1-自定义html排序功能"><a href="#1-自定义html排序功能" class="headerlink" title="1. 自定义html排序功能"></a>1. 自定义html排序功能</h2><p>原理：<strong>在Hexo生成首页HTML时，将top值高的文章排在前面，达到置顶功能</strong>。</p>
+<p>修改Hexo文件夹下的<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
+<p>需添加的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>generator.js完整内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">const</span> posts = locals.posts.sort(config.index_generator.order_by);</span><br><span class="line"></span><br><span class="line">	posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        	<span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        	<span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;     <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">const</span> path = config.index_generator.path || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改完成后，只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序top值越大越靠前。需要注意的是，这个文件不是主题的一部分，也不是Git管理的，备份的时候比较容易忽略。</p>
+<p><strong>使用实例：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232808783.png" alt="使用实例" title="">
+                </div>
+                <div class="image-caption">使用实例</div>
+            </figure>
+
+
+
+<p><strong>只需要设置top值即可完成排序置顶操作，并且还可以根据不同top值，选择置顶文章的先后次序</strong></p>
+<h2 id="2-添加置顶标签"><a href="#2-添加置顶标签" class="headerlink" title="2. 添加置顶标签"></a>2. 添加置顶标签</h2><p>参考文章的博主使用的是yelee主题，有自己的置顶标签，在indigo主题里，我们可以自己做。</p>
+<ul>
+<li><p>如果要在文章中添加置顶标签，则打开<code>themes\indigo\layout\_partial\post.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果要在博客主页的预览页面添加置顶标签，则打开<code>themes\indigo\layout\_partial\index_item.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果还想在其他页面添加，则打开对应的 ejs文件，添加上述代码即可</p>
+</li>
+</ul>
+<p><strong>预览效果：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232034478.png" alt="预览效果" title="">
+                </div>
+                <div class="image-caption">预览效果</div>
+            </figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -407,6 +462,11 @@
       </tags>
   </entry>
   <entry>
+    <title>作息表</title>
+    <url>/2020/06/17/%E4%BD%9C%E6%81%AF%E8%A1%A8/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>圆周率Pi的求解</title>
     <url>/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="圆周率Pi的求解"><a href="#圆周率Pi的求解" class="headerlink" title="圆周率Pi的求解"></a>圆周率Pi的求解</h1><blockquote>
@@ -460,15 +520,374 @@
       </tags>
   </entry>
   <entry>
+    <title>基于hexo搭建博客</title>
+    <url>/2020/06/16/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="基于hexo搭建博客"><a href="#基于hexo搭建博客" class="headerlink" title="基于hexo搭建博客"></a>基于hexo搭建博客</h1><h2 id="1-Git安装和配置"><a href="#1-Git安装和配置" class="headerlink" title="1. Git安装和配置"></a>1. Git安装和配置</h2><ul>
+<li><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a></p>
+<p>Git的安装比较简单</p>
+</li>
+<li><p>准备一个Github账号，我们的博客要挂在github上</p>
+</li>
+<li><p>首先打开CMD，设置你的账号和邮箱，输入</p>
+<p><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>其中”yourname”是你的github账号，”youremail”是你的github账号邮箱</p>
+</li>
+<li><p>可以用以下两条命令检查输入<br><code>git config user.name</code><br><code>git config user.email</code></p>
+</li>
+<li><p>然后用以下命令创建SSH秘钥<br><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code><br>后续连敲3次回车，不需要任何输入。<br>完成之后会告诉你生成了.ssh文件夹（应该在C:\Users\Administrator路径下），找到文件夹，其中id_rsa是秘钥，id_rsa.pub是公钥，用文本编辑器打开id_rsa.pub，复制所有内容。</p>
+</li>
+<li><p>添加公钥到Github</p>
+<p>登录Github，右上角 <strong>头像-&gt;Settings -&gt; SSH and GPG keys -&gt; New SSH key</strong>。 把公钥粘贴到key中，填好title并点击Add SSH key。</p>
+</li>
+<li><p>回到CMD，输入命令<br><code>ssh -T git@github.com</code><br>选yes，提示成功。</p>
+</li>
+</ul>
+<h2 id="2-安装Nodejs"><a href="#2-安装Nodejs" class="headerlink" title="2. 安装Nodejs"></a>2. 安装Nodejs</h2><ul>
+<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Nodejs官网</a></p>
+<p>windows：选择LTS版本就行了，下载完成后安装。</p>
+</li>
+<li><p>安装完成有两个组件，nodejs和npm，可以在<strong>git bash</strong>下使用以下命令查看版本</p>
+<p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+</li>
+<li><p>用npm安装cnpm淘宝镜像源</p>
+<p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p>用以下命令查看版本<br><code>cnpm -v</code><br>安装完成以后就都是用cnpm下载了</p>
+</li>
+</ul>
+<h2 id="3-安装博客框架Hexo"><a href="#3-安装博客框架Hexo" class="headerlink" title="3. 安装博客框架Hexo"></a>3. 安装博客框架Hexo</h2><ul>
+<li>安装命令<br><code>cnpm install -g hexo-cli</code></li>
+<li>查看版本<br><code>hexo -v</code></li>
+</ul>
+<h2 id="4-搭建Hexo博客"><a href="#4-搭建Hexo博客" class="headerlink" title="4. 搭建Hexo博客"></a>4. 搭建Hexo博客</h2>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论和数理统计</title>
+    <url>/2020/06/14/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
+<li>二维正太</li>
+</ul>
+<h1 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h1><ul>
+<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
+<ul>
+<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
+<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
+<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
+</ul>
+</li>
+<li><p>协方差公式：</p>
+<ul>
+<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
+</li>
+<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
+</li>
+<li><p>cov(X, Y) = cov(Y, X)</p>
+</li>
+<li><p>cov(X, X) = D(X)</p>
+</li>
+<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
+</li>
+<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
+</li>
+<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
+</li>
+</ul>
+</li>
+<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
+<ul>
+<li>0-1分布：</li>
+</ul>
+</li>
+<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看懂PID控制器</title>
+    <url>/2020/06/16/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <content><![CDATA[<p>[toc]</p>
+<h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
+<p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
+<p>举两个实例：</p>
+<h3 id="1-1-电机速度控制系统"><a href="#1-1-电机速度控制系统" class="headerlink" title="1.1 电机速度控制系统"></a>1.1 电机速度控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221429670.png" alt="电机速度" title="">
+                </div>
+                <div class="image-caption">电机速度</div>
+            </figure>
+
+<ol>
+<li>当出现扰动而使得电机的转速偏离设定值时，测速电动机充当检测变送环节的角色，而它的输出和设定值之间就会出现一个偏差信号（电压信号）</li>
+<li>这个偏差信号通常是比较小的，所以需要放大器对其进行放大</li>
+<li>而这个放大后的电压信号则是触发器的控制电压，控制晶闸管的关断时间，进而调节电动机的电枢电压，从而调节转速直到等于设定值</li>
+</ol>
+<p>在这个控制系统中，电动机显然是被控对象，而它的转速变化规律是可以抽象为一个数学模型的，也就是传递函数；而其他的环节，则是为了共同产生一个控制信号来作为电动机的输入。</p>
+<p>我们可以把比较器称为本文中的<strong>调节器</strong>，或者将比较器+放大器称为<strong>调节器</strong>，这不是重点，无伤大雅。</p>
+<p>值得注意的是：这个系统中的所有环节，其控制规律都可以抽象为若干个传递函数</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221459922.png" alt="电机调速" title="">
+                </div>
+                <div class="image-caption">电机调速</div>
+            </figure>
+<ul>
+<li>Un*为设定值，Un为测量变送的反馈值</li>
+<li>两者偏差去调节触发器控制电压Uct，控制规律为<code>Kp</code></li>
+<li>通过晶闸管控制电动机回路总电压Ud0，控制规律为<code>Ks</code></li>
+<li>Ud0 - 电枢总电阻电压即为电动机电动势E</li>
+<li>E = Ceφn，得到输出转速；测速发电机根据转速反馈电压信号，控制规律<code>α</code></li>
+</ul>
+<h3 id="1-2-温度或水位控制系统"><a href="#1-2-温度或水位控制系统" class="headerlink" title="1.2 温度或水位控制系统"></a>1.2 温度或水位控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221521103.png" alt="水位控制" title="">
+                </div>
+                <div class="image-caption">水位控制</div>
+            </figure>
+
+<p>这个应该是比较简单的过程控制，实际水位低于设定水位时，控制器则作用于执行机构去增大调节阀开度，增加进水流量。</p>
+<h3 id="1-3-小小总结"><a href="#1-3-小小总结" class="headerlink" title="1.3 小小总结"></a>1.3 小小总结</h3><blockquote>
+<p>不要总是孤立控制器，它们是控制被控对象的必要环节。</p>
+</blockquote>
+<p>这里给出一般的闭环控制系统框图</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221545700.png" alt="闭环控制框图"></p>
+<blockquote>
+<p>不要单纯的认为只有被控对象才有传递函数，每一个环节都有其相应的控制规律，都可以抽象为一个数学模型，用对应的传递函数来表达。就像最小拍控制器设计中，我们根据输入信号选择整个系统的闭环传函，进而确定控制器的脉冲传递函数。</p>
+</blockquote>
+<p><strong>总结：对于闭环系统来说，控制器的输入是偏差信号，输出则是控制信号，去控制执行机构，进而调节被控对象</strong>。</p>
+<p><strong>而闭环控制系统，设计目的就是系统输出对输入的跟随能力</strong>。</p>
+<h2 id="2-PID"><a href="#2-PID" class="headerlink" title="2. PID"></a>2. PID</h2><ul>
+<li>P：比例控制器，对系统产生的偏差能够迅速做出反应；但是比例控制器不能消除余差，不过随着比例系数的增大，余差会减小，同时系统输出振荡次数增加，稳定性也会下降，调节时间加长</li>
+</ul>
+<blockquote>
+<p>关于不能消除余差这一点，从数学角度是可以解释的，求一下余差即可。当然直想也是可以理解的：对于一个速度控制系统，某时刻负载减小，导致转速上升，比例控制器作用于执行机构使得转速下降，假如转速可以下降到设定转速，那么此时负载依然是小于额定负载的，转速依然会上升；所以反证得，最后余差是肯定会存在的。</p>
+</blockquote>
+<ul>
+<li>I：积分控制器，积分控制是可以消除余差的，体现于偏差消失后，积分控制器的输出是可以<strong>保持</strong>前时刻的输出；但是积分控制器的控制动作比较缓慢，一般不单独使用；随着积分系数的增大（时间常数的减小），系统的稳定性下降。</li>
+</ul>
+<ul>
+<li>D：微分控制器，够体现出当前误差的变化趋势，在偏差出现或变化的瞬间，立即产生强烈的调节作用，从而加快系统的动作速度，减少调节时间；但是由于微分对静态偏差毫无控制能力（偏差存在，但是不变化，控制器输出为0），所以一般不单独使用。并且在纯比例作用的基础上增加微分作用可以提高系统稳定性。</li>
+</ul>
+<p><strong>总结：讲比例，积分，微分三种控制规律结合在一起，只要三项控制作用的强度配合得当，就既能快速调节，又能消除余差，从而得到满意的控制效果。</strong></p>
+<h2 id="3-模拟式PID"><a href="#3-模拟式PID" class="headerlink" title="3. 模拟式PID"></a>3. 模拟式PID</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221607032.png" alt="一般pid框图" title="">
+                </div>
+                <div class="image-caption">一般pid框图</div>
+            </figure>
+
+<p>模拟pid控制器的算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221621725.png" alt="模拟pid算法" title="">
+                </div>
+                <div class="image-caption">模拟pid算法</div>
+            </figure>
+
+<ul>
+<li>u(t) 为控制器输出，e(t) 为控制器输入，即偏差信号：<code>e(t) = r(t) - y(t)</code></li>
+<li>Kp 为比例系数，Ti 为积分时间常数，Td 为微分时间常数</li>
+</ul>
+<p>给出一个简单的matlab模拟pid仿真：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221633752.png" alt="模拟pid仿真" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真</div>
+            </figure>
+
+<p>参数设置：<code>Kp = 0.5, Ki = 0.2, Kd = 1</code>；输出结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221650331.png" alt="模拟pid仿真结果" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真结果</div>
+            </figure>
+
+<p><strong>模拟pid局限性</strong></p>
+<ul>
+<li>功能单一，灵活性差</li>
+<li>信息分散，所用仪表多，且监视不方便</li>
+<li>接线过多，系统维护难度大</li>
+</ul>
+<p>随着计算机等技术的发展，数字控制器日益成为工业生产中占据主导地位的控制器。</p>
+<h2 id="4-数字式PID"><a href="#4-数字式PID" class="headerlink" title="4. 数字式PID"></a>4. 数字式PID</h2><p>对模拟pid控制器进行离散化处理，用<strong>后向差分</strong>代替微分得：（具体细节不细说）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221709929.png" alt="离散化pid算法" title="">
+                </div>
+                <div class="image-caption">离散化pid算法</div>
+            </figure>
+
+
+<h3 id="4-1-位置式PID算法"><a href="#4-1-位置式PID算法" class="headerlink" title="4.1 位置式PID算法"></a>4.1 位置式PID算法</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221726139.png" alt="位置式pid" title="">
+                </div>
+                <div class="image-caption">位置式pid</div>
+            </figure>
+
+<ul>
+<li>Kp，Ki，Kd为比例，积分，微分的三个重要参数</li>
+<li>k是采样序列号，k=0,1,2,3…</li>
+<li>Uk第k次采样时刻<strong>控制器</strong>输出值</li>
+<li>ek第k次采样时刻偏差，e(k-1)第k-1次采样偏差值，e(k-2)第k-2次采样偏差值</li>
+<li>位置式pid控制器的输入为系统的偏差值，输出为uk，即偏差的组合</li>
+</ul>
+<h4 id="4-1-2-位置式pid算法的缺点"><a href="#4-1-2-位置式pid算法的缺点" class="headerlink" title="4.1.2 位置式pid算法的缺点"></a>4.1.2 位置式pid算法的缺点</h4><ul>
+<li>控制器输出与过去的各个状态有关，运算量大</li>
+<li>计算机出现故障，u(k)的大幅度变化会引起执行机构位置的大幅度变化</li>
+</ul>
+<h3 id="4-2-增量式PID算法"><a href="#4-2-增量式PID算法" class="headerlink" title="4.2 增量式PID算法"></a>4.2 增量式PID算法</h3><p>由位置式pid第k次输出 - 第k-1次输出 得到增量式pid算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9nc3MwLmJhaWR1LmNvbS85NG8zZFNhZ194STRraEdrbzlXVEFuRjZoaHkvemhpZGFvL3doJTNENjAwJTJDODAwL3NpZ249NjAyYzFhOTdjOWZkZmMwM2U1MmRlYmJlZTQwZmFiYWMvZTRkZGU3MTE5MGVmNzZjNjBmM2YxNzQyOTcxNmZkZmFhZTUxNjdlZS5qcGc" alt="增量式pid算法" title="">
+                </div>
+                <div class="image-caption">增量式pid算法</div>
+            </figure>
+
+<blockquote>
+<p>增量式pid算法表示的是控制机构（阀门，步进电机等）的调节增量，即k时刻相对于k-1时刻的调节增量。</p>
+</blockquote>
+<p><strong>值得注意的是：采用增量式pid算法的控制器输出值为调节增量</strong>。</p>
+<p>从这里也可以得出<strong>位置式pid算法</strong>的另一种表示形式：<br><code>u(k) = u(k - 1) + Δu</code></p>
+<p>可以说，位置式pid算法和增量式pid算法是pid算法的两种表现形式，从本质上讲二者是一致的。</p>
+<h4 id="4-2-2-增量式pid的优点"><a href="#4-2-2-增量式pid的优点" class="headerlink" title="4.2.2 增量式pid的优点"></a>4.2.2 增量式pid的优点</h4><ul>
+<li>算式中不需要累加；控制增量Δu(k)的确定仅与最近3次的采样值有关</li>
+<li>计算机每次只输出控制增量，对应执行机构位置的变化量，不易引起过程的异常操作</li>
+<li>手动—自动切换时冲击小。当控制从手动向自动切换时，<br>可以作到无扰动切换</li>
+</ul>
+<h3 id="4-3-位置式pid和增量式pid的抉择"><a href="#4-3-位置式pid和增量式pid的抉择" class="headerlink" title="4.3 位置式pid和增量式pid的抉择"></a>4.3 位置式pid和增量式pid的抉择</h3><p>在实际使用中应该使用位置式还是增量式，关键看执行机构的特性：</p>
+<ul>
+<li>如果执行机构具有积分特性（如步进电机，具有齿轮传递特性的位置执行机构等），应该使用增量式pid算法</li>
+<li>如果执行机构没有积分特性，则应该使用位置式pid算法</li>
+</ul>
+<h3 id="4-4-位置式pid和增量式pid仿真"><a href="#4-4-位置式pid和增量式pid仿真" class="headerlink" title="4.4 位置式pid和增量式pid仿真"></a>4.4 位置式pid和增量式pid仿真</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function [] &#x3D; my_simulink_pid()</span><br><span class="line">% 离散模型</span><br><span class="line">ts &#x3D; 0.001;						    % 采样时间</span><br><span class="line">sys &#x3D; tf(400, [1, 50, 0]);		    % 传递函数</span><br><span class="line">d_sys &#x3D; c2d(sys, ts, &#39;z&#39;);		    % 传递函数离散化</span><br><span class="line">[num, den] &#x3D; tfdata(d_sys, &#39;v&#39;);	% 提取分子分母</span><br><span class="line"></span><br><span class="line">% pid参数</span><br><span class="line">kp &#x3D; 10; ki &#x3D; 2; kd &#x3D; 15;</span><br><span class="line"></span><br><span class="line">% 初始化信号值</span><br><span class="line">y_feed &#x3D; 0;	    % 当前反馈值</span><br><span class="line">y_prev1 &#x3D; 0;    % 前一次输出值</span><br><span class="line">y_prev2 &#x3D; 0;    % 前前一次输出值</span><br><span class="line"></span><br><span class="line">u_prev1 &#x3D; 0;    % 前一次控制器输出值</span><br><span class="line">u_prev2 &#x3D; 0;    % 前前一次控制器输出值</span><br><span class="line"></span><br><span class="line">e_prev1 &#x3D; 0;    % 前一次偏差</span><br><span class="line">e_prev2 &#x3D; 0;    % 前前一次偏差</span><br><span class="line"></span><br><span class="line">x &#x3D; [0, 0, 0];  % p i d 分别的输出</span><br><span class="line"></span><br><span class="line">for k &#x3D; 1:1:3000</span><br><span class="line">	time(k) &#x3D; k*ts;         % 时间序列，用于画图</span><br><span class="line">	r_in(k) &#x3D; 1;            % 输入序列，单位阶跃</span><br><span class="line">	e(k) &#x3D; r_in(k) - y_feed;    % 当前时刻偏差</span><br><span class="line"></span><br><span class="line">	delta_u &#x3D; kp*x(1) + ki*x(2) + kd*x(3);</span><br><span class="line">	% 位置式 PID算法</span><br><span class="line">	% u(k) &#x3D; u_prev1 + delta_u;</span><br><span class="line">	% 增量式 PID算法</span><br><span class="line">	u(k) &#x3D; delta_u;</span><br><span class="line"></span><br><span class="line">	% 对输出限幅</span><br><span class="line">	if u(k) &gt;&#x3D; 10</span><br><span class="line">		u(k) &#x3D; 10</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	if u(k) &lt;&#x3D; -10</span><br><span class="line">		u(k) &#x3D; -10</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	y_out(k) &#x3D; -den(2)*y_prev1- den(3)*y_prev2 + num(2)*u_prev1 + num(3)*u_prev2;  % 系统输出序列</span><br><span class="line">	y_feed &#x3D; y_out(k);	    % 反馈值</span><br><span class="line"></span><br><span class="line">	u_prev2 &#x3D; u_prev1;      % 更新控制器输出</span><br><span class="line">	u_prev1 &#x3D; u(k);</span><br><span class="line">	y_prev2 &#x3D; y_prev1;      % 更新系统输出</span><br><span class="line">	y_prev1 &#x3D; y_out(k);</span><br><span class="line"></span><br><span class="line">	x(1) &#x3D; e(k) - e_prev1;</span><br><span class="line">	x(2) &#x3D; e(k);</span><br><span class="line">	x(3) &#x3D; e(k) - 2*e_prev1 + e_prev2;</span><br><span class="line">	e_prev2 &#x3D; e_prev1;      % 更新偏差</span><br><span class="line">	e_prev1 &#x3D; e(k);</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 画图</span><br><span class="line">figure(1);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, y_out, &#39;r&#39;); </span><br><span class="line">axis([0, 3, 0, 1.5]);                           % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, y_out&#39;);   		% 系统输出和系统输入的曲线</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, u, &#39;--k&#39;); </span><br><span class="line">axis([0, 3, -0.2, 2.5]);                        % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, u_out&#39;);   		% 控制器输出和系统输入的曲线</span><br></pre></td></tr></table></figure>
+
+<p><strong>仿真结果：</strong></p>
+<p>增量式pid——系统食输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221745687.png" alt="r&y" title="">
+                </div>
+                <div class="image-caption">r&y</div>
+            </figure>
+
+<p>增量式pid——控制器输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221803911.png" alt="r&u" title="">
+                </div>
+                <div class="image-caption">r&u</div>
+            </figure>
+
+
+<blockquote>
+<p>关于位置式pid算法，在代码中也有标注，只需要加前一时刻控制器输出即可，至于参数的整定，在这里不详细说明。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>控制学科</category>
+      </categories>
+      <tags>
+        <tag>控制学科</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>讲讲堆内存和栈内存</title>
+    <url>/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/</url>
+    <content><![CDATA[<h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
+<p>前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？</p>
+<p>我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。</p>
+<p>说完之后，面试官没有立即反应，我以为他不太满意，又接着说了说堆栈的增长方向和内存大小等等…</p>
+<p>不知道是我回答的不好还是面试官太高冷，没什么说辞…</p>
+</blockquote>
+<p>本文内容有参考百科，知乎，博客等优秀回答。</p>
+<h2 id="1-从编程语言角度理解不同内存"><a href="#1-从编程语言角度理解不同内存" class="headerlink" title="1.  从编程语言角度理解不同内存"></a>1.  从编程语言角度理解不同内存</h2><p><strong>程序的内存分配：</strong></p>
+<p>一个由C/C++编译的程序占用的内存分布：</p>
+<ul>
+<li><p>栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等</p>
+</li>
+<li><p>堆区（heap）：一般由程序员分配释放， 若程序员不释放，程序结束时可能由操作系统回收 </p>
+</li>
+<li><p>全局区（global）/ 静态区（static）：</p>
+<ul>
+<li>data区：已经初始化的全局变量、静态变量和常量</li>
+<li>bss区：用来存放程序中未初始化的全局变量和静态变量；程序执行前BSS段会自动清0。</li>
+<li>常量区：全局区中划分的一个小区域，里面存放的是常量，如const修饰的全局变量、字符串常量</li>
+</ul>
+</li>
+<li><p>代码区（code）：存放函数体的二进制代码</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	@Time     : 2020/6/15 </span></span><br><span class="line"><span class="comment"> 	@Author   : BambooWine</span></span><br><span class="line"><span class="comment"> 	@Mail     : 2278816117@qq.com</span></span><br><span class="line"><span class="comment"> 	@Env	  : win10 + vs2017</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_a = <span class="number">10</span>;		<span class="comment">// 全局变量 data区</span></span><br><span class="line"><span class="keyword">int</span> g_b;	        <span class="comment">// 全局变量 bss区</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> s_a = <span class="number">10</span>;	<span class="comment">// 静态变量 data区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;           <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">"abc"</span>;	 <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span>* p1;            <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> s_b = <span class="number">1</span>;	 <span class="comment">// 静态变量 data区</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="string">"123"</span>;	            <span class="comment">// "123"在常量区，str在栈区</span></span><br><span class="line">    p1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">10</span>);  <span class="comment">// 申请堆内存</span></span><br><span class="line">    <span class="built_in">strcpy</span>(p1, <span class="string">"123"</span>);   <span class="comment">// 123放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方</span></span><br><span class="line">    <span class="built_in">free</span>(p1); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-从物理层角度理解堆栈内存"><a href="#2-从物理层角度理解堆栈内存" class="headerlink" title="2. 从物理层角度理解堆栈内存"></a>2. 从物理层角度理解堆栈内存</h2><blockquote>
+<p>不知道大家有没有这样的想法，堆栈不就是内存的不同区，为什么访问速度会有差矣呢？</p>
+<p>最近想到了这个问题，但奈何才疏学浅，只能在各种论坛搜索资料。</p>
+</blockquote>
+<ul>
+<li>从硬件上来说，堆和栈最终都是内存条上的若干存储单元，理应并没有什么不同</li>
+<li>但是很多CPU对压栈，出栈操作有硬件（指令）上的支持，所以在栈区分配/归还内存速度较快；尤其是函数内部的局部变量，可以轻易与函数调用/返回绑定</li>
+<li>由于栈内存分配/回收的特殊机制，使得同一函数内部的”局部变量”总是分配在一段连续的内存空间上</li>
+</ul>
+<p><a href="https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3" target="_blank" rel="noopener">https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</a></p>
+<p><a href="https://www.cnblogs.com/jiudianren/p/5671992.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiudianren/p/5671992.html</a></p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高等数学</title>
     <url>/2020/06/12/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="2-一元函数微分学"><a href="#2-一元函数微分学" class="headerlink" title="2. 一元函数微分学"></a>2. 一元函数微分学</h2><ul>
+    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="1-函数极限与连续"><a href="#1-函数极限与连续" class="headerlink" title="1. 函数极限与连续"></a>1. 函数极限与连续</h2><ul>
+<li>遇到三角函数求极限，并且趋于pi/2，pi这种的，大概率会使用<strong>诱导公式</strong>，使其简化：<ul>
+<li>sin(π/2+α) = cosα；  cos(π/2+α) = -sinα；  sin(π/2-α) = cosα；  cos(π/2-α) =sinα；</li>
+<li>sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(π-α) = -cosα；</li>
+<li>tan A= sin A/cos A；</li>
+<li>tan（π/2＋α）＝－cotα；    tan（π/2－α）＝cotα；</li>
+<li>tan（π－α）＝－tanα；       tan（π＋α）＝tanα；</li>
+</ul>
+</li>
+<li>遇到<code>arctant-pi/2</code>在无穷处取极限时，一般多用<strong>洛必达</strong>。</li>
+</ul>
+<h2 id="2-一元函数微分学"><a href="#2-一元函数微分学" class="headerlink" title="2. 一元函数微分学"></a>2. 一元函数微分学</h2><ul>
 <li>导数定义，以及证明：偶函数的导数是奇函数；奇函数的导数是偶函数；周期函数的导函数是周期函数。</li>
 <li>证明：(uv)’ = u’v + uv’  【凑】</li>
 </ul>
 ]]></content>
       <categories>
-        <category>高等数学</category>
+        <category>数学</category>
       </categories>
       <tags>
         <tag>数学</tag>

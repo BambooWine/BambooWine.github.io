@@ -14,34 +14,26 @@
     
     
     
-    <title>Typora+PicGo+Gitee实现markdown高效创作 | BambooWine | 好好学习，天天向上</title>
+    <title>讲讲堆内存和栈内存 | BambooWine | 好好学习，天天向上</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="图床">
-    <meta name="description" content="Typora+PicGo+Gitee实现markdown高效创作Why TyporaTypora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。 Why PicGo对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。 PicGo">
+    <meta name="keywords" content="面试,计算机组成原理">
+    <meta name="description" content="讲讲堆内存和栈内存 前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？ 我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。 说完之后，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Typora+PicGo+Gitee实现markdown高效创作">
-<meta property="og:url" content="http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/index.html">
+<meta property="og:title" content="讲讲堆内存和栈内存">
+<meta property="og:url" content="http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/index.html">
 <meta property="og:site_name" content="BambooWine">
-<meta property="og:description" content="Typora+PicGo+Gitee实现markdown高效创作Why TyporaTypora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。 Why PicGo对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。 PicGo">
+<meta property="og:description" content="讲讲堆内存和栈内存 前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？ 我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。 说完之后，">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png">
-<meta property="og:image" content="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png">
-<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png">
-<meta property="article:published_time" content="2020-06-13T09:09:26.000Z">
-<meta property="article:modified_time" content="2020-06-13T09:48:51.083Z">
+<meta property="article:published_time" content="2020-06-14T13:45:39.000Z">
+<meta property="article:modified_time" content="2020-06-16T14:09:00.451Z">
 <meta property="article:author" content="BambooWine">
-<meta property="article:tag" content="图床">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="计算机组成原理">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -148,7 +140,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Typora+PicGo+Gitee实现markdown高效创作</div>
+        <div class="flex-col header-title ellipsis">讲讲堆内存和栈内存</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -170,15 +162,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Typora+PicGo+Gitee实现markdown高效创作</h1>
+        <h1 class="title">讲讲堆内存和栈内存</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-06-13T09:09:26.000Z" itemprop="datePublished" class="page-time">
-  2020-06-13
+                <time datetime="2020-06-14T13:45:39.000Z" itemprop="datePublished" class="page-time">
+  2020-06-14
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/">工具教程</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
 
             
         </h5>
@@ -195,25 +187,25 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Typora-PicGo-Gitee实现markdown高效创作"><span class="post-toc-number">1.</span> <span class="post-toc-text">Typora+PicGo+Gitee实现markdown高效创作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Why-Typora"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Why Typora</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Why-PicGo"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Why PicGo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Why-Gitee"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Why Gitee</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">下载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PicGo安装插件"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">PicGo安装插件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置Gitee"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">配置Gitee</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-新建仓库"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">1. 新建仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-创建私人令牌"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">2. 创建私人令牌</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置PicGO"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">配置PicGO</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关联Typora"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">关联Typora</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#讲讲堆内存和栈内存"><span class="post-toc-number">1.</span> <span class="post-toc-text">讲讲堆内存和栈内存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-从编程语言角度理解不同内存"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.  从编程语言角度理解不同内存</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-从物理层角度理解堆栈内存"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2. 从物理层角度理解堆栈内存</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-Typora-PicGo-Gitee实现markdown高效创作"
+<article id="post-讲讲堆内存和栈内存"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Typora+PicGo+Gitee实现markdown高效创作</h1>
+        <h1 class="post-card-title">讲讲堆内存和栈内存</h1>
         <div class="post-meta">
 
         <!--添加置顶标签-->
         
 
-            <time class="post-time" title="2020-06-13 17:09:26" datetime="2020-06-13T09:09:26.000Z"  itemprop="datePublished">2020-06-13</time>
+            <time class="post-time" title="2020-06-14 21:45:39" datetime="2020-06-14T13:45:39.000Z"  itemprop="datePublished">2020-06-14</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/">工具教程</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
 
 
 
@@ -225,139 +217,45 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="Typora-PicGo-Gitee实现markdown高效创作"><a href="#Typora-PicGo-Gitee实现markdown高效创作" class="headerlink" title="Typora+PicGo+Gitee实现markdown高效创作"></a>Typora+PicGo+Gitee实现markdown高效创作</h1><h2 id="Why-Typora"><a href="#Why-Typora" class="headerlink" title="Why Typora"></a>Why Typora</h2><p>Typora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。</p>
-<h2 id="Why-PicGo"><a href="#Why-PicGo" class="headerlink" title="Why PicGo"></a>Why PicGo</h2><p>对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。</p>
-<p><strong>PicGo</strong>这个工具很好地解决了这个问题，只需拖动图片，就可以完成图床上传，并且把想要的链接格式复制到剪贴板。</p>
-<h2 id="Why-Gitee"><a href="#Why-Gitee" class="headerlink" title="Why Gitee"></a>Why Gitee</h2><p>Gitee可以说是国内的Github，没有Github那么全能，但是比Github快很多。做一个图床，Gitee应该是更好的选择。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><p><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora下载</a></p>
-</li>
-<li><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载</a></p>
-</li>
-</ul>
-<p>选择适应自己的版本，安装过程一路next即可。</p>
-<h2 id="PicGo安装插件"><a href="#PicGo安装插件" class="headerlink" title="PicGo安装插件"></a>PicGo安装插件</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png" alt="插件设置" title="">
-                </div>
-                <div class="image-caption">插件设置</div>
-            </figure>
-
-
-
-<p>搜索“gitee”，写这篇文章的时候有这两个插件，我选了右边的gitee-uploader，应该都是可以的，本文以gitee-uploader为例。点击“安装”。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG" alt="安装插件" title="">
-                </div>
-                <div class="image-caption">安装插件</div>
-            </figure>
-
-
-
-<h2 id="配置Gitee"><a href="#配置Gitee" class="headerlink" title="配置Gitee"></a>配置Gitee</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><ul>
-<li><p>访问 gitee.com，注册或登录。点击右上角的“＋”，点击“新建仓库”。</p>
-</li>
-<li><p>名称、路径自定，介绍随意。</p>
-</li>
-<li><p><strong>一定要选择公开！</strong></p>
-</li>
-<li><p>勾选“用Readme文件初始化这个仓库”，用于创建master分支。</p>
-</li>
-<li><p>点击创建。</p>
-</li>
-</ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG" alt="新建仓库"></p>
-<h3 id="2-创建私人令牌"><a href="#2-创建私人令牌" class="headerlink" title="2. 创建私人令牌"></a>2. 创建私人令牌</h3><ul>
-<li>点击右上角的头像，点击“设置”</li>
-<li>安全设置 -&gt; 私人令牌 -&gt; 生成新令牌</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li>随便填一段描述</li>
-<li><strong>取消全选，只勾选“projects”</strong></li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li><p>点击“提交”</p>
-</li>
-<li><p>然后会让你输入一段密码，之后会生成一段字符串。<strong>一定要点击“复制”，不要丢失了，它只会出现一次</strong></p>
-</li>
-<li><p>至此，gitee的配置完成</p>
-</li>
-</ul>
-<h2 id="配置PicGO"><a href="#配置PicGO" class="headerlink" title="配置PicGO"></a>配置PicGO</h2><ul>
-<li><p>下载插件之后，重启应用。</p>
-</li>
-<li><p>打开“图床设置”的“gitee”（如图）</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png" alt="gitee设置"></p>
-</li>
-<li><p><strong>先把复制的字符串令牌粘贴到“token”一栏</strong></p>
-</li>
-<li><p>repo：填写你的仓库对于gitee.com的相对路径。一般是：YourName/YourRepo</p>
-</li>
-<li><p>branch：master</p>
-</li>
-<li><p>path：img</p>
-</li>
-<li><p>后面两个不必填写</p>
-</li>
-<li><p>点击“确定”并设置为默认图床。</p>
-</li>
-<li><p><strong>至此，PicGo已经配置完成，拖动一张图片到PicGo的上传区后，待上传完成，会将图片链接复制到剪切板，只要Ctrl+V粘贴即可。</strong></p>
-</li>
-</ul>
-<h2 id="关联Typora"><a href="#关联Typora" class="headerlink" title="关联Typora"></a>关联Typora</h2><p>每次这么做还是有些麻烦，我们可以将Typora进行关联，得到复制图片到Typora即可完成上传并得到链接。</p>
-<ul>
-<li>打开typora</li>
-<li>文件→偏好设置→图像→插入图片时</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png" alt="插入图片" title="">
-                </div>
-                <div class="image-caption">插入图片</div>
-            </figure>
-
-<ul>
-<li><p>上传服务就选择PicGo（app）</p>
-</li>
-<li><p>路径填写你的picgo.exe所在的路径</p>
-</li>
-<li><p>通过“验证图片上传选项”按钮，可以检验配置是否成功</p>
-</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png" alt="上传服务" title="">
-                </div>
-                <div class="image-caption">上传服务</div>
-            </figure>
-
-<ul>
-<li>关联Typora至此配置成功</li>
-</ul>
-<blockquote>
-<p>测试之后假如没有问题，那就说明大功告成了。妈妈再也不担心我markdown创作时没有图床了，请开始你的创作之旅吧~</p>
+            <h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
+<p>前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？</p>
+<p>我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。</p>
+<p>说完之后，面试官没有立即反应，我以为他不太满意，又接着说了说堆栈的增长方向和内存大小等等…</p>
+<p>不知道是我回答的不好还是面试官太高冷，没什么说辞…</p>
 </blockquote>
+<p>本文内容有参考百科，知乎，博客等优秀回答。</p>
+<h2 id="1-从编程语言角度理解不同内存"><a href="#1-从编程语言角度理解不同内存" class="headerlink" title="1.  从编程语言角度理解不同内存"></a>1.  从编程语言角度理解不同内存</h2><p><strong>程序的内存分配：</strong></p>
+<p>一个由C/C++编译的程序占用的内存分布：</p>
+<ul>
+<li><p>栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等</p>
+</li>
+<li><p>堆区（heap）：一般由程序员分配释放， 若程序员不释放，程序结束时可能由操作系统回收 </p>
+</li>
+<li><p>全局区（global）/ 静态区（static）：</p>
+<ul>
+<li>data区：已经初始化的全局变量、静态变量和常量</li>
+<li>bss区：用来存放程序中未初始化的全局变量和静态变量；程序执行前BSS段会自动清0。</li>
+<li>常量区：全局区中划分的一个小区域，里面存放的是常量，如const修饰的全局变量、字符串常量</li>
+</ul>
+</li>
+<li><p>代码区（code）：存放函数体的二进制代码</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	@Time     : 2020/6/15 </span></span><br><span class="line"><span class="comment"> 	@Author   : BambooWine</span></span><br><span class="line"><span class="comment"> 	@Mail     : 2278816117@qq.com</span></span><br><span class="line"><span class="comment"> 	@Env	  : win10 + vs2017</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_a = <span class="number">10</span>;		<span class="comment">// 全局变量 data区</span></span><br><span class="line"><span class="keyword">int</span> g_b;	        <span class="comment">// 全局变量 bss区</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> s_a = <span class="number">10</span>;	<span class="comment">// 静态变量 data区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;           <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">"abc"</span>;	 <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span>* p1;            <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> s_b = <span class="number">1</span>;	 <span class="comment">// 静态变量 data区</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="string">"123"</span>;	            <span class="comment">// "123"在常量区，str在栈区</span></span><br><span class="line">    p1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">10</span>);  <span class="comment">// 申请堆内存</span></span><br><span class="line">    <span class="built_in">strcpy</span>(p1, <span class="string">"123"</span>);   <span class="comment">// 123放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方</span></span><br><span class="line">    <span class="built_in">free</span>(p1); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-从物理层角度理解堆栈内存"><a href="#2-从物理层角度理解堆栈内存" class="headerlink" title="2. 从物理层角度理解堆栈内存"></a>2. 从物理层角度理解堆栈内存</h2><blockquote>
+<p>不知道大家有没有这样的想法，堆栈不就是内存的不同区，为什么访问速度会有差矣呢？</p>
+<p>最近想到了这个问题，但奈何才疏学浅，只能在各种论坛搜索资料。</p>
+</blockquote>
+<ul>
+<li>从硬件上来说，堆和栈最终都是内存条上的若干存储单元，理应并没有什么不同</li>
+<li>但是很多CPU对压栈，出栈操作有硬件（指令）上的支持，所以在栈区分配/归还内存速度较快；尤其是函数内部的局部变量，可以轻易与函数调用/返回绑定</li>
+<li>由于栈内存分配/回收的特殊机制，使得同一函数内部的”局部变量”总是分配在一段连续的内存空间上</li>
+</ul>
+<p><a href="https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3" target="_blank" rel="noopener">https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</a></p>
+<p><a href="https://www.cnblogs.com/jiudianren/p/5671992.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiudianren/p/5671992.html</a></p>
 
         </div>
 
@@ -366,7 +264,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-06-13T09:48:51.083Z" itemprop="dateUpdated">2020-06-13 17:48:51</time>
+    Last updated: <time datetime="2020-06-16T14:09:00.451Z" itemprop="dateUpdated">2020-06-16 22:09:00</time>
 </span><br>
 
 
@@ -390,7 +288,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
 
 
             
@@ -400,7 +298,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&title=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -410,22 +308,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&title=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《讲讲堆内存和栈内存》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -448,18 +346,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/06/14/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" id="post-prev" class="post-nav-link">
+      <a href="/2020/06/16/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">概率论和数理统计</h4>
+        <h4 class="title">看懂PID控制器</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/06/13/auto%E5%85%B3%E9%94%AE%E5%AD%97/" id="post-next" class="post-nav-link">
+      <a href="/2020/06/14/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">C++11保证稳定性和兼容性</h4>
+        <h4 class="title">概率论和数理统计</h4>
       </a>
     </div>
   
@@ -681,7 +579,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&title=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -691,22 +589,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&title=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Typora+PicGo+Gitee实现markdown高效创作》 — BambooWine&url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《讲讲堆内存和栈内存》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -717,7 +615,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" alt="微信分享二维码">
 </div>
 
 
