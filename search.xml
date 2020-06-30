@@ -526,15 +526,9 @@
 <li><p><strong>伽马函数</strong></p>
 </li>
 <li><p><strong>常用统计量的数字特征：</strong></p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
 <ul>
-<li><p>$$<br>E(\overline{X}) = E(X)<br>$$</p>
-</li>
-<li><p>$$<br>D(\overline{X}) = D(X)/n<br>$$</p>
-</li>
-<li><p>$$<br>E(S^{2}) = D(X)<br>$$</p>
-</li>
-<li><p>要记住样本方差除以的是 n-1</p>
-</li>
+<li>要记住样本方差除以的是 n-1</li>
 </ul>
 </li>
 <li><p><strong>三大抽样分布：</strong></p>
@@ -549,28 +543,30 @@
 </li>
 <li><p>t分布</p>
 <ul>
-<li>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布<br>$$<br>T = \frac{X}{\sqrt{Y/n}}<br>$$</li>
-</ul>
+<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
 </li>
 </ul>
 </li>
 </ul>
-<pre><code>+ t分布的概率密度函数是一个偶函数，即以y轴对称</code></pre><ul>
+</li>
+<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
+</li>
 <li><p>F分布</p>
 <ul>
 <li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
 </ul>
-<p>$$<br>F =\frac{U/n1}{V/n2}<br>$$</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
 <p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
 <ul>
-<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)</li>
+<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
 <li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
 </li>
-</ul>
-<ul>
 <li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
 </li>
 <li><p><strong>单个正太总体的性质</strong></p>
