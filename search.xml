@@ -1,147 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Typora+PicGo+Gitee实现markdown高效创作</title>
-    <url>/2020/06/13/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="Typora-PicGo-Gitee实现markdown高效创作"><a href="#Typora-PicGo-Gitee实现markdown高效创作" class="headerlink" title="Typora+PicGo+Gitee实现markdown高效创作"></a>Typora+PicGo+Gitee实现markdown高效创作</h1><h2 id="Why-Typora"><a href="#Why-Typora" class="headerlink" title="Why Typora"></a>Why Typora</h2><p>Typora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。</p>
-<h2 id="Why-PicGo"><a href="#Why-PicGo" class="headerlink" title="Why PicGo"></a>Why PicGo</h2><p>对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。</p>
-<p><strong>PicGo</strong>这个工具很好地解决了这个问题，只需拖动图片，就可以完成图床上传，并且把想要的链接格式复制到剪贴板。</p>
-<h2 id="Why-Gitee"><a href="#Why-Gitee" class="headerlink" title="Why Gitee"></a>Why Gitee</h2><p>Gitee可以说是国内的Github，没有Github那么全能，但是比Github快很多。做一个图床，Gitee应该是更好的选择。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><p><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora下载</a></p>
-</li>
-<li><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载</a></p>
-</li>
-</ul>
-<p>选择适应自己的版本，安装过程一路next即可。</p>
-<h2 id="PicGo安装插件"><a href="#PicGo安装插件" class="headerlink" title="PicGo安装插件"></a>PicGo安装插件</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png" alt="插件设置" title="">
-                </div>
-                <div class="image-caption">插件设置</div>
-            </figure>
-
-
-
-<p>搜索“gitee”，写这篇文章的时候有这两个插件，我选了右边的gitee-uploader，应该都是可以的，本文以gitee-uploader为例。点击“安装”。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG" alt="安装插件" title="">
-                </div>
-                <div class="image-caption">安装插件</div>
-            </figure>
-
-
-
-<h2 id="配置Gitee"><a href="#配置Gitee" class="headerlink" title="配置Gitee"></a>配置Gitee</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><ul>
-<li><p>访问 gitee.com，注册或登录。点击右上角的“＋”，点击“新建仓库”。</p>
-</li>
-<li><p>名称、路径自定，介绍随意。</p>
-</li>
-<li><p><strong>一定要选择公开！</strong></p>
-</li>
-<li><p>勾选“用Readme文件初始化这个仓库”，用于创建master分支。</p>
-</li>
-<li><p>点击创建。</p>
-</li>
-</ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG" alt="新建仓库"></p>
-<h3 id="2-创建私人令牌"><a href="#2-创建私人令牌" class="headerlink" title="2. 创建私人令牌"></a>2. 创建私人令牌</h3><ul>
-<li>点击右上角的头像，点击“设置”</li>
-<li>安全设置 -&gt; 私人令牌 -&gt; 生成新令牌</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li>随便填一段描述</li>
-<li><strong>取消全选，只勾选“projects”</strong></li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li><p>点击“提交”</p>
-</li>
-<li><p>然后会让你输入一段密码，之后会生成一段字符串。<strong>一定要点击“复制”，不要丢失了，它只会出现一次</strong></p>
-</li>
-<li><p>至此，gitee的配置完成</p>
-</li>
-</ul>
-<h2 id="配置PicGO"><a href="#配置PicGO" class="headerlink" title="配置PicGO"></a>配置PicGO</h2><ul>
-<li><p>下载插件之后，重启应用。</p>
-</li>
-<li><p>打开“图床设置”的“gitee”（如图）</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png" alt="gitee设置"></p>
-</li>
-<li><p><strong>先把复制的字符串令牌粘贴到“token”一栏</strong></p>
-</li>
-<li><p>repo：填写你的仓库对于gitee.com的相对路径。一般是：YourName/YourRepo</p>
-</li>
-<li><p>branch：master</p>
-</li>
-<li><p>path：img</p>
-</li>
-<li><p>后面两个不必填写</p>
-</li>
-<li><p>点击“确定”并设置为默认图床。</p>
-</li>
-<li><p><strong>至此，PicGo已经配置完成，拖动一张图片到PicGo的上传区后，待上传完成，会将图片链接复制到剪切板，只要Ctrl+V粘贴即可。</strong></p>
-</li>
-</ul>
-<h2 id="关联Typora"><a href="#关联Typora" class="headerlink" title="关联Typora"></a>关联Typora</h2><p>每次这么做还是有些麻烦，我们可以将Typora进行关联，得到复制图片到Typora即可完成上传并得到链接。</p>
-<ul>
-<li>打开typora</li>
-<li>文件→偏好设置→图像→插入图片时</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png" alt="插入图片" title="">
-                </div>
-                <div class="image-caption">插入图片</div>
-            </figure>
-
-<ul>
-<li><p>上传服务就选择PicGo（app）</p>
-</li>
-<li><p>路径填写你的picgo.exe所在的路径</p>
-</li>
-<li><p>通过“验证图片上传选项”按钮，可以检验配置是否成功</p>
-</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png" alt="上传服务" title="">
-                </div>
-                <div class="image-caption">上传服务</div>
-            </figure>
-
-<ul>
-<li>关联Typora至此配置成功</li>
-</ul>
-<blockquote>
-<p>测试之后假如没有问题，那就说明大功告成了。妈妈再也不担心我markdown创作时没有图床了，请开始你的创作之旅吧~</p>
-</blockquote>
-]]></content>
+    <title>C++11保证稳定性和兼容性</title>
+    <url>/2020/06/13/auto%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<h1 id="1-C-11保证稳定性和兼容性"><a href="#1-C-11保证稳定性和兼容性" class="headerlink" title="1. C++11保证稳定性和兼容性"></a>1. C++11保证稳定性和兼容性</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
       <categories>
-        <category>工具教程</category>
+        <category>C++ 11</category>
       </categories>
       <tags>
-        <tag>图床</tag>
+        <tag>C++ 11</tag>
       </tags>
   </entry>
   <entry>
@@ -292,83 +159,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C++11保证稳定性和兼容性</title>
-    <url>/2020/06/13/auto%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<h1 id="1-C-11保证稳定性和兼容性"><a href="#1-C-11保证稳定性和兼容性" class="headerlink" title="1. C++11保证稳定性和兼容性"></a>1. C++11保证稳定性和兼容性</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2>]]></content>
-      <categories>
-        <category>C++ 11</category>
-      </categories>
-      <tags>
-        <tag>C++ 11</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-indigo主题添加置顶功能</title>
-    <url>/2020/06/17/hexo-indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h1 id="hexo-indigo主题添加置顶功能"><a href="#hexo-indigo主题添加置顶功能" class="headerlink" title="hexo-indigo主题添加置顶功能"></a>hexo-indigo主题添加置顶功能</h1><blockquote>
-<p>参考文章：<a href="https://www.jianshu.com/p/42a4efcdf8d7" target="_blank" rel="noopener">解决Hexo博客文章置顶问题</a></p>
-</blockquote>
-<h2 id="1-自定义html排序功能"><a href="#1-自定义html排序功能" class="headerlink" title="1. 自定义html排序功能"></a>1. 自定义html排序功能</h2><p>原理：<strong>在Hexo生成首页HTML时，将top值高的文章排在前面，达到置顶功能</strong>。</p>
-<p>修改Hexo文件夹下的<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
-<p>需添加的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>generator.js完整内容：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">const</span> posts = locals.posts.sort(config.index_generator.order_by);</span><br><span class="line"></span><br><span class="line">	posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        	<span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        	<span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;     <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">const</span> path = config.index_generator.path || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>修改完成后，只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序top值越大越靠前。需要注意的是，这个文件不是主题的一部分，也不是Git管理的，备份的时候比较容易忽略。</p>
-<p><strong>使用实例：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232808783.png" alt="使用实例" title="">
-                </div>
-                <div class="image-caption">使用实例</div>
-            </figure>
-
-
-
-<p><strong>只需要设置top值即可完成排序置顶操作，并且还可以根据不同top值，选择置顶文章的先后次序</strong></p>
-<h2 id="2-添加置顶标签"><a href="#2-添加置顶标签" class="headerlink" title="2. 添加置顶标签"></a>2. 添加置顶标签</h2><p>参考文章的博主使用的是yelee主题，有自己的置顶标签，在indigo主题里，我们可以自己做。</p>
-<ul>
-<li><p>如果要在文章中添加置顶标签，则打开<code>themes\indigo\layout\_partial\post.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果要在博客主页的预览页面添加置顶标签，则打开<code>themes\indigo\layout\_partial\index_item.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果还想在其他页面添加，则打开对应的 ejs文件，添加上述代码即可</p>
-</li>
-</ul>
-<p><strong>预览效果：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232034478.png" alt="预览效果" title="">
-                </div>
-                <div class="image-caption">预览效果</div>
-            </figure>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>indigo主题添加友链页面</title>
-    <url>/2020/06/18/indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/</url>
-    <content><![CDATA[<h1 id="indigo主题添加友链页面"><a href="#indigo主题添加友链页面" class="headerlink" title="indigo主题添加友链页面"></a>indigo主题添加友链页面</h1><h2 id="1-添加友链"><a href="#1-添加友链" class="headerlink" title="1. 添加友链"></a>1. 添加友链</h2><h2 id="2-添加评论页面"><a href="#2-添加评论页面" class="headerlink" title="2. 添加评论页面"></a>2. 添加评论页面</h2>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>作息表</title>
     <url>/2020/06/17/%E4%BD%9C%E6%81%AF%E8%A1%A8/</url>
     <content><![CDATA[<h1 id="作息表"><a href="#作息表" class="headerlink" title="作息表"></a>作息表</h1><table>
@@ -483,121 +273,171 @@
       </tags>
   </entry>
   <entry>
-    <title>概率论和数理统计</title>
-    <url>/2020/06/14/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</url>
-    <content><![CDATA[<h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
-<li>二维正太</li>
-</ul>
-<h2 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h2><ul>
-<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
+    <title>讲讲堆内存和栈内存</title>
+    <url>/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/</url>
+    <content><![CDATA[<h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
+<p>前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？</p>
+<p>我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。</p>
+<p>说完之后，面试官没有立即反应，我以为他不太满意，又接着说了说堆栈的增长方向和内存大小等等…</p>
+<p>不知道是我回答的不好还是面试官太高冷，没什么说辞…</p>
+</blockquote>
+<p>本文内容有参考百科，知乎，博客等优秀回答。</p>
+<h2 id="1-从编程语言角度理解不同内存"><a href="#1-从编程语言角度理解不同内存" class="headerlink" title="1.  从编程语言角度理解不同内存"></a>1.  从编程语言角度理解不同内存</h2><p><strong>程序的内存分配：</strong></p>
+<p>一个由C/C++编译的程序占用的内存分布：</p>
 <ul>
-<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
-<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
-<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
-</ul>
+<li><p>栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等</p>
 </li>
-<li><p>协方差公式：</p>
+<li><p>堆区（heap）：一般由程序员分配释放， 若程序员不释放，程序结束时可能由操作系统回收 </p>
+</li>
+<li><p>全局区（global）/ 静态区（static）：</p>
 <ul>
-<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
-</li>
-<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
-</li>
-<li><p>cov(X, Y) = cov(Y, X)</p>
-</li>
-<li><p>cov(X, X) = D(X)</p>
-</li>
-<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
-</li>
-<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
-</li>
-<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
-</li>
+<li>data区：已经初始化的全局变量、静态变量和常量</li>
+<li>bss区：用来存放程序中未初始化的全局变量和静态变量；程序执行前BSS段会自动清0。</li>
+<li>常量区：全局区中划分的一个小区域，里面存放的是常量，如const修饰的全局变量、字符串常量</li>
 </ul>
 </li>
-<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
+<li><p>代码区（code）：存放函数体的二进制代码</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	@Time     : 2020/6/15 </span></span><br><span class="line"><span class="comment"> 	@Author   : BambooWine</span></span><br><span class="line"><span class="comment"> 	@Mail     : 2278816117@qq.com</span></span><br><span class="line"><span class="comment"> 	@Env	  : win10 + vs2017</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_a = <span class="number">10</span>;		<span class="comment">// 全局变量 data区</span></span><br><span class="line"><span class="keyword">int</span> g_b;	        <span class="comment">// 全局变量 bss区</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> s_a = <span class="number">10</span>;	<span class="comment">// 静态变量 data区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;           <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">"abc"</span>;	 <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span>* p1;            <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> s_b = <span class="number">1</span>;	 <span class="comment">// 静态变量 data区</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="string">"123"</span>;	            <span class="comment">// "123"在常量区，str在栈区</span></span><br><span class="line">    p1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">10</span>);  <span class="comment">// 申请堆内存</span></span><br><span class="line">    <span class="built_in">strcpy</span>(p1, <span class="string">"123"</span>);   <span class="comment">// 123放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方</span></span><br><span class="line">    <span class="built_in">free</span>(p1); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-从物理层角度理解堆栈内存"><a href="#2-从物理层角度理解堆栈内存" class="headerlink" title="2. 从物理层角度理解堆栈内存"></a>2. 从物理层角度理解堆栈内存</h2><blockquote>
+<p>不知道大家有没有这样的想法，堆栈不就是内存的不同区，为什么访问速度会有差矣呢？</p>
+<p>最近想到了这个问题，但奈何才疏学浅，只能在各种论坛搜索资料。</p>
+</blockquote>
 <ul>
-<li>0-1分布：</li>
+<li>从硬件上来说，堆和栈最终都是内存条上的若干存储单元，理应并没有什么不同</li>
+<li>但是很多CPU对压栈，出栈操作有硬件（指令）上的支持，所以在栈区分配/归还内存速度较快；尤其是函数内部的局部变量，可以轻易与函数调用/返回绑定</li>
+<li>由于栈内存分配/回收的特殊机制，使得同一函数内部的”局部变量”总是分配在一段连续的内存空间上</li>
 </ul>
-</li>
-<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
-</li>
-</ul>
-<h2 id="6-数理统计"><a href="#6-数理统计" class="headerlink" title="6.  数理统计"></a>6.  数理统计</h2><ul>
-<li><p><strong>伽马函数</strong></p>
-</li>
-<li><p><strong>常用统计量的数字特征：</strong></p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
-<ul>
-<li>要记住样本方差除以的是 n-1</li>
-</ul>
-</li>
-<li><p><strong>三大抽样分布：</strong></p>
-<ul>
-<li><p>卡方分布</p>
-<ul>
-<li>卡方分布是n个<strong>独立</strong>的标准正方分布随机变量的平方和</li>
-<li>卡方分布的期望等于自由度n，方差等于两倍自由度2n</li>
-<li>卡方分布具有可加性，即X服从自由度为m的卡方分布，Y服从自由度为n的卡方分布，<strong>X和Y独立</strong>，则X+Y服从m+n的卡方分布</li>
-<li><strong>标准正太分布</strong>的平方，服从自由度为1的卡方分布，期望为1，方差为2</li>
-</ul>
-</li>
-<li><p>t分布</p>
-<ul>
-<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
-</li>
-<li><p>F分布</p>
-<ul>
-<li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
-</ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
-<p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
-<ul>
-<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
-<li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
-</li>
-<li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
-</li>
-<li><p><strong>单个正太总体的性质</strong></p>
-<p>设X1、X2…、Xn是来自总体X~N(μ，σ^2)的样本，样本均值 /X，样本方差S^2</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png" alt="image-20200630183340266"></p>
-<ul>
-<li>3和4区别在于：3是不独立的，所以3服从n-1的卡方分布；而4是独立的，服从n的卡方分布</li>
-<li>第5条可以由1，2，3证明</li>
-<li>第6条可以由第3证明，【卡方分布的期望和方差】</li>
-</ul>
-</li>
-<li><p>两个正太总体性质</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png" alt="两个正太总体性质"></p>
-<ul>
-<li>第1条就是用单个正太的样本方差性质 -&gt; 卡方分布</li>
-<li>第2条就是卡方分布的可加性</li>
-<li>第3条就是利用第2条，并将 /X - /Y标准变化；至于分子分母的独立性，运用单个正太的均值和方差独立</li>
-</ul>
-</li>
-</ul>
+<p><a href="https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3" target="_blank" rel="noopener">https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</a></p>
+<p><a href="https://www.cnblogs.com/jiudianren/p/5671992.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiudianren/p/5671992.html</a></p>
 ]]></content>
       <categories>
-        <category>数学</category>
+        <category>计算机组成原理</category>
       </categories>
       <tags>
-        <tag>数学</tag>
+        <tag>面试</tag>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>indigo主题添加友链页面</title>
+    <url>/2020/06/18/hexo/indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<h1 id="indigo主题添加友链页面"><a href="#indigo主题添加友链页面" class="headerlink" title="indigo主题添加友链页面"></a>indigo主题添加友链页面</h1><h2 id="1-添加友链"><a href="#1-添加友链" class="headerlink" title="1. 添加友链"></a>1. 添加友链</h2><h2 id="2-添加评论页面"><a href="#2-添加评论页面" class="headerlink" title="2. 添加评论页面"></a>2. 添加评论页面</h2>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-indigo主题添加置顶功能</title>
+    <url>/2020/06/17/hexo/hexo-indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h1 id="hexo-indigo主题添加置顶功能"><a href="#hexo-indigo主题添加置顶功能" class="headerlink" title="hexo-indigo主题添加置顶功能"></a>hexo-indigo主题添加置顶功能</h1><blockquote>
+<p>参考文章：<a href="https://www.jianshu.com/p/42a4efcdf8d7" target="_blank" rel="noopener">解决Hexo博客文章置顶问题</a></p>
+</blockquote>
+<h2 id="1-自定义html排序功能"><a href="#1-自定义html排序功能" class="headerlink" title="1. 自定义html排序功能"></a>1. 自定义html排序功能</h2><p>原理：<strong>在Hexo生成首页HTML时，将top值高的文章排在前面，达到置顶功能</strong>。</p>
+<p>修改Hexo文件夹下的<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
+<p>需添加的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>generator.js完整内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">const</span> posts = locals.posts.sort(config.index_generator.order_by);</span><br><span class="line"></span><br><span class="line">	posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        	<span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        	<span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;     <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">const</span> path = config.index_generator.path || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改完成后，只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序top值越大越靠前。需要注意的是，这个文件不是主题的一部分，也不是Git管理的，备份的时候比较容易忽略。</p>
+<p><strong>使用实例：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232808783.png" alt="使用实例" title="">
+                </div>
+                <div class="image-caption">使用实例</div>
+            </figure>
+
+
+
+<p><strong>只需要设置top值即可完成排序置顶操作，并且还可以根据不同top值，选择置顶文章的先后次序</strong></p>
+<h2 id="2-添加置顶标签"><a href="#2-添加置顶标签" class="headerlink" title="2. 添加置顶标签"></a>2. 添加置顶标签</h2><p>参考文章的博主使用的是yelee主题，有自己的置顶标签，在indigo主题里，我们可以自己做。</p>
+<ul>
+<li><p>如果要在文章中添加置顶标签，则打开<code>themes\indigo\layout\_partial\post.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果要在博客主页的预览页面添加置顶标签，则打开<code>themes\indigo\layout\_partial\index_item.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果还想在其他页面添加，则打开对应的 ejs文件，添加上述代码即可</p>
+</li>
+</ul>
+<p><strong>预览效果：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232034478.png" alt="预览效果" title="">
+                </div>
+                <div class="image-caption">预览效果</div>
+            </figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>indigo自定义界面</title>
+    <url>/2020/06/16/hexo/indigo%E8%87%AA%E5%AE%9A%E4%B9%89%E7%95%8C%E9%9D%A2/</url>
+    <content><![CDATA[<h1 id="indigo自定义界面"><a href="#indigo自定义界面" class="headerlink" title="indigo自定义界面"></a>indigo自定义界面</h1><p>@card{</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/640.gif" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>}</p>
+<p>@column-2{</p>
+<p>@card{</p>
+<h1 id="左"><a href="#左" class="headerlink" title="左"></a>左</h1><p>}</p>
+<p>@card{</p>
+<h1 id="右"><a href="#右" class="headerlink" title="右"></a>右</h1><p>}</p>
+<p>}</p>
+<p>@column-3{</p>
+<p>@card{</p>
+<p>左</p>
+<p>}</p>
+<p>@card{</p>
+<p>中</p>
+<p>}</p>
+<p>@card{</p>
+<p>右</p>
+<p>}</p>
+<p>}</p>
+<p>@timeline{</p>
+<h5 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h5><p>@item{</p>
+<h6 id="6月25日"><a href="#6月25日" class="headerlink" title="6月25日"></a>6月25日</h6><p>第一行<br>第二行 /* ok */</p>
+<p>}</p>
+<p>@item{</p>
+<h6 id="11月6日"><a href="#11月6日" class="headerlink" title="11月6日"></a>11月6日</h6><p>第一行<br>第二行 /* error */</p>
+<p>}</p>
+<p>}</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
     <title>hexo-theme-indigo搭建Valine评论以及美化</title>
-    <url>/2020/06/12/hexo-theme-indigo%E6%90%AD%E5%BB%BAValine%E8%AF%84%E8%AE%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E5%8C%96/</url>
+    <url>/2020/06/12/hexo/hexo-theme-indigo%E6%90%AD%E5%BB%BAValine%E8%AF%84%E8%AE%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<h1 id="indigo主题搭建Valine评论以及美化"><a href="#indigo主题搭建Valine评论以及美化" class="headerlink" title="indigo主题搭建Valine评论以及美化"></a>indigo主题搭建Valine评论以及美化</h1><h2 id="1-indigo主题搭建Valine后台评论系统"><a href="#1-indigo主题搭建Valine后台评论系统" class="headerlink" title="1. indigo主题搭建Valine后台评论系统"></a>1. indigo主题搭建Valine后台评论系统</h2><p>Valine是基于Leancloud开发完成的，因此我们需要先注册一个Leadcloud的账号。</p>
 <p><a href="https://www.leancloud.cn/" target="_blank" rel="noopener">Leadcloud官网，点我注册</a></p>
 <ul>
@@ -700,87 +540,8 @@
       </tags>
   </entry>
   <entry>
-    <title>讲讲堆内存和栈内存</title>
-    <url>/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/</url>
-    <content><![CDATA[<h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
-<p>前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？</p>
-<p>我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。</p>
-<p>说完之后，面试官没有立即反应，我以为他不太满意，又接着说了说堆栈的增长方向和内存大小等等…</p>
-<p>不知道是我回答的不好还是面试官太高冷，没什么说辞…</p>
-</blockquote>
-<p>本文内容有参考百科，知乎，博客等优秀回答。</p>
-<h2 id="1-从编程语言角度理解不同内存"><a href="#1-从编程语言角度理解不同内存" class="headerlink" title="1.  从编程语言角度理解不同内存"></a>1.  从编程语言角度理解不同内存</h2><p><strong>程序的内存分配：</strong></p>
-<p>一个由C/C++编译的程序占用的内存分布：</p>
-<ul>
-<li><p>栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等</p>
-</li>
-<li><p>堆区（heap）：一般由程序员分配释放， 若程序员不释放，程序结束时可能由操作系统回收 </p>
-</li>
-<li><p>全局区（global）/ 静态区（static）：</p>
-<ul>
-<li>data区：已经初始化的全局变量、静态变量和常量</li>
-<li>bss区：用来存放程序中未初始化的全局变量和静态变量；程序执行前BSS段会自动清0。</li>
-<li>常量区：全局区中划分的一个小区域，里面存放的是常量，如const修饰的全局变量、字符串常量</li>
-</ul>
-</li>
-<li><p>代码区（code）：存放函数体的二进制代码</p>
-</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	@Time     : 2020/6/15 </span></span><br><span class="line"><span class="comment"> 	@Author   : BambooWine</span></span><br><span class="line"><span class="comment"> 	@Mail     : 2278816117@qq.com</span></span><br><span class="line"><span class="comment"> 	@Env	  : win10 + vs2017</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_a = <span class="number">10</span>;		<span class="comment">// 全局变量 data区</span></span><br><span class="line"><span class="keyword">int</span> g_b;	        <span class="comment">// 全局变量 bss区</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> s_a = <span class="number">10</span>;	<span class="comment">// 静态变量 data区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;           <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">"abc"</span>;	 <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span>* p1;            <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> s_b = <span class="number">1</span>;	 <span class="comment">// 静态变量 data区</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="string">"123"</span>;	            <span class="comment">// "123"在常量区，str在栈区</span></span><br><span class="line">    p1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">10</span>);  <span class="comment">// 申请堆内存</span></span><br><span class="line">    <span class="built_in">strcpy</span>(p1, <span class="string">"123"</span>);   <span class="comment">// 123放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方</span></span><br><span class="line">    <span class="built_in">free</span>(p1); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-从物理层角度理解堆栈内存"><a href="#2-从物理层角度理解堆栈内存" class="headerlink" title="2. 从物理层角度理解堆栈内存"></a>2. 从物理层角度理解堆栈内存</h2><blockquote>
-<p>不知道大家有没有这样的想法，堆栈不就是内存的不同区，为什么访问速度会有差矣呢？</p>
-<p>最近想到了这个问题，但奈何才疏学浅，只能在各种论坛搜索资料。</p>
-</blockquote>
-<ul>
-<li>从硬件上来说，堆和栈最终都是内存条上的若干存储单元，理应并没有什么不同</li>
-<li>但是很多CPU对压栈，出栈操作有硬件（指令）上的支持，所以在栈区分配/归还内存速度较快；尤其是函数内部的局部变量，可以轻易与函数调用/返回绑定</li>
-<li>由于栈内存分配/回收的特殊机制，使得同一函数内部的”局部变量”总是分配在一段连续的内存空间上</li>
-</ul>
-<p><a href="https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3" target="_blank" rel="noopener">https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</a></p>
-<p><a href="https://www.cnblogs.com/jiudianren/p/5671992.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiudianren/p/5671992.html</a></p>
-]]></content>
-      <categories>
-        <category>计算机组成原理</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-        <tag>计算机组成原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>高等数学</title>
-    <url>/2020/06/12/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="1-函数极限与连续"><a href="#1-函数极限与连续" class="headerlink" title="1. 函数极限与连续"></a>1. 函数极限与连续</h2><ul>
-<li>遇到三角函数求极限，并且趋于pi/2，pi这种的，大概率会使用<strong>诱导公式</strong>，使其简化：<ul>
-<li>sin(π/2+α) = cosα；  cos(π/2+α) = -sinα；  sin(π/2-α) = cosα；  cos(π/2-α) =sinα；</li>
-<li>sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(π-α) = -cosα；</li>
-<li>tan A= sin A/cos A；</li>
-<li>tan（π/2＋α）＝－cotα；    tan（π/2－α）＝cotα；</li>
-<li>tan（π－α）＝－tanα；       tan（π＋α）＝tanα；</li>
-</ul>
-</li>
-<li>遇到<code>arctant-pi/2</code>在无穷处取极限时，一般多用<strong>洛必达</strong>。</li>
-</ul>
-<h2 id="2-一元函数微分学"><a href="#2-一元函数微分学" class="headerlink" title="2. 一元函数微分学"></a>2. 一元函数微分学</h2><ul>
-<li>导数定义，以及证明：偶函数的导数是奇函数；奇函数的导数是偶函数；周期函数的导函数是周期函数。</li>
-<li><strong>证明</strong>：(uv)’ = u’v + uv’  【凑】</li>
-<li>分步积分法的由来：(uv)’ = u’v + uv’     -&gt;    d(uv) = vdu + udv</li>
-<li><strong>ln|u(x)| = u’(x)/u(x)</strong>，视绝对值而不见</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于hexo搭建博客</title>
-    <url>/2020/06/16/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2020/06/16/hexo/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="基于hexo搭建博客"><a href="#基于hexo搭建博客" class="headerlink" title="基于hexo搭建博客"></a>基于hexo搭建博客</h1><blockquote>
 <p>参考文章:</p>
 <p><a href="https://blog.csdn.net/Bluno_s/article/details/98515460" target="_blank" rel="noopener">我的Hexo博客搭建过程</a></p>
@@ -908,8 +669,395 @@
       </tags>
   </entry>
   <entry>
+    <title>next主题首页只显示摘要</title>
+    <url>/2020/07/02/hexo/next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81/</url>
+    <content><![CDATA[<h1 id="next主题首页只显示摘要"><a href="#next主题首页只显示摘要" class="headerlink" title="next主题首页只显示摘要"></a>next主题首页只显示摘要</h1><blockquote>
+<p>参考文章：</p>
+<p><a href="https://blog.csdn.net/yueyue200830/article/details/104470646" target="_blank" rel="noopener">设置hexo首页只显示部分摘要（不显示全文）</a></p>
+<p>本文针对Next<strong>新版</strong>主题，Next默认是会显示全文的，这样显然很不方便，因此需要一些方法去只显示前面一部分。</p>
+</blockquote>
+<h2 id="1-修改配置"><a href="#1-修改配置" class="headerlink" title="1. 修改配置"></a>1. 修改配置</h2><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Automatically excerpt description <span class="keyword">in</span> homepage as preamble text.</span></span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-方法一"><a href="#2-方法一" class="headerlink" title="2. 方法一"></a>2. 方法一</h2><p>在文章的<code>front-matter</code>中添加<code>description</code>，其中description中的内容就会被显示在首页上，其余一律不显示。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 让首页显示部分内容</span><br><span class="line">date: 2020-02-23 22:55:10</span><br><span class="line">description: 这是显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-方法二"><a href="#3-方法二" class="headerlink" title="3. 方法二"></a>3. 方法二</h2><p>在需要截断的地方加入：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>首页就会显示这条以上的所有内容，隐藏接下来的所有内容。</p>
+<p><strong>两种方式各有利弊，大家可以按需要选择</strong></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typora+PicGo+Gitee实现markdown高效创作</title>
+    <url>/2020/06/13/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="Typora-PicGo-Gitee实现markdown高效创作"><a href="#Typora-PicGo-Gitee实现markdown高效创作" class="headerlink" title="Typora+PicGo+Gitee实现markdown高效创作"></a>Typora+PicGo+Gitee实现markdown高效创作</h1><h2 id="Why-Typora"><a href="#Why-Typora" class="headerlink" title="Why Typora"></a>Why Typora</h2><p>Typora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。</p>
+<h2 id="Why-PicGo"><a href="#Why-PicGo" class="headerlink" title="Why PicGo"></a>Why PicGo</h2><p>对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。</p>
+<p><strong>PicGo</strong>这个工具很好地解决了这个问题，只需拖动图片，就可以完成图床上传，并且把想要的链接格式复制到剪贴板。</p>
+<h2 id="Why-Gitee"><a href="#Why-Gitee" class="headerlink" title="Why Gitee"></a>Why Gitee</h2><p>Gitee可以说是国内的Github，没有Github那么全能，但是比Github快很多。做一个图床，Gitee应该是更好的选择。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><p><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora下载</a></p>
+</li>
+<li><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载</a></p>
+</li>
+</ul>
+<p>选择适应自己的版本，安装过程一路next即可。</p>
+<h2 id="PicGo安装插件"><a href="#PicGo安装插件" class="headerlink" title="PicGo安装插件"></a>PicGo安装插件</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png" alt="插件设置" title="">
+                </div>
+                <div class="image-caption">插件设置</div>
+            </figure>
+
+
+
+<p>搜索“gitee”，写这篇文章的时候有这两个插件，我选了右边的gitee-uploader，应该都是可以的，本文以gitee-uploader为例。点击“安装”。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG" alt="安装插件" title="">
+                </div>
+                <div class="image-caption">安装插件</div>
+            </figure>
+
+
+
+<h2 id="配置Gitee"><a href="#配置Gitee" class="headerlink" title="配置Gitee"></a>配置Gitee</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><ul>
+<li><p>访问 gitee.com，注册或登录。点击右上角的“＋”，点击“新建仓库”。</p>
+</li>
+<li><p>名称、路径自定，介绍随意。</p>
+</li>
+<li><p><strong>一定要选择公开！</strong></p>
+</li>
+<li><p>勾选“用Readme文件初始化这个仓库”，用于创建master分支。</p>
+</li>
+<li><p>点击创建。</p>
+</li>
+</ul>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG" alt="新建仓库"></p>
+<h3 id="2-创建私人令牌"><a href="#2-创建私人令牌" class="headerlink" title="2. 创建私人令牌"></a>2. 创建私人令牌</h3><ul>
+<li>点击右上角的头像，点击“设置”</li>
+<li>安全设置 -&gt; 私人令牌 -&gt; 生成新令牌</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png" alt="生成新令牌" title="">
+                </div>
+                <div class="image-caption">生成新令牌</div>
+            </figure>
+
+<ul>
+<li>随便填一段描述</li>
+<li><strong>取消全选，只勾选“projects”</strong></li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG" alt="生成新令牌" title="">
+                </div>
+                <div class="image-caption">生成新令牌</div>
+            </figure>
+
+<ul>
+<li><p>点击“提交”</p>
+</li>
+<li><p>然后会让你输入一段密码，之后会生成一段字符串。<strong>一定要点击“复制”，不要丢失了，它只会出现一次</strong></p>
+</li>
+<li><p>至此，gitee的配置完成</p>
+</li>
+</ul>
+<h2 id="配置PicGO"><a href="#配置PicGO" class="headerlink" title="配置PicGO"></a>配置PicGO</h2><ul>
+<li><p>下载插件之后，重启应用。</p>
+</li>
+<li><p>打开“图床设置”的“gitee”（如图）</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png" alt="gitee设置"></p>
+</li>
+<li><p><strong>先把复制的字符串令牌粘贴到“token”一栏</strong></p>
+</li>
+<li><p>repo：填写你的仓库对于gitee.com的相对路径。一般是：YourName/YourRepo</p>
+</li>
+<li><p>branch：master</p>
+</li>
+<li><p>path：img</p>
+</li>
+<li><p>后面两个不必填写</p>
+</li>
+<li><p>点击“确定”并设置为默认图床。</p>
+</li>
+<li><p><strong>至此，PicGo已经配置完成，拖动一张图片到PicGo的上传区后，待上传完成，会将图片链接复制到剪切板，只要Ctrl+V粘贴即可。</strong></p>
+</li>
+</ul>
+<h2 id="关联Typora"><a href="#关联Typora" class="headerlink" title="关联Typora"></a>关联Typora</h2><p>每次这么做还是有些麻烦，我们可以将Typora进行关联，得到复制图片到Typora即可完成上传并得到链接。</p>
+<ul>
+<li>打开typora</li>
+<li>文件→偏好设置→图像→插入图片时</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png" alt="插入图片" title="">
+                </div>
+                <div class="image-caption">插入图片</div>
+            </figure>
+
+<ul>
+<li><p>上传服务就选择PicGo（app）</p>
+</li>
+<li><p>路径填写你的picgo.exe所在的路径</p>
+</li>
+<li><p>通过“验证图片上传选项”按钮，可以检验配置是否成功</p>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png" alt="上传服务" title="">
+                </div>
+                <div class="image-caption">上传服务</div>
+            </figure>
+
+<ul>
+<li>关联Typora至此配置成功</li>
+</ul>
+<blockquote>
+<p>测试之后假如没有问题，那就说明大功告成了。妈妈再也不担心我markdown创作时没有图床了，请开始你的创作之旅吧~</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>工具教程</category>
+      </categories>
+      <tags>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等数学</title>
+    <url>/2020/06/12/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="1-函数极限与连续"><a href="#1-函数极限与连续" class="headerlink" title="1. 函数极限与连续"></a>1. 函数极限与连续</h2><ul>
+<li>遇到三角函数求极限，并且趋于pi/2，pi这种的，大概率会使用<strong>诱导公式</strong>，使其简化：<ul>
+<li>sin(π/2+α) = cosα；  cos(π/2+α) = -sinα；  sin(π/2-α) = cosα；  cos(π/2-α) =sinα；</li>
+<li>sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(π-α) = -cosα；</li>
+<li>tan A= sin A/cos A；</li>
+<li>tan（π/2＋α）＝－cotα；    tan（π/2－α）＝cotα；</li>
+<li>tan（π－α）＝－tanα；       tan（π＋α）＝tanα；</li>
+</ul>
+</li>
+<li>遇到<code>arctant-pi/2</code>在无穷处取极限时，一般多用<strong>洛必达</strong>。</li>
+</ul>
+<h2 id="2-一元函数微分学"><a href="#2-一元函数微分学" class="headerlink" title="2. 一元函数微分学"></a>2. 一元函数微分学</h2><ul>
+<li><p>导数定义，以及证明：偶函数的导数是奇函数；奇函数的导数是偶函数；周期函数的导函数是周期函数。</p>
+</li>
+<li><p><strong>证明</strong>：(uv)’ = u’v + uv’  【凑】</p>
+</li>
+<li><p>分步积分法的由来：(uv)’ = u’v + uv’     -&gt;    d(uv) = vdu + udv</p>
+</li>
+<li><p><strong>ln|u(x)| = u’(x)/u(x)</strong>，视绝对值而不见</p>
+</li>
+<li><p>一阶微分形式不变，<strong>df(u) = f’(u)du</strong></p>
+</li>
+<li><p>单调必有反函数，反函数不一定单调</p>
+</li>
+<li><p>反函数求导：</p>
+<ul>
+<li><strong>一阶导数：</strong></li>
+<li><strong>二阶导数：</strong></li>
+</ul>
+</li>
+<li><p>常用函数的麦克劳林展开式：</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200704104842957.png" alt="麦克劳林展开"></p>
+</li>
+</ul>
+<ul>
+<li>常用的n阶导数公式：<ul>
+<li>待完成</li>
+<li></li>
+</ul>
+</li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论和数理统计</title>
+    <url>/2020/06/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
+<li>二维正太</li>
+</ul>
+<h2 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h2><ul>
+<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
+<ul>
+<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
+<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
+<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
+</ul>
+</li>
+<li><p>协方差公式：</p>
+<ul>
+<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
+</li>
+<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
+</li>
+<li><p>cov(X, Y) = cov(Y, X)</p>
+</li>
+<li><p>cov(X, X) = D(X)</p>
+</li>
+<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
+</li>
+<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
+</li>
+<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
+</li>
+</ul>
+</li>
+<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
+<ul>
+<li>0-1分布：</li>
+</ul>
+</li>
+<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
+</li>
+</ul>
+<h2 id="6-数理统计"><a href="#6-数理统计" class="headerlink" title="6.  数理统计"></a>6.  数理统计</h2><ul>
+<li><p><strong>伽马函数</strong></p>
+</li>
+<li><p>统计量是<strong>样本的函数，且函数不含未知参数</strong></p>
+</li>
+<li><p><strong>常用统计量的数字特征：</strong></p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
+<ul>
+<li>要记住样本方差除以的是 n-1</li>
+</ul>
+</li>
+<li><p><strong>三大抽样分布：</strong></p>
+<ul>
+<li><p>卡方分布</p>
+<ul>
+<li>卡方分布是n个<strong>独立</strong>的标准正方分布随机变量的平方和</li>
+<li>卡方分布的期望等于自由度n，方差等于两倍自由度2n</li>
+<li>卡方分布具有可加性，即X服从自由度为m的卡方分布，Y服从自由度为n的卡方分布，<strong>X和Y独立</strong>，则X+Y服从m+n的卡方分布</li>
+<li><strong>标准正太分布</strong>的平方，服从自由度为1的卡方分布，期望为1，方差为2</li>
+</ul>
+</li>
+<li><p>t分布</p>
+<ul>
+<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
+</li>
+<li><p>F分布</p>
+<ul>
+<li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
+</ul>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
+<p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
+<ul>
+<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
+<li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
+</li>
+<li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
+</li>
+<li><p><strong>单个正太总体的性质</strong></p>
+<p>设X1、X2…、Xn是来自总体X~N(μ，σ^2)的样本，样本均值 /X，样本方差S^2</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png" alt="image-20200630183340266"></p>
+<ul>
+<li>3和4区别在于：3是不独立的，所以3服从n-1的卡方分布；而4是独立的，服从n的卡方分布</li>
+<li>第5条可以由1，2，3证明</li>
+<li>第6条可以由第3证明，【卡方分布的期望和方差】</li>
+</ul>
+</li>
+<li><p>两个正太总体性质</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png" alt="两个正太总体性质"></p>
+<ul>
+<li>第1条就是用单个正太的样本方差性质 -&gt; 卡方分布</li>
+<li>第2条就是卡方分布的可加性</li>
+<li>第3条就是利用第2条，并将 /X - /Y标准变化；至于分子分母的独立性，运用单个正太的均值和方差独立</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-参数估计"><a href="#7-参数估计" class="headerlink" title="7. 参数估计"></a>7. 参数估计</h2><ul>
+<li><p>点估计</p>
+<ul>
+<li><p>矩估计（很简单的，主要就是求<strong>期望</strong>）</p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  求期望EX</li>
+<li>2  令样本均值/X等于期望</li>
+<li>3  求出θ，估计量</li>
+<li>4  带入/X，得到估计值</li>
+</ul>
+</li>
+<li><p>最大似然估计法</p>
+<p>离散型的似然函数为<strong>样本值概率</strong>的乘积；连续性的<strong>似然函数为概率密度函数的乘积</strong>，<strong>而x换成xi</strong></p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  写出似然函数，关于似然函数，分为离散型和连续性，见上。</li>
+<li>2  对似然函数取对数</li>
+<li>3  对θ求导</li>
+<li>4  令导数为0，求出θ；若无解，则说明似然函数单调，根据定义，要求似然函数最大，即在边界取值</li>
+</ul>
+</li>
+<li><p>估计量和估计值的区别：</p>
+<ul>
+<li>估计量一般用样本表示；估计值用样本值（观察值）表示</li>
+<li>一定要注意最后求得是估计量还是估计值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>估计量的评选标准</p>
+<ul>
+<li><p>无偏性</p>
+<p>估计量/θ的期望 = θ，例如样本均值/X是μ的无偏估计量</p>
+</li>
+<li><p>有效性</p>
+<p>两个无偏估计量，方差较小的有效</p>
+</li>
+<li><p>相合（一致）性</p>
+<p>估计量/θ依概率收敛到θ，一般需要使用<strong>大数定律和切比雪夫不等式</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h2>]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>看懂PID控制器</title>
-    <url>/2020/06/16/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <url>/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
     <content><![CDATA[<p>[toc]</p>
 <h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
 <p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
