@@ -384,8 +384,9 @@ cov(X, Y)...
     
         高等数学1. 函数极限与连续
 遇到三角函数求极限，并且趋于pi/2，pi这种的，大概率会使用诱导公式，使其简化：
+
 sin(π/2+α) = cosα；  cos(π/2+α) = -sinα；  sin(π/2-α) = cosα；  cos(π/2-α) =sinα；
-sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(π...
+sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(...
     
 
         <a href="/2020/06/12/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" class="post-more waves-effect waves-button">
@@ -620,7 +621,16 @@ sin(π+α) = -sinα；  cos(π+α) = -cosα；  sin(π-α) = sinα；  cos(π...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        indigo主题添加友链页面1. 添加友链2. 添加评论页面
+        indigo主题添加友链页面1. 添加友链界面
+git bash here弹出命令行窗口
+
+输入以下命令新建 “友链“ 文件夹
+hexo new page links
+
+执行完之后，会在source文件夹下创建links文件夹，其中会有一个index.md文件，打开后，对其添加：
+1layout: links
+
+这一步主要是为了，确定友链界面的布局，使用的是links的布局文件，在下面进行添...
     
 
         <a href="/2020/06/18/hexo/indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/" class="post-more waves-effect waves-button">
