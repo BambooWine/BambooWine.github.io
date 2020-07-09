@@ -14,26 +14,31 @@
     
     
     
-    <title>讲讲堆内存和栈内存 | BambooWine | 好好学习，天天向上</title>
+    <title>概率论和数理统计 | BambooWine | 好好学习，天天向上</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="面试,计算机组成原理">
-    <meta name="description" content="讲讲堆内存和栈内存 前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？ 我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。 说完之后，">
+    <meta name="keywords" content="数学">
+    <meta name="description" content="概率论和数理统计3. 多维随机变量及分布 二维正太  4. 随机变量的数字特征 二维正太分布的不相关和独立对等  (X, Y)二维正太分布，则X，Y均正太；反过来不一定 (X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布 (X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太   协方差公式：  cov(X, Y) &#x3D;E">
 <meta property="og:type" content="article">
-<meta property="og:title" content="讲讲堆内存和栈内存">
-<meta property="og:url" content="http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/index.html">
+<meta property="og:title" content="概率论和数理统计">
+<meta property="og:url" content="http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/index.html">
 <meta property="og:site_name" content="BambooWine">
-<meta property="og:description" content="讲讲堆内存和栈内存 前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？ 我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。 说完之后，">
+<meta property="og:description" content="概率论和数理统计3. 多维随机变量及分布 二维正太  4. 随机变量的数字特征 二维正太分布的不相关和独立对等  (X, Y)二维正太分布，则X，Y均正太；反过来不一定 (X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布 (X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太   协方差公式：  cov(X, Y) &#x3D;E">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-14T13:45:39.000Z">
-<meta property="article:modified_time" content="2020-06-16T14:09:00.451Z">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png">
+<meta property="og:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png">
+<meta property="article:published_time" content="2020-06-14T01:57:21.000Z">
+<meta property="article:modified_time" content="2020-07-09T10:34:06.527Z">
 <meta property="article:author" content="BambooWine">
-<meta property="article:tag" content="面试">
-<meta property="article:tag" content="计算机组成原理">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -147,7 +152,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">讲讲堆内存和栈内存</div>
+        <div class="flex-col header-title ellipsis">概率论和数理统计</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -169,15 +174,15 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">讲讲堆内存和栈内存</h1>
+        <h1 class="title">概率论和数理统计</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-06-14T13:45:39.000Z" itemprop="datePublished" class="page-time">
+                <time datetime="2020-06-14T01:57:21.000Z" itemprop="datePublished" class="page-time">
   2020-06-14
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%80%83%E7%A0%94/">考研</a></li></ul>
 
             
         </h5>
@@ -194,25 +199,29 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#讲讲堆内存和栈内存"><span class="post-toc-number">1.</span> <span class="post-toc-text">讲讲堆内存和栈内存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-从编程语言角度理解不同内存"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.  从编程语言角度理解不同内存</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-从物理层角度理解堆栈内存"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2. 从物理层角度理解堆栈内存</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概率论和数理统计"><span class="post-toc-number">1.</span> <span class="post-toc-text">概率论和数理统计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-多维随机变量及分布"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">3. 多维随机变量及分布</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-随机变量的数字特征"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">4. 随机变量的数字特征</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-大数定律和中心极限定理"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">5. 大数定律和中心极限定理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-数理统计"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">6.  数理统计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-参数估计"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">7. 参数估计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-假设检验"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">8. 假设检验</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-讲讲堆内存和栈内存"
+<article id="post-考研科目/概率论和数理统计"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">讲讲堆内存和栈内存</h1>
+        <h1 class="post-card-title">概率论和数理统计</h1>
         <div class="post-meta">
 
         <!--添加置顶标签-->
         
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+        
 
-            <time class="post-time" title="2020-06-14 21:45:39" datetime="2020-06-14T13:45:39.000Z"  itemprop="datePublished">2020-06-14</time>
+            <time class="post-time" title="2020-06-14 09:57:21" datetime="2020-06-14T01:57:21.000Z"  itemprop="datePublished">2020-06-14</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E8%80%83%E7%A0%94/">考研</a></li></ul>
 
 
 
@@ -224,45 +233,184 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
-<p>前段时间面试腾讯时候，面试官问了一个很基础的问题：请你说说堆内存和栈内存的区别？</p>
-<p>我：基本就是那套模板，例如栈内存是由编译器自动分配和释放，其内存地址在编译期已确定的；主要用来存储局部变量，函数参数以及函数调用的地址等等；对于堆内存来说，其生命周期是由程序员决定的，即程序员手动申请释放，如果没有及时释放，就会造成内存泄漏，当程序结束时，会有操作系统回收未释放的内存。</p>
-<p>说完之后，面试官没有立即反应，我以为他不太满意，又接着说了说堆栈的增长方向和内存大小等等…</p>
-<p>不知道是我回答的不好还是面试官太高冷，没什么说辞…</p>
-</blockquote>
-<p>本文内容有参考百科，知乎，博客等优秀回答。</p>
-<h2 id="1-从编程语言角度理解不同内存"><a href="#1-从编程语言角度理解不同内存" class="headerlink" title="1.  从编程语言角度理解不同内存"></a>1.  从编程语言角度理解不同内存</h2><p><strong>程序的内存分配：</strong></p>
-<p>一个由C/C++编译的程序占用的内存分布：</p>
+            <h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
+<li>二维正太</li>
+</ul>
+<h2 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h2><ul>
+<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
 <ul>
-<li><p>栈区（stack）：由编译器自动分配释放 ，存放函数的参数值，局部变量的值等</p>
-</li>
-<li><p>堆区（heap）：一般由程序员分配释放， 若程序员不释放，程序结束时可能由操作系统回收 </p>
-</li>
-<li><p>全局区（global）/ 静态区（static）：</p>
-<ul>
-<li>data区：已经初始化的全局变量、静态变量和常量</li>
-<li>bss区：用来存放程序中未初始化的全局变量和静态变量；程序执行前BSS段会自动清0。</li>
-<li>常量区：全局区中划分的一个小区域，里面存放的是常量，如const修饰的全局变量、字符串常量</li>
+<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
+<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
+<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
 </ul>
 </li>
-<li><p>代码区（code）：存放函数体的二进制代码</p>
+<li><p>协方差公式：</p>
+<ul>
+<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
+</li>
+<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
+</li>
+<li><p>cov(X, Y) = cov(Y, X)</p>
+</li>
+<li><p>cov(X, X) = D(X)</p>
+</li>
+<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
+</li>
+<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
+</li>
+<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
 </li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	@Time     : 2020/6/15 </span></span><br><span class="line"><span class="comment"> 	@Author   : BambooWine</span></span><br><span class="line"><span class="comment"> 	@Mail     : 2278816117@qq.com</span></span><br><span class="line"><span class="comment"> 	@Env	  : win10 + vs2017</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_a = <span class="number">10</span>;		<span class="comment">// 全局变量 data区</span></span><br><span class="line"><span class="keyword">int</span> g_b;	        <span class="comment">// 全局变量 bss区</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> s_a = <span class="number">10</span>;	<span class="comment">// 静态变量 data区</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0</span>;           <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span> s[] = <span class="string">"abc"</span>;	 <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">char</span>* p1;            <span class="comment">// 栈</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> s_b = <span class="number">1</span>;	 <span class="comment">// 静态变量 data区</span></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="string">"123"</span>;	            <span class="comment">// "123"在常量区，str在栈区</span></span><br><span class="line">    p1 = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">10</span>);  <span class="comment">// 申请堆内存</span></span><br><span class="line">    <span class="built_in">strcpy</span>(p1, <span class="string">"123"</span>);   <span class="comment">// 123放在常量区，编译器可能会将它与p3所指向的"123456"优化成一个地方</span></span><br><span class="line">    <span class="built_in">free</span>(p1); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-从物理层角度理解堆栈内存"><a href="#2-从物理层角度理解堆栈内存" class="headerlink" title="2. 从物理层角度理解堆栈内存"></a>2. 从物理层角度理解堆栈内存</h2><blockquote>
-<p>不知道大家有没有这样的想法，堆栈不就是内存的不同区，为什么访问速度会有差矣呢？</p>
-<p>最近想到了这个问题，但奈何才疏学浅，只能在各种论坛搜索资料。</p>
-</blockquote>
+</li>
+<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
 <ul>
-<li>从硬件上来说，堆和栈最终都是内存条上的若干存储单元，理应并没有什么不同</li>
-<li>但是很多CPU对压栈，出栈操作有硬件（指令）上的支持，所以在栈区分配/归还内存速度较快；尤其是函数内部的局部变量，可以轻易与函数调用/返回绑定</li>
-<li>由于栈内存分配/回收的特殊机制，使得同一函数内部的”局部变量”总是分配在一段连续的内存空间上</li>
+<li>0-1分布：</li>
 </ul>
-<p><a href="https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3" target="_blank" rel="noopener">https://blog.csdn.net/yxwb1253587469/article/details/50759604?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-3</a></p>
-<p><a href="https://www.cnblogs.com/jiudianren/p/5671992.html" target="_blank" rel="noopener">https://www.cnblogs.com/jiudianren/p/5671992.html</a></p>
+</li>
+<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
+</li>
+</ul>
+<h2 id="5-大数定律和中心极限定理"><a href="#5-大数定律和中心极限定理" class="headerlink" title="5. 大数定律和中心极限定理"></a>5. 大数定律和中心极限定理</h2><ul>
+<li>切比雪夫不等式</li>
+<li>大数定律：<ul>
+<li>切比雪夫大数定律：根据切比雪夫不等式证明切比雪夫大数定律</li>
+<li>伯努利大数定律</li>
+<li>辛钦大数定律</li>
+</ul>
+</li>
+<li>中心极限定理：<ul>
+<li>棣莫弗—拉普拉斯中心极限定理</li>
+<li>列维—林德伯格中心极限定理</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-数理统计"><a href="#6-数理统计" class="headerlink" title="6.  数理统计"></a>6.  数理统计</h2><ul>
+<li><p><strong>伽马函数</strong></p>
+</li>
+<li><p>统计量是<strong>样本的函数，且函数不含未知参数</strong></p>
+</li>
+<li><p><strong>常用统计量的数字特征：</strong></p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
+<ul>
+<li>要记住样本方差除以的是 n-1</li>
+</ul>
+</li>
+<li><p><strong>三大抽样分布：</strong></p>
+<ul>
+<li><p>卡方分布</p>
+<ul>
+<li>卡方分布是n个<strong>独立</strong>的标准正方分布随机变量的平方和</li>
+<li>卡方分布的期望等于自由度n，方差等于两倍自由度2n</li>
+<li>卡方分布具有可加性，即X服从自由度为m的卡方分布，Y服从自由度为n的卡方分布，<strong>X和Y独立</strong>，则X+Y服从m+n的卡方分布</li>
+<li><strong>标准正太分布</strong>的平方，服从自由度为1的卡方分布，期望为1，方差为2</li>
+</ul>
+</li>
+<li><p>t分布</p>
+<ul>
+<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
+</li>
+<li><p>F分布</p>
+<ul>
+<li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
+</ul>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
+<p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
+<ul>
+<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
+<li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
+</li>
+<li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
+</li>
+<li><p><strong>单个正太总体的性质</strong></p>
+<p>设X1、X2…、Xn是来自总体X~N(μ，σ^2)的样本，样本均值 /X，样本方差S^2（<strong>手写</strong>）</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png" alt="image-20200630183340266"></p>
+<ul>
+<li>3和4区别在于：3是不独立的，所以3服从n-1的卡方分布；而4是独立的，服从n的卡方分布</li>
+<li>第5条可以由1，2，3证明</li>
+<li>第6条可以由第3证明，【卡方分布的期望和方差】</li>
+</ul>
+</li>
+<li><p>两个正太总体性质</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png" alt="两个正太总体性质"></p>
+<ul>
+<li>第1条就是用单个正太的样本方差性质 -&gt; 卡方分布</li>
+<li>第2条就是卡方分布的可加性</li>
+<li>第3条就是利用第2条，并将 /X - /Y标准变化；至于分子分母的独立性，运用单个正太的均值和方差独立</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-参数估计"><a href="#7-参数估计" class="headerlink" title="7. 参数估计"></a>7. 参数估计</h2><ul>
+<li><p>点估计</p>
+<ul>
+<li><p>矩估计（很简单的，主要就是求<strong>期望</strong>）</p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  求期望EX</li>
+<li>2  令样本均值/X等于期望</li>
+<li>3  求出θ，估计量</li>
+<li>4  带入/X，得到估计值</li>
+</ul>
+</li>
+<li><p>最大似然估计法</p>
+<p>离散型的似然函数为<strong>样本值概率</strong>的乘积；连续性的<strong>似然函数为概率密度函数的乘积</strong>，<strong>而x换成xi</strong></p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  写出似然函数，关于似然函数，分为离散型和连续性，见上。</li>
+<li>2  对似然函数取对数</li>
+<li>3  对θ求导</li>
+<li>4  令导数为0，求出θ；若无解，则说明似然函数单调，根据定义，要求似然函数最大，即在边界取值</li>
+</ul>
+</li>
+<li><p>估计量和估计值的区别：</p>
+<ul>
+<li>估计量一般用样本表示；估计值用样本值（观察值）表示</li>
+<li>一定要注意最后求得是估计量还是估计值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>估计量的评选标准</p>
+<ul>
+<li><p>无偏性</p>
+<p>估计量/θ的期望 = θ，例如样本均值/X是μ的无偏估计量</p>
+</li>
+<li><p>有效性</p>
+<p>两个无偏估计量，方差较小的有效</p>
+</li>
+<li><p>相合（一致）性</p>
+<p>估计量/θ依概率收敛到θ，一般需要使用<strong>大数定律和切比雪夫不等式</strong></p>
+</li>
+</ul>
+</li>
+<li><p><strong>区间估计</strong></p>
+<p>大概率只考单个正太总体的均值和方差</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-假设检验"><a href="#8-假设检验" class="headerlink" title="8. 假设检验"></a>8. 假设检验</h2><ul>
+<li>显著性检验的一般步骤：<ul>
+<li>根据实际问题提出原假设H0和备择假设H1</li>
+<li>给出显著检验水平α和样本容量n</li>
+<li>确定检验统计量K以及拒绝域形式</li>
+<li>按犯第一类错误的概率等于α求出拒绝域W</li>
+<li>根据样本值计算K的观察值k，当k∈W时，拒绝原假设H0；否则接受原假设H0</li>
+</ul>
+</li>
+</ul>
 
         </div>
 
@@ -271,7 +419,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2020-06-16T14:09:00.451Z" itemprop="dateUpdated">2020-06-16 22:09:00</time>
+    Last updated: <time datetime="2020-07-09T10:34:06.527Z" itemprop="dateUpdated">2020-07-09 18:34:06</time>
 </span><br>
 
 
@@ -295,7 +443,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag">面试</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li></ul>
 
 
             
@@ -305,7 +453,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&title=《概率论和数理统计》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -315,22 +463,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&title=《概率论和数理统计》 — BambooWine&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《讲讲堆内存和栈内存》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《概率论和数理统计》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -353,18 +501,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/" id="post-prev" class="post-nav-link">
+      <a href="/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">看懂PID控制器</h4>
+        <h4 class="title">讲讲堆内存和栈内存</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" id="post-next" class="post-nav-link">
+      <a href="/2020/06/13/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">概率论和数理统计</h4>
+        <h4 class="title">Typora+PicGo+Gitee实现markdown高效创作</h4>
       </a>
     </div>
   
@@ -586,7 +734,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&title=《概率论和数理统计》 — BambooWine&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -596,22 +744,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&title=《讲讲堆内存和栈内存》 — BambooWine&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&title=《概率论和数理统计》 — BambooWine&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《讲讲堆内存和栈内存》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《概率论和数理统计》 — BambooWine&url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -622,7 +770,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" alt="微信分享二维码">
 </div>
 
 

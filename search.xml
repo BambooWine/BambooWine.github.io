@@ -1444,185 +1444,6 @@
       </tags>
   </entry>
   <entry>
-    <title>概率论和数理统计</title>
-    <url>/2020/06/14/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</url>
-    <content><![CDATA[<h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
-<li>二维正太</li>
-</ul>
-<h2 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h2><ul>
-<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
-<ul>
-<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
-<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
-<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
-</ul>
-</li>
-<li><p>协方差公式：</p>
-<ul>
-<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
-</li>
-<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
-</li>
-<li><p>cov(X, Y) = cov(Y, X)</p>
-</li>
-<li><p>cov(X, X) = D(X)</p>
-</li>
-<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
-</li>
-<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
-</li>
-<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
-</li>
-</ul>
-</li>
-<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
-<ul>
-<li>0-1分布：</li>
-</ul>
-</li>
-<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
-</li>
-</ul>
-<h2 id="5-大数定律和中心极限定理"><a href="#5-大数定律和中心极限定理" class="headerlink" title="5. 大数定律和中心极限定理"></a>5. 大数定律和中心极限定理</h2><ul>
-<li>切比雪夫不等式</li>
-<li>大数定律：<ul>
-<li>切比雪夫大数定律：根据切比雪夫不等式证明切比雪夫大数定律</li>
-<li>伯努利大数定律</li>
-<li>辛钦大数定律</li>
-</ul>
-</li>
-<li>中心极限定理：<ul>
-<li>棣莫弗—拉普拉斯中心极限定理</li>
-<li>列维—林德伯格中心极限定理</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-数理统计"><a href="#6-数理统计" class="headerlink" title="6.  数理统计"></a>6.  数理统计</h2><ul>
-<li><p><strong>伽马函数</strong></p>
-</li>
-<li><p>统计量是<strong>样本的函数，且函数不含未知参数</strong></p>
-</li>
-<li><p><strong>常用统计量的数字特征：</strong></p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
-<ul>
-<li>要记住样本方差除以的是 n-1</li>
-</ul>
-</li>
-<li><p><strong>三大抽样分布：</strong></p>
-<ul>
-<li><p>卡方分布</p>
-<ul>
-<li>卡方分布是n个<strong>独立</strong>的标准正方分布随机变量的平方和</li>
-<li>卡方分布的期望等于自由度n，方差等于两倍自由度2n</li>
-<li>卡方分布具有可加性，即X服从自由度为m的卡方分布，Y服从自由度为n的卡方分布，<strong>X和Y独立</strong>，则X+Y服从m+n的卡方分布</li>
-<li><strong>标准正太分布</strong>的平方，服从自由度为1的卡方分布，期望为1，方差为2</li>
-</ul>
-</li>
-<li><p>t分布</p>
-<ul>
-<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
-</li>
-<li><p>F分布</p>
-<ul>
-<li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
-</ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
-<p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
-<ul>
-<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
-<li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
-</li>
-<li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
-</li>
-<li><p><strong>单个正太总体的性质</strong></p>
-<p>设X1、X2…、Xn是来自总体X~N(μ，σ^2)的样本，样本均值 /X，样本方差S^2（<strong>手写</strong>）</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png" alt="image-20200630183340266"></p>
-<ul>
-<li>3和4区别在于：3是不独立的，所以3服从n-1的卡方分布；而4是独立的，服从n的卡方分布</li>
-<li>第5条可以由1，2，3证明</li>
-<li>第6条可以由第3证明，【卡方分布的期望和方差】</li>
-</ul>
-</li>
-<li><p>两个正太总体性质</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png" alt="两个正太总体性质"></p>
-<ul>
-<li>第1条就是用单个正太的样本方差性质 -&gt; 卡方分布</li>
-<li>第2条就是卡方分布的可加性</li>
-<li>第3条就是利用第2条，并将 /X - /Y标准变化；至于分子分母的独立性，运用单个正太的均值和方差独立</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-参数估计"><a href="#7-参数估计" class="headerlink" title="7. 参数估计"></a>7. 参数估计</h2><ul>
-<li><p>点估计</p>
-<ul>
-<li><p>矩估计（很简单的，主要就是求<strong>期望</strong>）</p>
-<p><strong>步骤：</strong></p>
-<ul>
-<li>1  求期望EX</li>
-<li>2  令样本均值/X等于期望</li>
-<li>3  求出θ，估计量</li>
-<li>4  带入/X，得到估计值</li>
-</ul>
-</li>
-<li><p>最大似然估计法</p>
-<p>离散型的似然函数为<strong>样本值概率</strong>的乘积；连续性的<strong>似然函数为概率密度函数的乘积</strong>，<strong>而x换成xi</strong></p>
-<p><strong>步骤：</strong></p>
-<ul>
-<li>1  写出似然函数，关于似然函数，分为离散型和连续性，见上。</li>
-<li>2  对似然函数取对数</li>
-<li>3  对θ求导</li>
-<li>4  令导数为0，求出θ；若无解，则说明似然函数单调，根据定义，要求似然函数最大，即在边界取值</li>
-</ul>
-</li>
-<li><p>估计量和估计值的区别：</p>
-<ul>
-<li>估计量一般用样本表示；估计值用样本值（观察值）表示</li>
-<li>一定要注意最后求得是估计量还是估计值</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>估计量的评选标准</p>
-<ul>
-<li><p>无偏性</p>
-<p>估计量/θ的期望 = θ，例如样本均值/X是μ的无偏估计量</p>
-</li>
-<li><p>有效性</p>
-<p>两个无偏估计量，方差较小的有效</p>
-</li>
-<li><p>相合（一致）性</p>
-<p>估计量/θ依概率收敛到θ，一般需要使用<strong>大数定律和切比雪夫不等式</strong></p>
-</li>
-</ul>
-</li>
-<li><p><strong>区间估计</strong></p>
-<p>大概率只考单个正太总体的均值和方差</p>
-<ul>
-<li></li>
-</ul>
-</li>
-</ul>
-<h2 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h2>]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>第三章——进程管理</title>
     <url>/2020/07/06/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%89%E7%AB%A0%E2%80%94%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/</url>
     <content><![CDATA[<h1 id="第三章——进程管理"><a href="#第三章——进程管理" class="headerlink" title="第三章——进程管理"></a>第三章——进程管理</h1><blockquote>
@@ -1912,14 +1733,59 @@
 </li>
 </ul>
 <h4 id="2-5-3-进程的其他状态"><a href="#2-5-3-进程的其他状态" class="headerlink" title="2.5.3 进程的其他状态"></a>2.5.3 进程的其他状态</h4><ul>
-<li><strong>创建状态：</strong>创建（新new）状态</li>
-<li><strong>终止状态（Exit）</strong><ul>
+<li><p><strong>创建状态：</strong>创建（新new）状态</p>
+<ul>
+<li><p>OS已完成为创建一进程所必要的工作</p>
+<ul>
+<li><p>已构造了进程标识符；</p>
+</li>
+<li><p>已创建了管理进程所需的表格、PCB</p>
+</li>
+</ul>
+</li>
+<li><p>但还没有允许执行该进程 （尚未同意）</p>
+<ul>
+<li><p>因为资源有限，OS所需的关于该进程的信息保存在主存中的进程表中，但进程自身还未进入主存，也没有为与这个程序相关的数据分配空间，程序保留在辅存中</p>
+</li>
+<li><p>在批处理系统中，提交新作业；为新登录用户创建进程</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>引入创建状态，保证进程的调度必须在进程创建后进行，确保对PCB操作的完整性；OS可以根据系统性能或主存容量的限制，推迟 创建进程的提交，增加管理的灵活性</p>
+</blockquote>
+<ul>
+<li>导致<strong>进程创建</strong>的原因：<ul>
+<li>批处理环境中，选择一新作业即将进入内存执行</li>
+<li>交互环境中，新用户登录到系统</li>
+<li>操作系统因提供一项服务而创建。如：用户请求打印一个文件，OS可创建严格管理打印的进程，使请求进程可继续执行，与完成打印任务的时间无关</li>
+<li>由现有进程生成，父进程—-子进程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>终止状态（Exit）</strong></p>
+<ul>
 <li>终止后进程移入该状态</li>
 <li>它不再有执行资格——PCB清空并将PCB返还系统</li>
 <li>表格和其它信息暂时保留——状态码和统计数据</li>
 <li>实用程序为了分析性能和利用率，可能要提取程序的历史信息</li>
 </ul>
+<p><strong>导致终止进程的原因：</strong></p>
+<ul>
+<li>含一个HALT指令或用于终止的OS显式服务调用</li>
+<li>分时系统中，用户的行为可指示终止，如：用户退出系统或关闭自己的终端，该用户的进程将被终止</li>
+<li>PC机环境中，用户结束一应用程序</li>
+<li>出现某些错误时，如：I/O失败，无效指令等</li>
+<li>父进程可请求它的某个子进程终止</li>
+<li>父进程终止，OS自动终止所有后代进程</li>
+</ul>
 </li>
+</ul>
+<ul>
 <li><strong>挂起状态：</strong>把一个进程从内存转到外存</li>
 </ul>
 <h4 id="2-5-3-五状态进程模型"><a href="#2-5-3-五状态进程模型" class="headerlink" title="2.5.3 五状态进程模型"></a>2.5.3 五状态进程模型</h4><figure class="image-bubble">
@@ -1932,14 +1798,92 @@
 
 
 
+<h4 id="2-5-3-1-单队列结构"><a href="#2-5-3-1-单队列结构" class="headerlink" title="2.5.3.1 单队列结构"></a>2.5.3.1 单队列结构</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200708235804787.png" alt="image-20200708235804787" title="">
+                </div>
+                <div class="image-caption">image-20200708235804787</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200709000049595.png" alt="image-20200709000049595" title="">
+                </div>
+                <div class="image-caption">image-20200709000049595</div>
+            </figure>
+
+<blockquote>
+<p>时间片超时也会导致进程状态转换</p>
+</blockquote>
+<h4 id="2-5-3-2-多队列结构"><a href="#2-5-3-2-多队列结构" class="headerlink" title="2.5.3.2 多队列结构"></a>2.5.3.2 多队列结构</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200709000417137.png" alt="image-20200709000417137" title="">
+                </div>
+                <div class="image-caption">image-20200709000417137</div>
+            </figure>
 
 
-<h4 id="2-5-4-挂起进程模型"><a href="#2-5-4-挂起进程模型" class="headerlink" title="2.5.4 挂起进程模型"></a>2.5.4 挂起进程模型</h4><h4 id="2-5-5-练习题"><a href="#2-5-5-练习题" class="headerlink" title="2.5.5 练习题"></a>2.5.5 练习题</h4><ol>
+
+<h4 id="2-5-4-挂起进程模型"><a href="#2-5-4-挂起进程模型" class="headerlink" title="2.5.4 挂起进程模型"></a>2.5.4 挂起进程模型</h4><p>  由于进程优先级的引入，一些低优先级进程可能等待较长时间，从而被对换至外存。目的是：</p>
+<ul>
+<li><strong>提高处理机效率：</strong>就绪进程表为空时，OS将阻塞进程从内存中 “驱逐” 到磁盘的 “挂起队列”，再从该队列选另一进程进入内存，或接受一个新进程的请求。</li>
+<li><strong>为运行进程提供足够内存：</strong>资源紧张时，暂停某些进程，如：CPU繁忙（或实时任务执行），内存紧张</li>
+</ul>
+<p><strong>单挂起进程模型</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200709000737957.png" alt="image-20200709000737957" title="">
+                </div>
+                <div class="image-caption">image-20200709000737957</div>
+            </figure>
+
+
+
+<p><strong>双挂起进程模型</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200709000956350.png" alt="image-20200709000956350" title="">
+                </div>
+                <div class="image-caption">image-20200709000956350</div>
+            </figure>
+
+
+
+<h4 id="2-5-5-练习题"><a href="#2-5-5-练习题" class="headerlink" title="2.5.5 练习题"></a>2.5.5 练习题</h4><ol>
 <li><p>如果系统中有N个进程，运行的进程最多几个，最少几个；就绪进程最多几个最少几个；等待进程最多几个，最少几个？</p>
 <p>答：考虑<strong>单CPU</strong>的情况，运行的进程最多有1个，最少0个。就绪进程最多N-1个，最少0个。等待进程最多N个，最少0个。</p>
 </li>
 </ol>
-<h2 id="3-进程的控制"><a href="#3-进程的控制" class="headerlink" title="3. 进程的控制"></a>3. 进程的控制</h2><h2 id="4-线程（Thread）概念与多线程模型"><a href="#4-线程（Thread）概念与多线程模型" class="headerlink" title="4. 线程（Thread）概念与多线程模型"></a>4. 线程（Thread）概念与多线程模型</h2>]]></content>
+<h2 id="3-进程控制"><a href="#3-进程控制" class="headerlink" title="3. 进程控制"></a>3. 进程控制</h2><h3 id="3-1-进程控制的功能"><a href="#3-1-进程控制的功能" class="headerlink" title="3.1 进程控制的功能"></a>3.1 进程控制的功能</h3><ul>
+<li>完成进程状态的转换</li>
+<li>完成创建和撤消进程，挂起和激活进程、阻塞和唤醒进程</li>
+<li><strong>原语(primitive)：</strong>由若干条指令构成的 “<strong>原子操作</strong>(atomic operation)” 过程，作为一个<strong>整体</strong>而<strong>不可分割</strong>–要么全都完成，要么全都不做。许多系统调用就是原语</li>
+<li>原语分为：<ul>
+<li>机器指令级：不允许中断</li>
+<li>功能级原语：允许中断，不允许并发</li>
+</ul>
+</li>
+<li>注意：<strong>系统调用并不都是原语。</strong>进程A调用read()，因无数据而阻塞，在read()里未返回。然后进程B调用read()，此时read()被重入。系统调用不一定一次执行完并返回该进程，有可能在特定的点暂停，而转入到其他进程</li>
+</ul>
+<blockquote>
+<p><strong>原语是操作系统的核心，它不是由进程而是由一组程序模块所组成，是操作系统的一个组成部分，它必须在管态下执行，并且常驻内存</strong></p>
+</blockquote>
+<h3 id="3-2-进程控制的主要原语"><a href="#3-2-进程控制的主要原语" class="headerlink" title="3.2 进程控制的主要原语"></a>3.2 进程控制的主要原语</h3><blockquote>
+<ol>
+<li><p>进程<strong>创建</strong>与<strong>撤消</strong>原语</p>
+</li>
+<li><p>进程<strong>阻塞</strong>与<strong>唤醒</strong>原语</p>
+</li>
+<li><p>进程<strong>挂起</strong>与<strong>激活</strong>原语</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="3-3-Unix的进程管理"><a href="#3-3-Unix的进程管理" class="headerlink" title="3.3 Unix的进程管理"></a>3.3 Unix的进程管理</h3><h2 id="4-线程（Thread）概念与多线程模型"><a href="#4-线程（Thread）概念与多线程模型" class="headerlink" title="4. 线程（Thread）概念与多线程模型"></a>4. 线程（Thread）概念与多线程模型</h2><h3 id="4-1-进程与线程的关系"><a href="#4-1-进程与线程的关系" class="headerlink" title="4.1 进程与线程的关系"></a>4.1 进程与线程的关系</h3><h3 id="4-2-线程的引入"><a href="#4-2-线程的引入" class="headerlink" title="4.2 线程的引入"></a>4.2 线程的引入</h3><h3 id="4-3-线程的属性"><a href="#4-3-线程的属性" class="headerlink" title="4.3 线程的属性"></a>4.3 线程的属性</h3><h3 id="4-4-多线程OS中的进程"><a href="#4-4-多线程OS中的进程" class="headerlink" title="4.4 多线程OS中的进程"></a>4.4 多线程OS中的进程</h3><h3 id="4-5-线程与进程的比较"><a href="#4-5-线程与进程的比较" class="headerlink" title="4.5 线程与进程的比较"></a>4.5 线程与进程的比较</h3><h3 id="4-6-线程的优点"><a href="#4-6-线程的优点" class="headerlink" title="4.6 线程的优点"></a>4.6 线程的优点</h3><h3 id="4-7-线程的适用范围"><a href="#4-7-线程的适用范围" class="headerlink" title="4.7 线程的适用范围"></a>4.7 线程的适用范围</h3><h3 id="4-8-线程的状态"><a href="#4-8-线程的状态" class="headerlink" title="4.8 线程的状态"></a>4.8 线程的状态</h3><h3 id="4-9-OS对线程的实现方式"><a href="#4-9-OS对线程的实现方式" class="headerlink" title="4.9 OS对线程的实现方式"></a>4.9 OS对线程的实现方式</h3><h3 id="4-10-线程举例"><a href="#4-10-线程举例" class="headerlink" title="4.10 线程举例"></a>4.10 线程举例</h3>]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
@@ -1948,9 +1892,209 @@
       </tags>
   </entry>
   <entry>
+    <title>线性代数</title>
+    <url>/2020/07/07/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="1-行列式"><a href="#1-行列式" class="headerlink" title="1. 行列式"></a>1. 行列式</h2><h2 id="2-矩阵"><a href="#2-矩阵" class="headerlink" title="2. 矩阵"></a>2. 矩阵</h2><h2 id="3-向量组"><a href="#3-向量组" class="headerlink" title="3. 向量组"></a>3. 向量组</h2><h2 id="4-线性方程组"><a href="#4-线性方程组" class="headerlink" title="4. 线性方程组"></a>4. 线性方程组</h2><h2 id="5-特征值和特征向量"><a href="#5-特征值和特征向量" class="headerlink" title="5. 特征值和特征向量"></a>5. 特征值和特征向量</h2><h2 id="6-二次型"><a href="#6-二次型" class="headerlink" title="6. 二次型"></a>6. 二次型</h2>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>概率论和数理统计</title>
+    <url>/2020/06/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/</url>
+    <content><![CDATA[<h1 id="概率论和数理统计"><a href="#概率论和数理统计" class="headerlink" title="概率论和数理统计"></a>概率论和数理统计</h1><h2 id="3-多维随机变量及分布"><a href="#3-多维随机变量及分布" class="headerlink" title="3. 多维随机变量及分布"></a>3. 多维随机变量及分布</h2><ul>
+<li>二维正太</li>
+</ul>
+<h2 id="4-随机变量的数字特征"><a href="#4-随机变量的数字特征" class="headerlink" title="4. 随机变量的数字特征"></a>4. 随机变量的数字特征</h2><ul>
+<li><p>二维正太分布的<strong>不相关和独立对等</strong></p>
+<ul>
+<li>(X, Y)二维正太分布，则X，Y均正太；反过来不一定</li>
+<li>(X, Y)二维正太分布，当 ad≠bc时，则（aX + bY）*（cX + dY）也服从二维正太分布</li>
+<li>(X, Y)二维正太分布，当 a^2 + b^2 ≠ 0时，aX + bY必正太</li>
+</ul>
+</li>
+<li><p>协方差公式：</p>
+<ul>
+<li><p>cov(X, Y) =E{ [X-EX] * [Y-EY] }   【定义式】</p>
+</li>
+<li><p>cov(X, Y) = E(XY) - EX*EY           【常用计算公式】</p>
+</li>
+<li><p>cov(X, Y) = cov(Y, X)</p>
+</li>
+<li><p>cov(X, X) = D(X)</p>
+</li>
+<li><p>cov(X1 + X2, Y) = cov(X1, Y) + cov(X2, Y)</p>
+</li>
+<li><p>cov(X1 + c, Y) = cov(X1, Y)     【c 为常数】</p>
+</li>
+<li><p>cov(aX + c, bY + d) = ab*cov(X, Y)       【a，b，c，d为常数】</p>
+</li>
+</ul>
+</li>
+<li><p>常用分布的期望和方差，<strong>一定要会推导，特别是涉及级数的，例如泊松分布</strong></p>
+<ul>
+<li>0-1分布：</li>
+</ul>
+</li>
+<li><p><strong>奇函数在无穷域积分</strong>：当函数在[0, +∞)收敛，则积分为0；反之积分发散</p>
+</li>
+</ul>
+<h2 id="5-大数定律和中心极限定理"><a href="#5-大数定律和中心极限定理" class="headerlink" title="5. 大数定律和中心极限定理"></a>5. 大数定律和中心极限定理</h2><ul>
+<li>切比雪夫不等式</li>
+<li>大数定律：<ul>
+<li>切比雪夫大数定律：根据切比雪夫不等式证明切比雪夫大数定律</li>
+<li>伯努利大数定律</li>
+<li>辛钦大数定律</li>
+</ul>
+</li>
+<li>中心极限定理：<ul>
+<li>棣莫弗—拉普拉斯中心极限定理</li>
+<li>列维—林德伯格中心极限定理</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-数理统计"><a href="#6-数理统计" class="headerlink" title="6.  数理统计"></a>6.  数理统计</h2><ul>
+<li><p><strong>伽马函数</strong></p>
+</li>
+<li><p>统计量是<strong>样本的函数，且函数不含未知参数</strong></p>
+</li>
+<li><p><strong>常用统计量的数字特征：</strong></p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193815427.png" alt="常用统计量的数字特征"></p>
+<ul>
+<li>要记住样本方差除以的是 n-1</li>
+</ul>
+</li>
+<li><p><strong>三大抽样分布：</strong></p>
+<ul>
+<li><p>卡方分布</p>
+<ul>
+<li>卡方分布是n个<strong>独立</strong>的标准正方分布随机变量的平方和</li>
+<li>卡方分布的期望等于自由度n，方差等于两倍自由度2n</li>
+<li>卡方分布具有可加性，即X服从自由度为m的卡方分布，Y服从自由度为n的卡方分布，<strong>X和Y独立</strong>，则X+Y服从m+n的卡方分布</li>
+<li><strong>标准正太分布</strong>的平方，服从自由度为1的卡方分布，期望为1，方差为2</li>
+</ul>
+</li>
+<li><p>t分布</p>
+<ul>
+<li><p>X服从标准正太分布，Y服从自由度为n的卡方分布，<strong>且X和Y独立</strong>，则下式服从自由度为n的t分布</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193834133.png" alt="t分布"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>t分布的概率密度函数是一个偶函数，即以y轴对称</p>
+</li>
+<li><p>F分布</p>
+<ul>
+<li>设U服从自由度为n1的卡方分布，V服从自由度为n2的卡方分布，<strong>且U和V独立</strong>，则</li>
+</ul>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630193853911.png" alt="F分布"></p>
+<p>​        服从自由度为(n1, n2)的F分布，记为 F ~ F(n1, n2)</p>
+<ul>
+<li>F服从F(n1, n2)分布，则1/F则服从F(n2, n1)<ul>
+<li>若T服从自由度为n的t分布，则T^2服从F(1, n)分布</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>记住每个分布的形式，凑分布时可以直接写答案：卡方分布是平方和，t分布涉及根号，F分布涉及两个卡方分布</strong></p>
+</li>
+<li><p>分位点，是<strong>上侧</strong>还是<strong>下侧</strong></p>
+</li>
+<li><p><strong>单个正太总体的性质</strong></p>
+<p>设X1、X2…、Xn是来自总体X~N(μ，σ^2)的样本，样本均值 /X，样本方差S^2（<strong>手写</strong>）</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630183340266.png" alt="image-20200630183340266"></p>
+<ul>
+<li>3和4区别在于：3是不独立的，所以3服从n-1的卡方分布；而4是独立的，服从n的卡方分布</li>
+<li>第5条可以由1，2，3证明</li>
+<li>第6条可以由第3证明，【卡方分布的期望和方差】</li>
+</ul>
+</li>
+<li><p>两个正太总体性质</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200630192238252.png" alt="两个正太总体性质"></p>
+<ul>
+<li>第1条就是用单个正太的样本方差性质 -&gt; 卡方分布</li>
+<li>第2条就是卡方分布的可加性</li>
+<li>第3条就是利用第2条，并将 /X - /Y标准变化；至于分子分母的独立性，运用单个正太的均值和方差独立</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-参数估计"><a href="#7-参数估计" class="headerlink" title="7. 参数估计"></a>7. 参数估计</h2><ul>
+<li><p>点估计</p>
+<ul>
+<li><p>矩估计（很简单的，主要就是求<strong>期望</strong>）</p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  求期望EX</li>
+<li>2  令样本均值/X等于期望</li>
+<li>3  求出θ，估计量</li>
+<li>4  带入/X，得到估计值</li>
+</ul>
+</li>
+<li><p>最大似然估计法</p>
+<p>离散型的似然函数为<strong>样本值概率</strong>的乘积；连续性的<strong>似然函数为概率密度函数的乘积</strong>，<strong>而x换成xi</strong></p>
+<p><strong>步骤：</strong></p>
+<ul>
+<li>1  写出似然函数，关于似然函数，分为离散型和连续性，见上。</li>
+<li>2  对似然函数取对数</li>
+<li>3  对θ求导</li>
+<li>4  令导数为0，求出θ；若无解，则说明似然函数单调，根据定义，要求似然函数最大，即在边界取值</li>
+</ul>
+</li>
+<li><p>估计量和估计值的区别：</p>
+<ul>
+<li>估计量一般用样本表示；估计值用样本值（观察值）表示</li>
+<li>一定要注意最后求得是估计量还是估计值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>估计量的评选标准</p>
+<ul>
+<li><p>无偏性</p>
+<p>估计量/θ的期望 = θ，例如样本均值/X是μ的无偏估计量</p>
+</li>
+<li><p>有效性</p>
+<p>两个无偏估计量，方差较小的有效</p>
+</li>
+<li><p>相合（一致）性</p>
+<p>估计量/θ依概率收敛到θ，一般需要使用<strong>大数定律和切比雪夫不等式</strong></p>
+</li>
+</ul>
+</li>
+<li><p><strong>区间估计</strong></p>
+<p>大概率只考单个正太总体的均值和方差</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<h2 id="8-假设检验"><a href="#8-假设检验" class="headerlink" title="8. 假设检验"></a>8. 假设检验</h2><ul>
+<li>显著性检验的一般步骤：<ul>
+<li>根据实际问题提出原假设H0和备择假设H1</li>
+<li>给出显著检验水平α和样本容量n</li>
+<li>确定检验统计量K以及拒绝域形式</li>
+<li>按犯第一类错误的概率等于α求出拒绝域W</li>
+<li>根据样本值计算K的观察值k，当k∈W时，拒绝原假设H0；否则接受原假设H0</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高等数学</title>
-    <url>/2020/06/12/%E8%80%83%E7%A0%94%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="1-函数极限与连续"><a href="#1-函数极限与连续" class="headerlink" title="1. 函数极限与连续"></a>1. 函数极限与连续</h2><ul>
+    <url>/2020/06/12/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="高等数学"><a href="#高等数学" class="headerlink" title="高等数学"></a>高等数学</h1><h2 id="1-函数极限与连续"><a href="#1-函数极限与连续" class="headerlink" title="1. 函数极限与连续"></a>1. 函数极限与连续</h2><h3 id="1-1-常用极限求解的技巧"><a href="#1-1-常用极限求解的技巧" class="headerlink" title="1.1 常用极限求解的技巧"></a>1.1 常用极限求解的技巧</h3><ul>
 <li><p>遇到三角函数求极限，并且趋于pi/2，pi这种的，大概率会使用<strong>诱导公式</strong>，使其简化：</p>
 <ul>
 <li>sin(π/2+α) = cosα；  cos(π/2+α) = -sinα；  sin(π/2-α) = cosα；  cos(π/2-α) =sinα；</li>
@@ -1965,8 +2109,16 @@
 <li><p>遇到cotx一般使用诱导公式转化为tanx</p>
 </li>
 <li><p>与积分项无关的可以进行<strong>提取无关项</strong></p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/88376151BD1E18A107886CDBFBD2401B.jpg" alt=""></p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/88376151BD1E18A107886CDBFBD2401B.jpg" style="zoom: 50%;" />
 </li>
+<li><p>遇到分式中带有<code>tan(tanx)</code> 或者 <code>sin(sinx)</code> 的情况求极限，解题方法一般是<strong><code>- tanx + tanx</code></strong>凑分式：</p>
+</li>
+</ul>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/CBCCF2B46C35AFDA6CE82CEE02E9300D.jpg" style="zoom: 50%;" />
+
+
+
+<h3 id="1-2-n项之积或和的极限的求解"><a href="#1-2-n项之积或和的极限的求解" class="headerlink" title="1.2 n项之积或和的极限的求解"></a>1.2 n项之积或和的极限的求解</h3><ul>
 <li><p>求n项之积或和的极限的常用方法有：<strong>1. 先计算和或积，再求极限</strong>， <strong>2. 夹逼定理</strong>，<strong>3. 定积分</strong></p>
 <ul>
 <li>分子从1到n这种形式的，多用夹逼准则</li>
@@ -1974,14 +2126,33 @@
 <li>形如n次开根，多凑积分</li>
 <li>什么时候考虑放缩（夹逼准则），什么时候用定积分 ——》分子不同用放缩</li>
 </ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/DA2D5CC1A673590C56EFE1E8F5F006EC.jpg" alt=""></p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/3B5EA3738E0189E90799964D0217B9A6.jpg" alt=""></p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/B05D3E765EDBD1CB33AC9E16F133D504.jpg" alt=""></p>
-</li>
-<li><p>遇到分式中带有<code>tan(tanx)</code> 或者 <code>sin(sinx)</code> 的情况求极限，解题方法一般是<strong><code>- tanx + tanx</code></strong>凑分式：</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/CBCCF2B46C35AFDA6CE82CEE02E9300D.jpg" alt=""></p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/DA2D5CC1A673590C56EFE1E8F5F006EC.jpg" style="zoom: 50%;" />
+
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/3B5EA3738E0189E90799964D0217B9A6.jpg" style="zoom: 50%;" />
+
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/B05D3E765EDBD1CB33AC9E16F133D504.jpg" style="zoom: 50%;" />
+
+
+
 </li>
 </ul>
+<h3 id="1-3-单调有界准则的应用"><a href="#1-3-单调有界准则的应用" class="headerlink" title="1.3 单调有界准则的应用"></a>1.3 单调有界准则的应用</h3><p>求解步骤：</p>
+<ul>
+<li>可以先假设极限存在，求极限（当然这一步不需要写卷纸上）；再猜测数列是单调递减还是单挑递增</li>
+<li>有界性证明：用<strong>数学归纳法</strong>证明数列有界</li>
+<li>对于单调性的证明：<ul>
+<li>利用<code>αn+1 - αn</code> 的正负来直接证明数列的单调性</li>
+<li>假如上述的<code>αn+1 - αn</code> 不能直接看出正负，则有以下两种方法：<ul>
+<li>对于<code>αn+1 - αn</code> 建立函数，求导，分析正负</li>
+<li>或者使用<strong>中值定理</strong>，来判断αn+1 和 α 的大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最后再设极限为A，根据数列递推式，求极限</li>
+</ul>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/D4BEF271ACF23770E53203C98C0BBD69.jpg" style="zoom: 67%;" />
+
 <h2 id="4-一元函数微分学"><a href="#4-一元函数微分学" class="headerlink" title="4 . 一元函数微分学"></a>4 . 一元函数微分学</h2><ul>
 <li><p>导数定义，以及证明：偶函数的导数是奇函数；奇函数的导数是偶函数；周期函数的导函数是周期函数。</p>
 </li>
@@ -2028,10 +2199,810 @@
 </ul>
 ]]></content>
       <categories>
-        <category>数学</category>
+        <category>考研</category>
       </categories>
       <tags>
         <tag>数学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研英语单词辨析</title>
+    <url>/2020/07/09/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%80%83%E7%A0%94%E5%8D%95%E8%AF%8D%E8%BE%A8%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="考研英语单词辨析"><a href="#考研英语单词辨析" class="headerlink" title="考研英语单词辨析"></a>考研英语单词辨析</h1><ul>
+<li><pre><code class="cpp">compliment 赞美，称赞    
+competent 胜任的，足够的，有能力的
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">elect    选举
+erect    竖直的；创立，建立
+&lt;!--￼<span class="number">1</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">tomb    坟墓
+comb    梳子
+bomb    爆炸
+&lt;!--￼<span class="number">2</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">inherent    本质的，固有的
+inherit        继承，获得
+&lt;!--￼<span class="number">3</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">diversion    n 转移，消遣，娱乐
+divorce        n/v 离婚，分开，分离
+&lt;!--￼<span class="number">4</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">scare    惊恐；使害怕
+scarf    围巾；嵌接；狼吞虎咽地吃
+&lt;!--￼<span class="number">5</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">expect    期待，期望
+expert
+except
+&lt;!--￼<span class="number">6</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">vesion        视野；想象
+version        版本，译本
+preversion    预防
+&lt;!--￼<span class="number">7</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">accident
+incident
+&lt;!--￼<span class="number">8</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">inhibit    约束，抑制
+inhabit    居住，栖息
+&lt;!--￼<span class="number">9</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">precede        先于，领先，优于
+precise        准确的
+&lt;!--￼<span class="number">10</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">emigrate    移居外国
+immigrate    移民
+&lt;!--￼<span class="number">11</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">vocation    职业
+vacation    假期
+&lt;!--￼<span class="number">12</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">fourth    第四
+forth    向前，向外，露出
+froth    泡沫
+&lt;!--￼<span class="number">13</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">elephant    大象
+elegant        优雅的，讲究的
+&lt;!--￼<span class="number">14</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">shutter        百叶窗，快门
+shatter        打碎
+shuttle        穿梭，梭子
+&lt;!--￼<span class="number">15</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">soap    肥皂
+soup    汤
+soul    灵魂
+&lt;!--￼<span class="number">16</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">shallow        浅的，浅薄的
+shadow        影子
+&lt;!--￼<span class="number">17</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">moral        道德的
+mortal        凡人；极度的，致命的    （mortality：死亡人数，死亡率）
+&lt;!--￼<span class="number">18</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">precede        先于
+precise        准确的
+&lt;!--￼<span class="number">19</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">perceive    察觉
+conceive    构想；怀孕
+deceive        欺骗
+receive        接收
+&lt;!--￼<span class="number">20</span>--&gt;</code></pre>
+</li>
+<li><pre><code class="cpp">adoptive    收养的
+adaptive    适应的</code></pre>
+</li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研英语同义词</title>
+    <url>/2020/07/09/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%90%8C%E4%B9%89%E8%AF%8D/</url>
+    <content><![CDATA[<h1 id="考研英语同义词"><a href="#考研英语同义词" class="headerlink" title="考研英语同义词"></a>考研英语同义词</h1><ul>
+<li><p><strong>1. 重要的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">important, vital, significant, leading, essential, crucial, consequential;</span><br><span class="line">foremost</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>2. 不重要的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unimportant, trivial, marginal, insignificant</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>3. 困难的，难以应付的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">difficult, hard, tough, formidable, troublesome</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>4. 个人的，私人的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">personal, <span class="keyword">private</span>, individual</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>5. 遥远的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">remote, distant</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>6. 主要的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">chief, primary, main, principal, prime, head, staple</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>7. 降低</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">decrease, decline, reduce, lower, fall</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>8. 热情的，热烈的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">passionate, enthusiastic</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>9. 巨大的，庞大的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">big, large, huge, giant, immense, enormous, gigantic</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>10. 结果</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">result, consequence</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>11. 娱乐，消遣</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">pastime, entertainment, recreation, amusement, diversion</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>12. 宣告，声称</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">assert, allege, contend, announce</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>13. 可疑的，有问题的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">questionable, doubtful, suspicious, dubious, skeptical</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>14. 仅仅，只</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">just, only, merely, barely</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>15. 问题，错误</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">error, mistake, problem, trouble, question, issue, slipup</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>16. 完全的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">utter, complete</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>17. 轻视，看不起</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">despise, underestimate, slight</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>18. 认为</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">think, reckon</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>19. 使惊叹，使惊讶</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">startle, shock, surprise, stun</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>20. 促进，增进</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">boost, further, foster, promote</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>21. 称赞，恭维，赞美</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">admire, compliment, adore, favor, praise</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>22. 令人赞叹的，令人敬畏的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">impressive,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>23. 提供，供应</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">provide, offer, give, supply, furnish</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>24. 风景，景色</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">landscape, scenery</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>25. 不利条件，缺点</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">disadvantage, shortcoming, drawback, defect, downside</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>26. 主要地，大部分地，通常</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mostly, typically, commonly, usually, generally, ordinary, routinely,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>27. 抑制，压抑</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">repress, restrain, inhibit</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>28. 考虑，沉思</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">meditate, deliberate, ponder</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>29. 必要的，必须的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">necessary,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>30. 冷漠的，不关心的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unconcerned, carefree, indifferent, uninterested</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>31. 清楚地，明显地</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">distinctly, explicitly, conspicuously</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>32. 正直的，竖直的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">upright, straight</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>33. 应付，处理</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cope with, deal with,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>34. 引人注目的， 显著的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">striking, notably, conspicuous, manifest, remarkable,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>35. 临时的，暂时的</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">temporary, interim</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>36. 阻碍，妨碍</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hamper, hinder, disturb,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>37. 恢复</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">restore, recover</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>37. 精美的，精致的</strong></p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">exquisite, delicate, refined</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>38. 理所应当地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">naturally, take <span class="keyword">for</span> granted</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>39. 卓越的，优秀的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">exceptional, extraordinary, outstanding, distinguished, remarkable, excellent;</span><br><span class="line">eminent, prominent, superb</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>40. 保证</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">assure, ensure, insure <span class="comment">/***** 需要辨析 *****/</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>41. 而且，此外</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">furthermore, moreover, additionally, also, besides;</span><br><span class="line"><span class="comment">/*-- 例句 --*/</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>42. 企业，公司</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">corporation, company, enterprise, firm</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>43. 完成，实现</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">accomplish, complete, finish, go through with,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>44. 非常地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">extremely</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>45. 绝对地，完全地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">completely, utterly, totally, entirely, fully, thoroughly</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>46. 使气馁</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">discourage, daunt</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>47. 侮辱</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">insult, brand</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>48. 激烈的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">furious</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>49. 激励，促进</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">stimulate, inspire</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>50. 痛苦的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sore, agony,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>51. 腐败的，腐烂的</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rotten, corrupt</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>52. 抑制，压抑</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">restrain, repress</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>53. 懒散的，松弛的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">slack, loose</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>54. 易受影响的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">impressionable, susceptible</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>55. 执行，实施</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">execute, administer</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>56.  更加</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">all the more,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>57. 相反的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">contrary, converse</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>58. 充分的，足够的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">adequate, sufficient, competent</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>59. 由于</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">owing to,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>60. 无可匹敌的，未被超越的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unsurpassed,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>61. 痛苦</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">anguish, misery</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>62. 干扰，干预</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">intervene, interfere</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>63. 献身于</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">be devoted to,  be committed to</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>64. 永久地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> good, forever, permanently</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>65. 大体上，总之</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">on the whole, 	in general;</span><br><span class="line">in balance, 	in short;</span><br><span class="line">all in all,		in summary;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>66. 普遍的， 流行的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">popular, prevalent, prevailing</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>67. 欺骗</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">deceive,  rip sb. off, trick</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>68. 微不足道</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">trivial, marginal, nominal</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>69. 基本上的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">inherent, fundamental, essential, radical</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>70. 立即的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">instant, immediate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>71. 几乎不</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">hardly, scarcely, barely</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>72. 讨厌的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">tiresome, troublesome, rank</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>73. 相当大的，可观的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">fair, considerable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>74. 体贴的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">considerate, thoughtful, sensitive</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>75. 过剩的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">surplus, redundant</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>76. 虚弱的，微弱的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">weak, faint, feeble</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>77. 评估</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">assess, estimate, evaluation</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>78. 最后的，最终的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ultimate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>79. 极端的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">rank, ultimate, extreme</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>80. 不顾的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">regardless, irrespective</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>81. 履行</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">perform, discharge, fulfillment</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>82. 令人钦佩的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">admirable,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>83. 合理的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">reasonable, sensible, reasonable, rational, defensible</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>84. 明智的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sensible, intelligent, intellectual</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>85. 有重大意义的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">significant, landmark</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>86. 使人困惑的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">perplexing, confused</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>87. 不礼貌的，粗鲁的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">rude, impolite,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>88. 招致</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">incur, spell</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>89. 合理的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sensible, reasonable, rational, defensible</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>90. 声望，威望</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">repulation, prestige, fame</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>91. 坚持到底</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">stick it out,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>92. 易变的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">variable, <span class="keyword">mutable</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>93. 抵制</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">resist, boycott,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>94. 夸大，夸张</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">exaggerate, overstate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>95. 确实地，肯定地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">positively, <span class="keyword">for</span> sure,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>96. 合理性</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">valid, legitimate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>97. 合作</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">collaborate, cooperate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>98. 同情</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">sympathy (sympathetic), compassion</span><br><span class="line">be sympathetic to/with = show sympathy <span class="keyword">for</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>99. 大约，粗略地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">roughly, approximately</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>100. 容忍</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">tolerate, abide, bear</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>101. 平庸的，无特色的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unimpressive</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>102. 超过，胜过</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">surpass, transcend</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>103. 独特的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">peculiar, distinctive</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>104. 古老的，过时的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">antique, ancient, outdated</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>105. 污染</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">pollute, contaminate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>106. 精确的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">accurate, refined</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>107. 完美的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">perfect, flawless</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>108. 不相干的，不相关的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">irrelevant, unrelated</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>109. 丢脸，不光彩</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">disgrace，humiliate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>110. 巧妙的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">skillful, ingenious</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>111. 笨拙的，不灵巧的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">awkward, clumsy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>112. 天堂</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">heaven, paradise</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>113. 激怒，刺激</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">irritate, aggravate, incense</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>114. 津贴</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">subsidy, allowance</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>115. 目的，意图</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">intention, purpose</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>116. 确定的，肯定的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">definite, certain</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>117. 注视</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">fix one<span class="number">'</span>s eyes on</span><br><span class="line">contemplate, gaze</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>118. 根本上，根本地</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">radically, essentially, fundamentally, ultimately</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>119. 微不足道</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">trivial, marginal, nominal</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>120. 宣告</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">proclaim, announce</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>121. 可怕的，恐怖的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">afraid, horrible, terrible, fearsome, scared</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>122. 收缩，缩小</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">contraction, shrinkage</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>113. 熟练的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">expert, proficient, skillful, skilled</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>114. 回答，应答</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">reply, respond</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>115. 准确的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">accurate, percise</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>116. 误导</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">misguide, mislead</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>117. 腐烂</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">rot, decay,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>118. 值得，应得</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">deserve, merit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>119. 阴谋</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">scheme, conspiracy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>120. 恶作剧</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">trick, mischief</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>121. 培养</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">foster, nurture</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>122. 潮湿的，湿润的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">moist, humid</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>123. 多产的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">productive, fertile，fruitful</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>124. 无用的，徒劳的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">in vain, futile</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>125. 领域，领土</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">realm, territory, field</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>126. 先进的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">developed, advanced</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>127. 模糊的，费解的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">ambiguous, obscure</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>128. 不可避免的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unavoidable, inevitable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>129. 渴望的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">eager, anxious</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>130. 次要的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">subordinate, secondary</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>131. 稳定的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">steady, stable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>132. 复杂的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">complex</span>, complicated, intricate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>133. 威胁，胁迫</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">menace, intimidate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>134. 违背</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">violate, deviate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>135. 碰撞</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">bump, crash, hit, impact</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>136. 沮丧</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">frustration</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>137. 合适的，适当的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">appropriate, proper</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>138. 无价的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">invaluable, inestimable, costly</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>139. 没有价值的，不值钱的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">valueless, worthless, unworthy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>140. 展望</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">prospect, envisage</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
       </tags>
   </entry>
 </search>
