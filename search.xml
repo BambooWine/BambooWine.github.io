@@ -1,71 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>作息表</title>
-    <url>/2020/06/17/%E4%BD%9C%E6%81%AF%E8%A1%A8/</url>
-    <content><![CDATA[<h1 id="作息表"><a href="#作息表" class="headerlink" title="作息表"></a>作息表</h1><table>
-<thead>
-<tr>
-<th>时间</th>
-<th>任务</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>6：30</td>
-<td>起床</td>
-</tr>
-<tr>
-<td>7：00 — 8：00</td>
-<td>跑步 + 听音单词120 + 发音练习（1篇）</td>
-</tr>
-<tr>
-<td>8：10 — 10：00</td>
-<td>线性代数（奇数）看句句真研（偶数）周日除外</td>
-</tr>
-<tr>
-<td>10：10 — 12：00</td>
-<td>概率论（奇数）看英语写作（偶数）周日除外</td>
-</tr>
-<tr>
-<td>12：10 — 13：00</td>
-<td>吃午饭 + 整理实习笔记</td>
-</tr>
-<tr>
-<td>13：10 — 14：00</td>
-<td>午休</td>
-</tr>
-<tr>
-<td>14：10 — 16：00</td>
-<td>看视频学习高数</td>
-</tr>
-<tr>
-<td>16：10 — 18：00</td>
-<td>看视频学习高数 or 做高数题</td>
-</tr>
-<tr>
-<td>18：10 — 19：00</td>
-<td>吃饭 + 可以选择整理学习笔记</td>
-</tr>
-<tr>
-<td>19：10 — 20：20</td>
-<td>晚上走路 + 新背30以上单词 + 读文章（可选）</td>
-</tr>
-<tr>
-<td>20：30 — 21：50</td>
-<td>看视频学习高数</td>
-</tr>
-<tr>
-<td>22：00 — 23：00</td>
-<td>可以自己安排，写一会笔记博客 or leetcode or 视频</td>
-</tr>
-<tr>
-<td></td>
-<td>睡觉</td>
-</tr>
-</tbody></table>
-]]></content>
-  </entry>
-  <entry>
     <title>LRU和LFU算法</title>
     <url>/2020/06/08/LRU%E5%92%8CLFU%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="LRU和LFU算法解析"><a href="#LRU和LFU算法解析" class="headerlink" title="LRU和LFU算法解析"></a>LRU和LFU算法解析</h1><h2 id="LRU"><a href="#LRU" class="headerlink" title="LRU"></a>LRU</h2><h3 id="LRU概念"><a href="#LRU概念" class="headerlink" title="LRU概念"></a>LRU概念</h3><p>LRU（The Least Recently Used，最近最少未使用）是一种常见内存管理算法，最早应用于Linux操作系统，在Redis中也有广泛使用的。</p>
@@ -213,6 +148,71 @@
       </tags>
   </entry>
   <entry>
+    <title>作息表</title>
+    <url>/2020/06/17/%E4%BD%9C%E6%81%AF%E8%A1%A8/</url>
+    <content><![CDATA[<h1 id="作息表"><a href="#作息表" class="headerlink" title="作息表"></a>作息表</h1><table>
+<thead>
+<tr>
+<th>时间</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6：30</td>
+<td>起床</td>
+</tr>
+<tr>
+<td>7：00 — 8：00</td>
+<td>跑步 + 听音单词120 + 发音练习（1篇）</td>
+</tr>
+<tr>
+<td>8：10 — 10：00</td>
+<td>线性代数（奇数）看句句真研（偶数）周日除外</td>
+</tr>
+<tr>
+<td>10：10 — 12：00</td>
+<td>概率论（奇数）看英语写作（偶数）周日除外</td>
+</tr>
+<tr>
+<td>12：10 — 13：00</td>
+<td>吃午饭 + 整理实习笔记</td>
+</tr>
+<tr>
+<td>13：10 — 14：00</td>
+<td>午休</td>
+</tr>
+<tr>
+<td>14：10 — 16：00</td>
+<td>看视频学习高数</td>
+</tr>
+<tr>
+<td>16：10 — 18：00</td>
+<td>看视频学习高数 or 做高数题</td>
+</tr>
+<tr>
+<td>18：10 — 19：00</td>
+<td>吃饭 + 可以选择整理学习笔记</td>
+</tr>
+<tr>
+<td>19：10 — 20：20</td>
+<td>晚上走路 + 新背30以上单词 + 读文章（可选）</td>
+</tr>
+<tr>
+<td>20：30 — 21：50</td>
+<td>看视频学习高数</td>
+</tr>
+<tr>
+<td>22：00 — 23：00</td>
+<td>可以自己安排，写一会笔记博客 or leetcode or 视频</td>
+</tr>
+<tr>
+<td>23：30</td>
+<td>睡觉</td>
+</tr>
+</tbody></table>
+]]></content>
+  </entry>
+  <entry>
     <title>圆周率Pi的求解</title>
     <url>/2020/06/11/%E5%9C%86%E5%91%A8%E7%8E%87Pi%E7%9A%84%E6%B1%82%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="圆周率Pi的求解"><a href="#圆周率Pi的求解" class="headerlink" title="圆周率Pi的求解"></a>圆周率Pi的求解</h1><blockquote>
@@ -266,6 +266,36 @@
       </tags>
   </entry>
   <entry>
+    <title>英语听力计划</title>
+    <url>/2020/07/19/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="英语听力计划"><a href="#英语听力计划" class="headerlink" title="英语听力计划"></a>英语听力计划</h1><h2 id="第一阶段—Peppa-Pig"><a href="#第一阶段—Peppa-Pig" class="headerlink" title="第一阶段—Peppa Pig"></a>第一阶段—Peppa Pig</h2><p>刚开始先计划培养语感，形成模块化听力，争取不再纠结一段听力中的某几个词，如果将一段句子分得过于零散，那么就会发生听的后面忘记前面的，只记住了几个单词，却没有形成模块化的记忆。</p>
+<p>总共90个小视频，每个短视频大概五分钟左右，目前计划每天看3个，早中晚各一个。</p>
+<table>
+<thead>
+<tr>
+<th>时间段</th>
+<th>任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8：00 — 8：10</td>
+<td>Peppa Pig</td>
+</tr>
+<tr>
+<td>12：50 — 13：00</td>
+<td>Peppa Pig</td>
+</tr>
+<tr>
+<td>23：30 — 23：40</td>
+<td>Peppa Pig</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>讲讲堆内存和栈内存</title>
     <url>/2020/06/14/%E8%AE%B2%E8%AE%B2%E5%A0%86%E5%86%85%E5%AD%98%E5%92%8C%E6%A0%88%E5%86%85%E5%AD%98/</url>
     <content><![CDATA[<h1 id="讲讲堆内存和栈内存"><a href="#讲讲堆内存和栈内存" class="headerlink" title="讲讲堆内存和栈内存"></a>讲讲堆内存和栈内存</h1><blockquote>
@@ -314,6 +344,61 @@
       <tags>
         <tag>面试</tag>
         <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-indigo主题添加置顶功能</title>
+    <url>/2020/06/17/hexo/hexo-indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h1 id="hexo-indigo主题添加置顶功能"><a href="#hexo-indigo主题添加置顶功能" class="headerlink" title="hexo-indigo主题添加置顶功能"></a>hexo-indigo主题添加置顶功能</h1><blockquote>
+<p>参考文章：<a href="https://www.jianshu.com/p/42a4efcdf8d7" target="_blank" rel="noopener">解决Hexo博客文章置顶问题</a></p>
+</blockquote>
+<h2 id="1-自定义html排序功能"><a href="#1-自定义html排序功能" class="headerlink" title="1. 自定义html排序功能"></a>1. 自定义html排序功能</h2><p>原理：<strong>在Hexo生成首页HTML时，将top值高的文章排在前面，达到置顶功能</strong>。</p>
+<p>修改Hexo文件夹下的<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
+<p>需添加的代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>generator.js完整内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">const</span> posts = locals.posts.sort(config.index_generator.order_by);</span><br><span class="line"></span><br><span class="line">	posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        	<span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        	<span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;     <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">const</span> path = config.index_generator.path || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改完成后，只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序top值越大越靠前。需要注意的是，这个文件不是主题的一部分，也不是Git管理的，备份的时候比较容易忽略。</p>
+<p><strong>使用实例：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232808783.png" alt="使用实例" title="">
+                </div>
+                <div class="image-caption">使用实例</div>
+            </figure>
+
+
+
+<p><strong>只需要设置top值即可完成排序置顶操作，并且还可以根据不同top值，选择置顶文章的先后次序</strong></p>
+<h2 id="2-添加置顶标签"><a href="#2-添加置顶标签" class="headerlink" title="2. 添加置顶标签"></a>2. 添加置顶标签</h2><p>参考文章的博主使用的是yelee主题，有自己的置顶标签，在indigo主题里，我们可以自己做。</p>
+<ul>
+<li><p>如果要在文章中添加置顶标签，则打开<code>themes\indigo\layout\_partial\post.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果要在博客主页的预览页面添加置顶标签，则打开<code>themes\indigo\layout\_partial\index_item.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果还想在其他页面添加，则打开对应的 ejs文件，添加上述代码即可</p>
+</li>
+</ul>
+<p><strong>预览效果：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232034478.png" alt="预览效果" title="">
+                </div>
+                <div class="image-caption">预览效果</div>
+            </figure>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -510,53 +595,29 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo-indigo主题添加置顶功能</title>
-    <url>/2020/06/17/hexo/hexo-indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<h1 id="hexo-indigo主题添加置顶功能"><a href="#hexo-indigo主题添加置顶功能" class="headerlink" title="hexo-indigo主题添加置顶功能"></a>hexo-indigo主题添加置顶功能</h1><blockquote>
-<p>参考文章：<a href="https://www.jianshu.com/p/42a4efcdf8d7" target="_blank" rel="noopener">解决Hexo博客文章置顶问题</a></p>
+    <title>next主题首页只显示摘要</title>
+    <url>/2020/07/02/hexo/next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81/</url>
+    <content><![CDATA[<h1 id="next主题首页只显示摘要"><a href="#next主题首页只显示摘要" class="headerlink" title="next主题首页只显示摘要"></a>next主题首页只显示摘要</h1><blockquote>
+<p>参考文章：</p>
+<p><a href="https://blog.csdn.net/yueyue200830/article/details/104470646" target="_blank" rel="noopener">设置hexo首页只显示部分摘要（不显示全文）</a></p>
+<p>本文针对Next<strong>新版</strong>主题，Next默认是会显示全文的，这样显然很不方便，因此需要一些方法去只显示前面一部分。</p>
 </blockquote>
-<h2 id="1-自定义html排序功能"><a href="#1-自定义html排序功能" class="headerlink" title="1. 自定义html排序功能"></a>1. 自定义html排序功能</h2><p>原理：<strong>在Hexo生成首页HTML时，将top值高的文章排在前面，达到置顶功能</strong>。</p>
-<p>修改Hexo文件夹下的<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
-<p>需添加的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>generator.js完整内容：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">const</span> posts = locals.posts.sort(config.index_generator.order_by);</span><br><span class="line"></span><br><span class="line">	posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">        	<span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">        	<span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123;     <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面</span></span><br><span class="line">        	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">	&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">const</span> path = config.index_generator.path || <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> pagination(path, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="1-修改配置"><a href="#1-修改配置" class="headerlink" title="1. 修改配置"></a>1. 修改配置</h2><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Automatically excerpt description <span class="keyword">in</span> homepage as preamble text.</span></span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
 
 
 
-<p>修改完成后，只需要在front-matter中设置需要置顶文章的top值，将会根据top值大小来选择置顶顺序top值越大越靠前。需要注意的是，这个文件不是主题的一部分，也不是Git管理的，备份的时候比较容易忽略。</p>
-<p><strong>使用实例：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232808783.png" alt="使用实例" title="">
-                </div>
-                <div class="image-caption">使用实例</div>
-            </figure>
+<h2 id="2-方法一"><a href="#2-方法一" class="headerlink" title="2. 方法一"></a>2. 方法一</h2><p>在文章的<code>front-matter</code>中添加<code>description</code>，其中description中的内容就会被显示在首页上，其余一律不显示。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 让首页显示部分内容</span><br><span class="line">date: 2020-02-23 22:55:10</span><br><span class="line">description: 这是显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 
 
-<p><strong>只需要设置top值即可完成排序置顶操作，并且还可以根据不同top值，选择置顶文章的先后次序</strong></p>
-<h2 id="2-添加置顶标签"><a href="#2-添加置顶标签" class="headerlink" title="2. 添加置顶标签"></a>2. 添加置顶标签</h2><p>参考文章的博主使用的是yelee主题，有自己的置顶标签，在indigo主题里，我们可以自己做。</p>
-<ul>
-<li><p>如果要在文章中添加置顶标签，则打开<code>themes\indigo\layout\_partial\post.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果要在博客主页的预览页面添加置顶标签，则打开<code>themes\indigo\layout\_partial\index_item.ejs</code>文件，接着定位到<code>&lt;div class=&quot;post-meta&quot;&gt;</code> ，在它的下面添加这段代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加置顶标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">post.top</span> &gt;</span> 1)&#123; %&gt;</span><br><span class="line">	<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果还想在其他页面添加，则打开对应的 ejs文件，添加上述代码即可</p>
-</li>
-</ul>
-<p><strong>预览效果：</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200617232034478.png" alt="预览效果" title="">
-                </div>
-                <div class="image-caption">预览效果</div>
-            </figure>]]></content>
+<h2 id="3-方法二"><a href="#3-方法二" class="headerlink" title="3. 方法二"></a>3. 方法二</h2><p>在需要截断的地方加入：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>首页就会显示这条以上的所有内容，隐藏接下来的所有内容。</p>
+<p><strong>两种方式各有利弊，大家可以按需要选择</strong></p>
+]]></content>
       <categories>
         <category>hexo</category>
       </categories>
@@ -694,60 +755,205 @@
       </tags>
   </entry>
   <entry>
-    <title>线性代数</title>
-    <url>/2020/07/07/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="1-行列式"><a href="#1-行列式" class="headerlink" title="1. 行列式"></a>1. 行列式</h2><h3 id="1-1-知识点"><a href="#1-1-知识点" class="headerlink" title="1.1 知识点"></a>1.1 知识点</h3><ul>
-<li>二阶行列式是由两个二维向量组成的，其（运算规则的）结果为以这两个向量为邻边的平行四边形的面积</li>
-<li>三阶行列式</li>
-</ul>
-<h3 id="1-2-相关解题技巧"><a href="#1-2-相关解题技巧" class="headerlink" title="1.2 相关解题技巧"></a>1.2 相关解题技巧</h3><h2 id="2-矩阵"><a href="#2-矩阵" class="headerlink" title="2. 矩阵"></a>2. 矩阵</h2><h3 id="2-1-知识点"><a href="#2-1-知识点" class="headerlink" title="2.1 知识点"></a>2.1 知识点</h3><ul>
-<li><strong>矩阵运算规律</strong></li>
-</ul>
+    <title>看懂PID控制器</title>
+    <url>/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <content><![CDATA[<p>[toc]</p>
+<h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
+<p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
+<p>举两个实例：</p>
+<h3 id="1-1-电机速度控制系统"><a href="#1-1-电机速度控制系统" class="headerlink" title="1.1 电机速度控制系统"></a>1.1 电机速度控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221429670.png" alt="电机速度" title="">
+                </div>
+                <div class="image-caption">电机速度</div>
+            </figure>
+
+<ol>
+<li>当出现扰动而使得电机的转速偏离设定值时，测速电动机充当检测变送环节的角色，而它的输出和设定值之间就会出现一个偏差信号（电压信号）</li>
+<li>这个偏差信号通常是比较小的，所以需要放大器对其进行放大</li>
+<li>而这个放大后的电压信号则是触发器的控制电压，控制晶闸管的关断时间，进而调节电动机的电枢电压，从而调节转速直到等于设定值</li>
+</ol>
+<p>在这个控制系统中，电动机显然是被控对象，而它的转速变化规律是可以抽象为一个数学模型的，也就是传递函数；而其他的环节，则是为了共同产生一个控制信号来作为电动机的输入。</p>
+<p>我们可以把比较器称为本文中的<strong>调节器</strong>，或者将比较器+放大器称为<strong>调节器</strong>，这不是重点，无伤大雅。</p>
+<p>值得注意的是：这个系统中的所有环节，其控制规律都可以抽象为若干个传递函数</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200715192724000.png" alt="image-20200715192724000" title="">
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221459922.png" alt="电机调速" title="">
                 </div>
-                <div class="image-caption">image-20200715192724000</div>
+                <div class="image-caption">电机调速</div>
+            </figure>
+<ul>
+<li>Un*为设定值，Un为测量变送的反馈值</li>
+<li>两者偏差去调节触发器控制电压Uct，控制规律为<code>Kp</code></li>
+<li>通过晶闸管控制电动机回路总电压Ud0，控制规律为<code>Ks</code></li>
+<li>Ud0 - 电枢总电阻电压即为电动机电动势E</li>
+<li>E = Ceφn，得到输出转速；测速发电机根据转速反馈电压信号，控制规律<code>α</code></li>
+</ul>
+<h3 id="1-2-温度或水位控制系统"><a href="#1-2-温度或水位控制系统" class="headerlink" title="1.2 温度或水位控制系统"></a>1.2 温度或水位控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221521103.png" alt="水位控制" title="">
+                </div>
+                <div class="image-caption">水位控制</div>
             </figure>
 
-<h2 id="3-向量组"><a href="#3-向量组" class="headerlink" title="3. 向量组"></a>3. 向量组</h2><h2 id="4-线性方程组"><a href="#4-线性方程组" class="headerlink" title="4. 线性方程组"></a>4. 线性方程组</h2><h2 id="5-特征值和特征向量"><a href="#5-特征值和特征向量" class="headerlink" title="5. 特征值和特征向量"></a>5. 特征值和特征向量</h2><h2 id="6-二次型"><a href="#6-二次型" class="headerlink" title="6. 二次型"></a>6. 二次型</h2>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>next主题首页只显示摘要</title>
-    <url>/2020/07/02/hexo/next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E5%8F%AA%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81/</url>
-    <content><![CDATA[<h1 id="next主题首页只显示摘要"><a href="#next主题首页只显示摘要" class="headerlink" title="next主题首页只显示摘要"></a>next主题首页只显示摘要</h1><blockquote>
-<p>参考文章：</p>
-<p><a href="https://blog.csdn.net/yueyue200830/article/details/104470646" target="_blank" rel="noopener">设置hexo首页只显示部分摘要（不显示全文）</a></p>
-<p>本文针对Next<strong>新版</strong>主题，Next默认是会显示全文的，这样显然很不方便，因此需要一些方法去只显示前面一部分。</p>
+<p>这个应该是比较简单的过程控制，实际水位低于设定水位时，控制器则作用于执行机构去增大调节阀开度，增加进水流量。</p>
+<h3 id="1-3-小小总结"><a href="#1-3-小小总结" class="headerlink" title="1.3 小小总结"></a>1.3 小小总结</h3><blockquote>
+<p>不要总是孤立控制器，它们是控制被控对象的必要环节。</p>
 </blockquote>
-<h2 id="1-修改配置"><a href="#1-修改配置" class="headerlink" title="1. 修改配置"></a>1. 修改配置</h2><p>首先需要在Next主题的_config.yml中把设置打开：(默认安装时就打开了)</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Automatically excerpt description <span class="keyword">in</span> homepage as preamble text.</span></span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+<p>这里给出一般的闭环控制系统框图</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221545700.png" alt="闭环控制框图"></p>
+<blockquote>
+<p>不要单纯的认为只有被控对象才有传递函数，每一个环节都有其相应的控制规律，都可以抽象为一个数学模型，用对应的传递函数来表达。就像最小拍控制器设计中，我们根据输入信号选择整个系统的闭环传函，进而确定控制器的脉冲传递函数。</p>
+</blockquote>
+<p><strong>总结：对于闭环系统来说，控制器的输入是偏差信号，输出则是控制信号，去控制执行机构，进而调节被控对象</strong>。</p>
+<p><strong>而闭环控制系统，设计目的就是系统输出对输入的跟随能力</strong>。</p>
+<h2 id="2-PID"><a href="#2-PID" class="headerlink" title="2. PID"></a>2. PID</h2><ul>
+<li>P：比例控制器，对系统产生的偏差能够迅速做出反应；但是比例控制器不能消除余差，不过随着比例系数的增大，余差会减小，同时系统输出振荡次数增加，稳定性也会下降，调节时间加长</li>
+</ul>
+<blockquote>
+<p>关于不能消除余差这一点，从数学角度是可以解释的，求一下余差即可。当然直想也是可以理解的：对于一个速度控制系统，某时刻负载减小，导致转速上升，比例控制器作用于执行机构使得转速下降，假如转速可以下降到设定转速，那么此时负载依然是小于额定负载的，转速依然会上升；所以反证得，最后余差是肯定会存在的。</p>
+</blockquote>
+<ul>
+<li>I：积分控制器，积分控制是可以消除余差的，体现于偏差消失后，积分控制器的输出是可以<strong>保持</strong>前时刻的输出；但是积分控制器的控制动作比较缓慢，一般不单独使用；随着积分系数的增大（时间常数的减小），系统的稳定性下降。</li>
+</ul>
+<ul>
+<li>D：微分控制器，够体现出当前误差的变化趋势，在偏差出现或变化的瞬间，立即产生强烈的调节作用，从而加快系统的动作速度，减少调节时间；但是由于微分对静态偏差毫无控制能力（偏差存在，但是不变化，控制器输出为0），所以一般不单独使用。并且在纯比例作用的基础上增加微分作用可以提高系统稳定性。</li>
+</ul>
+<p><strong>总结：讲比例，积分，微分三种控制规律结合在一起，只要三项控制作用的强度配合得当，就既能快速调节，又能消除余差，从而得到满意的控制效果。</strong></p>
+<h2 id="3-模拟式PID"><a href="#3-模拟式PID" class="headerlink" title="3. 模拟式PID"></a>3. 模拟式PID</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221607032.png" alt="一般pid框图" title="">
+                </div>
+                <div class="image-caption">一般pid框图</div>
+            </figure>
+
+<p>模拟pid控制器的算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221621725.png" alt="模拟pid算法" title="">
+                </div>
+                <div class="image-caption">模拟pid算法</div>
+            </figure>
+
+<ul>
+<li>u(t) 为控制器输出，e(t) 为控制器输入，即偏差信号：<code>e(t) = r(t) - y(t)</code></li>
+<li>Kp 为比例系数，Ti 为积分时间常数，Td 为微分时间常数</li>
+</ul>
+<p>给出一个简单的matlab模拟pid仿真：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221633752.png" alt="模拟pid仿真" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真</div>
+            </figure>
+
+<p>参数设置：<code>Kp = 0.5, Ki = 0.2, Kd = 1</code>；输出结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221650331.png" alt="模拟pid仿真结果" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真结果</div>
+            </figure>
+
+<p><strong>模拟pid局限性</strong></p>
+<ul>
+<li>功能单一，灵活性差</li>
+<li>信息分散，所用仪表多，且监视不方便</li>
+<li>接线过多，系统维护难度大</li>
+</ul>
+<p>随着计算机等技术的发展，数字控制器日益成为工业生产中占据主导地位的控制器。</p>
+<h2 id="4-数字式PID"><a href="#4-数字式PID" class="headerlink" title="4. 数字式PID"></a>4. 数字式PID</h2><p>对模拟pid控制器进行离散化处理，用<strong>后向差分</strong>代替微分得：（具体细节不细说）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221709929.png" alt="离散化pid算法" title="">
+                </div>
+                <div class="image-caption">离散化pid算法</div>
+            </figure>
 
 
+<h3 id="4-1-位置式PID算法"><a href="#4-1-位置式PID算法" class="headerlink" title="4.1 位置式PID算法"></a>4.1 位置式PID算法</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221726139.png" alt="位置式pid" title="">
+                </div>
+                <div class="image-caption">位置式pid</div>
+            </figure>
 
-<h2 id="2-方法一"><a href="#2-方法一" class="headerlink" title="2. 方法一"></a>2. 方法一</h2><p>在文章的<code>front-matter</code>中添加<code>description</code>，其中description中的内容就会被显示在首页上，其余一律不显示。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 让首页显示部分内容</span><br><span class="line">date: 2020-02-23 22:55:10</span><br><span class="line">description: 这是显示在首页的概述，正文内容均会被隐藏。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Kp，Ki，Kd为比例，积分，微分的三个重要参数</li>
+<li>k是采样序列号，k=0,1,2,3…</li>
+<li>Uk第k次采样时刻<strong>控制器</strong>输出值</li>
+<li>ek第k次采样时刻偏差，e(k-1)第k-1次采样偏差值，e(k-2)第k-2次采样偏差值</li>
+<li>位置式pid控制器的输入为系统的偏差值，输出为uk，即偏差的组合</li>
+</ul>
+<h4 id="4-1-2-位置式pid算法的缺点"><a href="#4-1-2-位置式pid算法的缺点" class="headerlink" title="4.1.2 位置式pid算法的缺点"></a>4.1.2 位置式pid算法的缺点</h4><ul>
+<li>控制器输出与过去的各个状态有关，运算量大</li>
+<li>计算机出现故障，u(k)的大幅度变化会引起执行机构位置的大幅度变化</li>
+</ul>
+<h3 id="4-2-增量式PID算法"><a href="#4-2-增量式PID算法" class="headerlink" title="4.2 增量式PID算法"></a>4.2 增量式PID算法</h3><p>由位置式pid第k次输出 - 第k-1次输出 得到增量式pid算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9nc3MwLmJhaWR1LmNvbS85NG8zZFNhZ194STRraEdrbzlXVEFuRjZoaHkvemhpZGFvL3doJTNENjAwJTJDODAwL3NpZ249NjAyYzFhOTdjOWZkZmMwM2U1MmRlYmJlZTQwZmFiYWMvZTRkZGU3MTE5MGVmNzZjNjBmM2YxNzQyOTcxNmZkZmFhZTUxNjdlZS5qcGc" alt="增量式pid算法" title="">
+                </div>
+                <div class="image-caption">增量式pid算法</div>
+            </figure>
+
+<blockquote>
+<p>增量式pid算法表示的是控制机构（阀门，步进电机等）的调节增量，即k时刻相对于k-1时刻的调节增量。</p>
+</blockquote>
+<p><strong>值得注意的是：采用增量式pid算法的控制器输出值为调节增量</strong>。</p>
+<p>从这里也可以得出<strong>位置式pid算法</strong>的另一种表示形式：<br><code>u(k) = u(k - 1) + Δu</code></p>
+<p>可以说，位置式pid算法和增量式pid算法是pid算法的两种表现形式，从本质上讲二者是一致的。</p>
+<h4 id="4-2-2-增量式pid的优点"><a href="#4-2-2-增量式pid的优点" class="headerlink" title="4.2.2 增量式pid的优点"></a>4.2.2 增量式pid的优点</h4><ul>
+<li>算式中不需要累加；控制增量Δu(k)的确定仅与最近3次的采样值有关</li>
+<li>计算机每次只输出控制增量，对应执行机构位置的变化量，不易引起过程的异常操作</li>
+<li>手动—自动切换时冲击小。当控制从手动向自动切换时，<br>可以作到无扰动切换</li>
+</ul>
+<h3 id="4-3-位置式pid和增量式pid的抉择"><a href="#4-3-位置式pid和增量式pid的抉择" class="headerlink" title="4.3 位置式pid和增量式pid的抉择"></a>4.3 位置式pid和增量式pid的抉择</h3><p>在实际使用中应该使用位置式还是增量式，关键看执行机构的特性：</p>
+<ul>
+<li>如果执行机构具有积分特性（如步进电机，具有齿轮传递特性的位置执行机构等），应该使用增量式pid算法</li>
+<li>如果执行机构没有积分特性，则应该使用位置式pid算法</li>
+</ul>
+<h3 id="4-4-位置式pid和增量式pid仿真"><a href="#4-4-位置式pid和增量式pid仿真" class="headerlink" title="4.4 位置式pid和增量式pid仿真"></a>4.4 位置式pid和增量式pid仿真</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function [] &#x3D; my_simulink_pid()</span><br><span class="line">% 离散模型</span><br><span class="line">ts &#x3D; 0.001;						    % 采样时间</span><br><span class="line">sys &#x3D; tf(400, [1, 50, 0]);		    % 传递函数</span><br><span class="line">d_sys &#x3D; c2d(sys, ts, &#39;z&#39;);		    % 传递函数离散化</span><br><span class="line">[num, den] &#x3D; tfdata(d_sys, &#39;v&#39;);	% 提取分子分母</span><br><span class="line"></span><br><span class="line">% pid参数</span><br><span class="line">kp &#x3D; 10; ki &#x3D; 2; kd &#x3D; 15;</span><br><span class="line"></span><br><span class="line">% 初始化信号值</span><br><span class="line">y_feed &#x3D; 0;	    % 当前反馈值</span><br><span class="line">y_prev1 &#x3D; 0;    % 前一次输出值</span><br><span class="line">y_prev2 &#x3D; 0;    % 前前一次输出值</span><br><span class="line"></span><br><span class="line">u_prev1 &#x3D; 0;    % 前一次控制器输出值</span><br><span class="line">u_prev2 &#x3D; 0;    % 前前一次控制器输出值</span><br><span class="line"></span><br><span class="line">e_prev1 &#x3D; 0;    % 前一次偏差</span><br><span class="line">e_prev2 &#x3D; 0;    % 前前一次偏差</span><br><span class="line"></span><br><span class="line">x &#x3D; [0, 0, 0];  % p i d 分别的输出</span><br><span class="line"></span><br><span class="line">for k &#x3D; 1:1:3000</span><br><span class="line">	time(k) &#x3D; k*ts;         % 时间序列，用于画图</span><br><span class="line">	r_in(k) &#x3D; 1;            % 输入序列，单位阶跃</span><br><span class="line">	e(k) &#x3D; r_in(k) - y_feed;    % 当前时刻偏差</span><br><span class="line"></span><br><span class="line">	delta_u &#x3D; kp*x(1) + ki*x(2) + kd*x(3);</span><br><span class="line">	% 位置式 PID算法</span><br><span class="line">	% u(k) &#x3D; u_prev1 + delta_u;</span><br><span class="line">	% 增量式 PID算法</span><br><span class="line">	u(k) &#x3D; delta_u;</span><br><span class="line"></span><br><span class="line">	% 对输出限幅</span><br><span class="line">	if u(k) &gt;&#x3D; 10</span><br><span class="line">		u(k) &#x3D; 10</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	if u(k) &lt;&#x3D; -10</span><br><span class="line">		u(k) &#x3D; -10</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	y_out(k) &#x3D; -den(2)*y_prev1- den(3)*y_prev2 + num(2)*u_prev1 + num(3)*u_prev2;  % 系统输出序列</span><br><span class="line">	y_feed &#x3D; y_out(k);	    % 反馈值</span><br><span class="line"></span><br><span class="line">	u_prev2 &#x3D; u_prev1;      % 更新控制器输出</span><br><span class="line">	u_prev1 &#x3D; u(k);</span><br><span class="line">	y_prev2 &#x3D; y_prev1;      % 更新系统输出</span><br><span class="line">	y_prev1 &#x3D; y_out(k);</span><br><span class="line"></span><br><span class="line">	x(1) &#x3D; e(k) - e_prev1;</span><br><span class="line">	x(2) &#x3D; e(k);</span><br><span class="line">	x(3) &#x3D; e(k) - 2*e_prev1 + e_prev2;</span><br><span class="line">	e_prev2 &#x3D; e_prev1;      % 更新偏差</span><br><span class="line">	e_prev1 &#x3D; e(k);</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 画图</span><br><span class="line">figure(1);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, y_out, &#39;r&#39;); </span><br><span class="line">axis([0, 3, 0, 1.5]);                           % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, y_out&#39;);   		% 系统输出和系统输入的曲线</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, u, &#39;--k&#39;); </span><br><span class="line">axis([0, 3, -0.2, 2.5]);                        % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, u_out&#39;);   		% 控制器输出和系统输入的曲线</span><br></pre></td></tr></table></figure>
+
+<p><strong>仿真结果：</strong></p>
+<p>增量式pid——系统食输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221745687.png" alt="r&y" title="">
+                </div>
+                <div class="image-caption">r&y</div>
+            </figure>
+
+<p>增量式pid——控制器输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221803911.png" alt="r&u" title="">
+                </div>
+                <div class="image-caption">r&u</div>
+            </figure>
 
 
-
-<h2 id="3-方法二"><a href="#3-方法二" class="headerlink" title="3. 方法二"></a>3. 方法二</h2><p>在需要截断的地方加入：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--more--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>首页就会显示这条以上的所有内容，隐藏接下来的所有内容。</p>
-<p><strong>两种方式各有利弊，大家可以按需要选择</strong></p>
+<blockquote>
+<p>关于位置式pid算法，在代码中也有标注，只需要加前一时刻控制器输出即可，至于参数的整定，在这里不详细说明。</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>控制学科</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>控制学科</tag>
       </tags>
   </entry>
   <entry>
@@ -1118,12 +1324,16 @@
 <h2 id="8-假设检验"><a href="#8-假设检验" class="headerlink" title="8. 假设检验"></a>8. 假设检验</h2><ul>
 <li>显著性检验的一般步骤：<ul>
 <li>根据实际问题提出原假设H0和备择假设H1</li>
-<li>给出显著检验水平α和样本容量n</li>
-<li>确定检验统计量K以及拒绝域形式</li>
-<li>按犯第一类错误的概率等于α求出拒绝域W</li>
-<li>根据样本值计算K的观察值k，当k∈W时，拒绝原假设H0；否则接受原假设H0</li>
+<li>给出显著检验水平α</li>
+<li>确定检验统计量，以及对应的分布表值</li>
+<li>根据原假设给出<strong>拒绝域形式</strong>，并求出拒绝域W</li>
+<li>根据已知数据求出统计量的观察值w，当k∈W时，拒绝原假设H0；否则接受原假设H0</li>
 </ul>
 </li>
+<li>抽取过程中计算得到的方差是样本方差，不是σ^2，而是<strong>S^2</strong></li>
+<li>t分布的概率密度函数是<strong>偶函数</strong></li>
+<li>统计量的选择：</li>
+<li>拒绝域形式：</li>
 </ul>
 ]]></content>
       <categories>
@@ -1134,205 +1344,709 @@
       </tags>
   </entry>
   <entry>
-    <title>看懂PID控制器</title>
-    <url>/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
-    <content><![CDATA[<p>[toc]</p>
-<h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
-<p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
-<p>举两个实例：</p>
-<h3 id="1-1-电机速度控制系统"><a href="#1-1-电机速度控制系统" class="headerlink" title="1.1 电机速度控制系统"></a>1.1 电机速度控制系统</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221429670.png" alt="电机速度" title="">
-                </div>
-                <div class="image-caption">电机速度</div>
-            </figure>
-
-<ol>
-<li>当出现扰动而使得电机的转速偏离设定值时，测速电动机充当检测变送环节的角色，而它的输出和设定值之间就会出现一个偏差信号（电压信号）</li>
-<li>这个偏差信号通常是比较小的，所以需要放大器对其进行放大</li>
-<li>而这个放大后的电压信号则是触发器的控制电压，控制晶闸管的关断时间，进而调节电动机的电枢电压，从而调节转速直到等于设定值</li>
-</ol>
-<p>在这个控制系统中，电动机显然是被控对象，而它的转速变化规律是可以抽象为一个数学模型的，也就是传递函数；而其他的环节，则是为了共同产生一个控制信号来作为电动机的输入。</p>
-<p>我们可以把比较器称为本文中的<strong>调节器</strong>，或者将比较器+放大器称为<strong>调节器</strong>，这不是重点，无伤大雅。</p>
-<p>值得注意的是：这个系统中的所有环节，其控制规律都可以抽象为若干个传递函数</p>
+    <title>第一章——操作系统引论</title>
+    <url>/2020/07/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/</url>
+    <content><![CDATA[<h1 id="第一章——操作系统引论"><a href="#第一章——操作系统引论" class="headerlink" title="第一章——操作系统引论"></a>第一章——操作系统引论</h1><blockquote>
+<p>搬运文章：<a href="https://blog.csdn.net/qq_41261490/article/details/80872072?utm_source=app" target="_blank" rel="noopener">操作系统（第四版）期末复习总结（上）</a></p>
+</blockquote>
+<h2 id="1-操作系统是什么？"><a href="#1-操作系统是什么？" class="headerlink" title="1. 操作系统是什么？"></a>1. 操作系统是什么？</h2><blockquote>
+<p>操作系统为用户完成所有“硬件相关，应用无关“的工作，以给用户方便、高效、安全的使用环境。</p>
+</blockquote>
+<h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>​    操作系统是一个大型的<strong>程序系统</strong>，它负责计算机的<strong>全部软、硬件资源的分配</strong>、<strong>调度</strong>工作，<strong>控制并协调多个任务的活动</strong>，实现<strong>信息的存取和保护</strong>。它提供<strong>用户接口</strong>，使用户获得良好的工作环境。</p>
+<h3 id="1-2-目标"><a href="#1-2-目标" class="headerlink" title="1.2 目标"></a>1.2 目标</h3><ul>
+<li><strong>方便性：</strong>配置OS后计算机系统更容易使用</li>
+<li><strong>有效性：</strong>改善资源利用率；提高系统 吞吐量</li>
+<li><strong>可扩充性</strong>：OS的结构（如层次化的结构：无结构发展-&gt;模快化结构-&gt;层次化结构-&gt;<strong>微内核</strong>结构）【微内核后续解释】</li>
+<li><strong>开放性：</strong>OS遵循世界标准范围。</li>
+</ul>
+<h3 id="1-3-作用"><a href="#1-3-作用" class="headerlink" title="1.3 作用"></a>1.3 作用</h3><h4 id="1-3-1-OS作为用户与计算机硬件系统之间的接口"><a href="#1-3-1-OS作为用户与计算机硬件系统之间的接口" class="headerlink" title="1.3.1 OS作为用户与计算机硬件系统之间的接口"></a>1.3.1 OS作为用户与计算机硬件系统之间的接口</h4><p>如API／CUI／GUI</p>
+<p>即：OS处于用户与计算机硬件系统之间，用户通过OS来使用计算机系统。</p>
+<h4 id="1-3-2-OS是计算机系统资源的管理者"><a href="#1-3-2-OS是计算机系统资源的管理者" class="headerlink" title="1.3.2  OS是计算机系统资源的管理者"></a>1.3.2  OS是计算机系统资源的管理者</h4><ul>
+<li><p><strong>处理机</strong>管理是用于分配和控制处理机</p>
+</li>
+<li><p><strong>存储器</strong>管理是负责内存的分配与回收</p>
+</li>
+<li><p><strong>I/O设备</strong>管理是负责I/O设备的分配（回收）与操纵</p>
+</li>
+<li><p><strong>文件</strong>管理是用于实现文件的存取、共享和保护</p>
+</li>
+</ul>
+<h4 id="1-3-3-OS实现了对计算机资源的抽象"><a href="#1-3-3-OS实现了对计算机资源的抽象" class="headerlink" title="1.3.3 OS实现了对计算机资源的抽象"></a>1.3.3 OS实现了对计算机资源的抽象</h4><h2 id="2-操作系统的发展过程"><a href="#2-操作系统的发展过程" class="headerlink" title="2. 操作系统的发展过程"></a>2. 操作系统的发展过程</h2><h3 id="2-1-未配置操作系统的计算机系统（40年代-手工操作阶段）"><a href="#2-1-未配置操作系统的计算机系统（40年代-手工操作阶段）" class="headerlink" title="2.1 未配置操作系统的计算机系统（40年代 手工操作阶段）"></a>2.1 未配置操作系统的计算机系统（40年代 手工操作阶段）</h3><ul>
+<li>工作方式：<ul>
+<li>用户：用户既是程序员，又是操作员；用户是计算机专业人员</li>
+<li>编程语言：为机器语言</li>
+<li>输入输出：纸带或卡片</li>
+</ul>
+</li>
+<li>计算机的工作特点：<ul>
+<li>用户独占全机：不出现资源被其他用户占用，资源利用率低</li>
+<li>CPU等待用户：计算前，手工装入纸带或卡片；计算完成后，手工卸取纸带或卡片；CPU利用率低</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>手工装卸、人工判断、手工修改与调试内存指令等造成CPU空闲；</li>
+<li>提前完成造成剩余预约时间内的CPU完全空闲；</li>
+<li>I/O设备的慢速与CPU的速度不匹配造成的CPU空闲等待时间</li>
+</ul>
+</li>
+</ul>
+<p><strong>简言之，资源利用率低；CPU利用率低</strong></p>
+<h3 id="2-2-单道批处理系统（50年代）"><a href="#2-2-单道批处理系统（50年代）" class="headerlink" title="2.2 单道批处理系统（50年代）"></a>2.2 单道批处理系统（50年代）</h3><blockquote>
+<p>单道批处理系统是在<strong>解决人机矛盾和CPU与I/O设备速度不匹配矛盾</strong>的过程中形成的。批处理系统旨在<strong>提高系统资源的利用率和系统的吞吐量</strong>。（但单道批处理系统仍不能充分利用资源，故现在已很少用）</p>
+</blockquote>
+<h4 id="2-2-1-联机批处理"><a href="#2-2-1-联机批处理" class="headerlink" title="2.2.1 联机批处理"></a>2.2.1 联机批处理</h4><blockquote>
+<p>I/O设备与主机直接连接，CPU直接控制作业输入输出</p>
+</blockquote>
+<ul>
+<li><strong>优点：</strong>解决了作业的自动转接，减少了人工操作时间</li>
+<li><strong>问题：</strong>作业输入和结果输出过程中，CPU处于等待状态</li>
+<li><strong>解决：</strong>增加一台不与主机直接相连而专门与I/O设备交换信息的卫星机（<strong>脱机批处理</strong>）</li>
+</ul>
+<h4 id="2-2-2-脱机批处理"><a href="#2-2-2-脱机批处理" class="headerlink" title="2.2.2 脱机批处理"></a>2.2.2 脱机批处理</h4><blockquote>
+<p>增加一台不与主机直接相连而专门与I/O设备交换信息的卫星机，由卫星机控制作业输入输出</p>
+</blockquote>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706000357598.png" alt="脱机批处理"></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221459922.png" alt="电机调速" title="">
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706000427605.png" alt="indicate" title="">
                 </div>
-                <div class="image-caption">电机调速</div>
-            </figure>
-<ul>
-<li>Un*为设定值，Un为测量变送的反馈值</li>
-<li>两者偏差去调节触发器控制电压Uct，控制规律为<code>Kp</code></li>
-<li>通过晶闸管控制电动机回路总电压Ud0，控制规律为<code>Ks</code></li>
-<li>Ud0 - 电枢总电阻电压即为电动机电动势E</li>
-<li>E = Ceφn，得到输出转速；测速发电机根据转速反馈电压信号，控制规律<code>α</code></li>
-</ul>
-<h3 id="1-2-温度或水位控制系统"><a href="#1-2-温度或水位控制系统" class="headerlink" title="1.2 温度或水位控制系统"></a>1.2 温度或水位控制系统</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221521103.png" alt="水位控制" title="">
-                </div>
-                <div class="image-caption">水位控制</div>
+                <div class="image-caption">indicate</div>
             </figure>
 
-<p>这个应该是比较简单的过程控制，实际水位低于设定水位时，控制器则作用于执行机构去增大调节阀开度，增加进水流量。</p>
-<h3 id="1-3-小小总结"><a href="#1-3-小小总结" class="headerlink" title="1.3 小小总结"></a>1.3 小小总结</h3><blockquote>
-<p>不要总是孤立控制器，它们是控制被控对象的必要环节。</p>
+
+
+<ul>
+<li><p>缺点：系统资源利用率低（<strong>因为内存中只存在一道程序，I/O请求成功前CPU都处于空闲状态</strong>）</p>
+</li>
+<li><p>特征：</p>
+<ul>
+<li><strong>自动性：</strong>正常情况下，一批作业能自动依次运行，无需人工干预</li>
+<li><strong>顺序性：</strong>各道作业是顺序进入内存</li>
+<li><strong>单道性：</strong>内存中任何时候只能有一道作业</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-多道批处理系统（60年代初）"><a href="#2-3-多道批处理系统（60年代初）" class="headerlink" title="2.3 多道批处理系统（60年代初）"></a>2.3 多道批处理系统（60年代初）</h3><blockquote>
+<p>单道运行每次只调一个用户作业程序进入内存并运行，CPU利用率低，为了进一步提高资源利用率和系统吞吐量，引入多道批处理</p>
 </blockquote>
-<p>这里给出一般的闭环控制系统框图</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221545700.png" alt="闭环控制框图"></p>
+<p><strong>多道程序</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706133354742.png" alt="多道批处理" title="">
+                </div>
+                <div class="image-caption">多道批处理</div>
+            </figure> 
+
+<ul>
+<li><p>优点：</p>
+<ul>
+<li><strong>资源利用率高</strong>（资源指CPU、存储器、设备、数据）</li>
+<li><strong>系统吞吐量大</strong>（系统吞吐量指系统在单位时间完成的总工作量（作业数量））</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>平均周转时间长（作业的周转时间是指从作业进入系统开始，直至其完成并退出系统为止所经历的时间），<strong>短作业的周转时间显著增长</strong></li>
+<li>无交互能力，<strong>整个作业完成后或中间出错时，才与用户交互，不利于调试和修改</strong></li>
+</ul>
+</li>
+<li><p>特点：</p>
+<ul>
+<li><strong>多道：</strong>内存同时存在多个作业</li>
+<li><strong>宏观上并行：</strong>同时有多道程序在内存运行，某一时间段上，各道程序不同程度地向前推进</li>
+<li><strong>微观上串行：</strong>任一时刻最多只有一道作业占用CPU，多道程序交替使用CPU </li>
+</ul>
+</li>
+</ul>
+<p><strong>在当前运行的作业需作I/O处理时，CPU转而执行另一个作业</strong></p>
+<p><strong>单道批处理系统与多道批处理系统的特点比较：</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>单道批处理系统</strong></th>
+<th><strong>多道批处理系统</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>内存中驻留程序数目</strong></td>
+<td><strong>一道</strong></td>
+<td><strong>多道</strong></td>
+</tr>
+<tr>
+<td><strong>占用CPU的情况</strong></td>
+<td><strong>独占</strong></td>
+<td><strong>交替占用</strong></td>
+</tr>
+<tr>
+<td><strong>是否需要作业和进程调度</strong></td>
+<td><strong>不需要</strong></td>
+<td><strong>需要</strong></td>
+</tr>
+<tr>
+<td><strong>程序完成次序与其进入内存次序间的关系</strong></td>
+<td><strong>严格对应</strong></td>
+<td><strong>不严格对应</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>相关技术问题：</p>
+<ul>
+<li><strong>处理机管理问题：</strong>如何分配，使CPU满足要求</li>
+<li><strong>内存管理问题：</strong>为每道程序分配内存空间</li>
+<li><strong>I/O设备管理问题：</strong>如何分配<strong>I/O</strong>设备</li>
+<li><strong>文件管理问题：</strong>如何组织程序和数据</li>
+<li><strong>作业管理问题：</strong>如何组织作业</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-分时系统（60年代中）"><a href="#2-4-分时系统（60年代中）" class="headerlink" title="2.4 分时系统（60年代中）"></a>2.4 分时系统（60年代中）</h3><blockquote>
+<p>分时系统是指在一台主机上连接多个带有显示器和键盘的终端，同时允许多个用户通过自己的键盘，以交互的方式使用计算机，<strong>分时共享硬件和软件资源。</strong></p>
+</blockquote>
+<h4 id="2-4-1-分时的定义"><a href="#2-4-1-分时的定义" class="headerlink" title="2.4.1 分时的定义"></a>2.4.1 分时的定义</h4><p><strong>分时的定义：</strong> 把计算机的系统资源（尤其是<strong>CPU时间</strong>）进行时间上的分割，每个时间段称为一个<strong>时间片</strong>（time slice），每个用户依次轮流使用时间片。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706150632805.png" alt="分时系统" title="">
+                </div>
+                <div class="image-caption">分时系统</div>
+            </figure>
+
+<ul>
+<li><p>关键问题：</p>
+<ul>
+<li><strong>通常按时间片分配：</strong>各个程序在<strong>CPU</strong>上执行的轮换时间。把处理器的运行时间分成很短的时间片，按<strong>时间片</strong>轮流把处理机分配给各作业使用。</li>
+<li><strong>多个用户分时：</strong>单个用户使用计算机的效率低，因而允许多个应用程序同时在内存中，分别服务于不同的用户</li>
+<li><strong>前台和后台程序分时：</strong>后台程序不占用终端输入输出，不与用户交互——现在的图形用户界面（GUI），除当前交互的程序（输入焦点）之外，其他程序均作为后台</li>
+</ul>
+</li>
+<li><p>特点：</p>
+<ul>
+<li><strong>人机交互性：</strong>用户可以通过终端与系统进行广泛的对话</li>
+<li><strong>多路性：</strong>允许在一台主机上同时连接多台联机终端，系统按分时原则为每个用户服务</li>
+<li><strong>用户独立性：</strong>对每个用户而言好像独占主机，每个用户各占一个终端，彼此独立工作</li>
+<li><strong>及时性：</strong>用户的请求在很短的时间内能够获得响应</li>
+</ul>
+</li>
+</ul>
+<p><strong>现在的许多操作系统都具有分时处理的功能，在分时系统的基础上，操作系统的发展开始分化，如实时系统、通用系统、个人系统等。</strong></p>
+<h3 id="2-5-实时操作系统"><a href="#2-5-实时操作系统" class="headerlink" title="2.5 实时操作系统"></a>2.5 实时操作系统</h3><blockquote>
+<p> 实时系统（Real－Time System）是指系统能<strong>及时响应外部事件的请求</strong>，在规定的时间内完成对该事件的处理，并控制所有实时任务协调一致地运行。</p>
+</blockquote>
+<p><strong>实时操作系统有硬实时和软实时之分：</strong></p>
+<ul>
+<li><p>硬实时要求在规定的时间内必须完成操作，这是在操作系统设计时保证的</p>
+</li>
+<li><p>软实时则只要按照任务的优先级，尽可能快地完成操作即可</p>
+</li>
+</ul>
+<p><strong>实时系统与分时系统特征的比较：</strong></p>
+<ul>
+<li><p><strong>设计目标：</strong>分时系统为给多用户提供通用的交互型开发运行环境，实时系统为特殊用途提供专用系统</p>
+</li>
+<li><p><strong>交互性：</strong>分时系统交互性强，实时系统较弱</p>
+</li>
+<li><p><strong>响应时间：</strong>分时系统以用户能够接受的响应时间为准，实时系统与受控对象及应用场合有关</p>
+</li>
+</ul>
+<h3 id="2-6-操作系统的进一步发展"><a href="#2-6-操作系统的进一步发展" class="headerlink" title="2.6 操作系统的进一步发展"></a>2.6 操作系统的进一步发展</h3><ul>
+<li><p>通用操作系统</p>
 <blockquote>
-<p>不要单纯的认为只有被控对象才有传递函数，每一个环节都有其相应的控制规律，都可以抽象为一个数学模型，用对应的传递函数来表达。就像最小拍控制器设计中，我们根据输入信号选择整个系统的闭环传函，进而确定控制器的脉冲传递函数。</p>
+<p>如果一个操作系统兼有批处理、分时或实时处理的全部或两种功能，该操作系统为通用操作系统</p>
 </blockquote>
-<p><strong>总结：对于闭环系统来说，控制器的输入是偏差信号，输出则是控制信号，去控制执行机构，进而调节被控对象</strong>。</p>
-<p><strong>而闭环控制系统，设计目的就是系统输出对输入的跟随能力</strong>。</p>
-<h2 id="2-PID"><a href="#2-PID" class="headerlink" title="2. PID"></a>2. PID</h2><ul>
-<li>P：比例控制器，对系统产生的偏差能够迅速做出反应；但是比例控制器不能消除余差，不过随着比例系数的增大，余差会减小，同时系统输出振荡次数增加，稳定性也会下降，调节时间加长</li>
-</ul>
+</li>
+<li><p>微内核操作系统</p>
+<p>采用微内核结构：提供基本支持功能的<strong>内核很小</strong>，大部分功能由内核之外的服务程序完成——<strong>进程（线程）管理</strong>、<strong>低级存储管理</strong>、<strong>中断和陷入管理</strong>、<strong>进程通信</strong></p>
+</li>
+<li><p>网络操作系统</p>
 <blockquote>
-<p>关于不能消除余差这一点，从数学角度是可以解释的，求一下余差即可。当然直想也是可以理解的：对于一个速度控制系统，某时刻负载减小，导致转速上升，比例控制器作用于执行机构使得转速下降，假如转速可以下降到设定转速，那么此时负载依然是小于额定负载的，转速依然会上升；所以反证得，最后余差是肯定会存在的。</p>
+<p>能够控制计算机在网络中方便地传送信息和共享资源，并能为网络用户提供各种所需的服务</p>
 </blockquote>
 <ul>
-<li>I：积分控制器，积分控制是可以消除余差的，体现于偏差消失后，积分控制器的输出是可以<strong>保持</strong>前时刻的输出；但是积分控制器的控制动作比较缓慢，一般不单独使用；随着积分系数的增大（时间常数的减小），系统的稳定性下降。</li>
+<li>功能：<ul>
+<li><strong>网络通信：</strong>在源计算机和目标计算机之间实现无差错的数据传送</li>
+<li><strong>资源管理：</strong>对网络中的硬、软件资源实施管理</li>
+<li><strong>网络管理：</strong>安全控制、性能监测、维护功能</li>
+<li><strong>网络服务：</strong>如e-mail、文件传输、共享设备服务、远程作业录入等</li>
 </ul>
-<ul>
-<li>D：微分控制器，够体现出当前误差的变化趋势，在偏差出现或变化的瞬间，立即产生强烈的调节作用，从而加快系统的动作速度，减少调节时间；但是由于微分对静态偏差毫无控制能力（偏差存在，但是不变化，控制器输出为0），所以一般不单独使用。并且在纯比例作用的基础上增加微分作用可以提高系统稳定性。</li>
+</li>
 </ul>
-<p><strong>总结：讲比例，积分，微分三种控制规律结合在一起，只要三项控制作用的强度配合得当，就既能快速调节，又能消除余差，从而得到满意的控制效果。</strong></p>
-<h2 id="3-模拟式PID"><a href="#3-模拟式PID" class="headerlink" title="3. 模拟式PID"></a>3. 模拟式PID</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221607032.png" alt="一般pid框图" title="">
-                </div>
-                <div class="image-caption">一般pid框图</div>
-            </figure>
-
-<p>模拟pid控制器的算法：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221621725.png" alt="模拟pid算法" title="">
-                </div>
-                <div class="image-caption">模拟pid算法</div>
-            </figure>
-
-<ul>
-<li>u(t) 为控制器输出，e(t) 为控制器输入，即偏差信号：<code>e(t) = r(t) - y(t)</code></li>
-<li>Kp 为比例系数，Ti 为积分时间常数，Td 为微分时间常数</li>
-</ul>
-<p>给出一个简单的matlab模拟pid仿真：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221633752.png" alt="模拟pid仿真" title="">
-                </div>
-                <div class="image-caption">模拟pid仿真</div>
-            </figure>
-
-<p>参数设置：<code>Kp = 0.5, Ki = 0.2, Kd = 1</code>；输出结果：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221650331.png" alt="模拟pid仿真结果" title="">
-                </div>
-                <div class="image-caption">模拟pid仿真结果</div>
-            </figure>
-
-<p><strong>模拟pid局限性</strong></p>
-<ul>
-<li>功能单一，灵活性差</li>
-<li>信息分散，所用仪表多，且监视不方便</li>
-<li>接线过多，系统维护难度大</li>
-</ul>
-<p>随着计算机等技术的发展，数字控制器日益成为工业生产中占据主导地位的控制器。</p>
-<h2 id="4-数字式PID"><a href="#4-数字式PID" class="headerlink" title="4. 数字式PID"></a>4. 数字式PID</h2><p>对模拟pid控制器进行离散化处理，用<strong>后向差分</strong>代替微分得：（具体细节不细说）</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221709929.png" alt="离散化pid算法" title="">
-                </div>
-                <div class="image-caption">离散化pid算法</div>
-            </figure>
-
-
-<h3 id="4-1-位置式PID算法"><a href="#4-1-位置式PID算法" class="headerlink" title="4.1 位置式PID算法"></a>4.1 位置式PID算法</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221726139.png" alt="位置式pid" title="">
-                </div>
-                <div class="image-caption">位置式pid</div>
-            </figure>
-
-<ul>
-<li>Kp，Ki，Kd为比例，积分，微分的三个重要参数</li>
-<li>k是采样序列号，k=0,1,2,3…</li>
-<li>Uk第k次采样时刻<strong>控制器</strong>输出值</li>
-<li>ek第k次采样时刻偏差，e(k-1)第k-1次采样偏差值，e(k-2)第k-2次采样偏差值</li>
-<li>位置式pid控制器的输入为系统的偏差值，输出为uk，即偏差的组合</li>
-</ul>
-<h4 id="4-1-2-位置式pid算法的缺点"><a href="#4-1-2-位置式pid算法的缺点" class="headerlink" title="4.1.2 位置式pid算法的缺点"></a>4.1.2 位置式pid算法的缺点</h4><ul>
-<li>控制器输出与过去的各个状态有关，运算量大</li>
-<li>计算机出现故障，u(k)的大幅度变化会引起执行机构位置的大幅度变化</li>
-</ul>
-<h3 id="4-2-增量式PID算法"><a href="#4-2-增量式PID算法" class="headerlink" title="4.2 增量式PID算法"></a>4.2 增量式PID算法</h3><p>由位置式pid第k次输出 - 第k-1次输出 得到增量式pid算法：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9nc3MwLmJhaWR1LmNvbS85NG8zZFNhZ194STRraEdrbzlXVEFuRjZoaHkvemhpZGFvL3doJTNENjAwJTJDODAwL3NpZ249NjAyYzFhOTdjOWZkZmMwM2U1MmRlYmJlZTQwZmFiYWMvZTRkZGU3MTE5MGVmNzZjNjBmM2YxNzQyOTcxNmZkZmFhZTUxNjdlZS5qcGc" alt="增量式pid算法" title="">
-                </div>
-                <div class="image-caption">增量式pid算法</div>
-            </figure>
-
+</li>
+<li><p>分布式操作系统</p>
 <blockquote>
-<p>增量式pid算法表示的是控制机构（阀门，步进电机等）的调节增量，即k时刻相对于k-1时刻的调节增量。</p>
+<p><strong>集中式计算机系统：</strong>处理和控制能力都高度集中在一台计算机上，所有任务均由它完成。</p>
+<p><strong>分布式计算机系统：</strong>由多台分散的计算机经互联网络连接而成的系统，各台计算机没有主从之分。任何工作都可以分布在几台计算机上，由它们并行工作、协同完成。</p>
 </blockquote>
-<p><strong>值得注意的是：采用增量式pid算法的控制器输出值为调节增量</strong>。</p>
-<p>从这里也可以得出<strong>位置式pid算法</strong>的另一种表示形式：<br><code>u(k) = u(k - 1) + Δu</code></p>
-<p>可以说，位置式pid算法和增量式pid算法是pid算法的两种表现形式，从本质上讲二者是一致的。</p>
-<h4 id="4-2-2-增量式pid的优点"><a href="#4-2-2-增量式pid的优点" class="headerlink" title="4.2.2 增量式pid的优点"></a>4.2.2 增量式pid的优点</h4><ul>
-<li>算式中不需要累加；控制增量Δu(k)的确定仅与最近3次的采样值有关</li>
-<li>计算机每次只输出控制增量，对应执行机构位置的变化量，不易引起过程的异常操作</li>
-<li>手动—自动切换时冲击小。当控制从手动向自动切换时，<br>可以作到无扰动切换</li>
-</ul>
-<h3 id="4-3-位置式pid和增量式pid的抉择"><a href="#4-3-位置式pid和增量式pid的抉择" class="headerlink" title="4.3 位置式pid和增量式pid的抉择"></a>4.3 位置式pid和增量式pid的抉择</h3><p>在实际使用中应该使用位置式还是增量式，关键看执行机构的特性：</p>
+<p><strong>分布式计算机系统与单机集中式操作系统区别：</strong></p>
 <ul>
-<li>如果执行机构具有积分特性（如步进电机，具有齿轮传递特性的位置执行机构等），应该使用增量式pid算法</li>
-<li>如果执行机构没有积分特性，则应该使用位置式pid算法</li>
+<li><strong>进程通信：</strong>集中式简单，分布式涉及机构、规程和路径算法</li>
+<li><strong>资源管理：</strong>集中式，一类资源由一个管理程序管理；分布式，一类资源由多个管理程序管理，这些程序必须协调一致工作</li>
+<li><strong>系统结构：</strong>分布式，有若干相对独立的部分，分布在各台计算</li>
 </ul>
-<h3 id="4-4-位置式pid和增量式pid仿真"><a href="#4-4-位置式pid和增量式pid仿真" class="headerlink" title="4.4 位置式pid和增量式pid仿真"></a>4.4 位置式pid和增量式pid仿真</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function [] &#x3D; my_simulink_pid()</span><br><span class="line">% 离散模型</span><br><span class="line">ts &#x3D; 0.001;						    % 采样时间</span><br><span class="line">sys &#x3D; tf(400, [1, 50, 0]);		    % 传递函数</span><br><span class="line">d_sys &#x3D; c2d(sys, ts, &#39;z&#39;);		    % 传递函数离散化</span><br><span class="line">[num, den] &#x3D; tfdata(d_sys, &#39;v&#39;);	% 提取分子分母</span><br><span class="line"></span><br><span class="line">% pid参数</span><br><span class="line">kp &#x3D; 10; ki &#x3D; 2; kd &#x3D; 15;</span><br><span class="line"></span><br><span class="line">% 初始化信号值</span><br><span class="line">y_feed &#x3D; 0;	    % 当前反馈值</span><br><span class="line">y_prev1 &#x3D; 0;    % 前一次输出值</span><br><span class="line">y_prev2 &#x3D; 0;    % 前前一次输出值</span><br><span class="line"></span><br><span class="line">u_prev1 &#x3D; 0;    % 前一次控制器输出值</span><br><span class="line">u_prev2 &#x3D; 0;    % 前前一次控制器输出值</span><br><span class="line"></span><br><span class="line">e_prev1 &#x3D; 0;    % 前一次偏差</span><br><span class="line">e_prev2 &#x3D; 0;    % 前前一次偏差</span><br><span class="line"></span><br><span class="line">x &#x3D; [0, 0, 0];  % p i d 分别的输出</span><br><span class="line"></span><br><span class="line">for k &#x3D; 1:1:3000</span><br><span class="line">	time(k) &#x3D; k*ts;         % 时间序列，用于画图</span><br><span class="line">	r_in(k) &#x3D; 1;            % 输入序列，单位阶跃</span><br><span class="line">	e(k) &#x3D; r_in(k) - y_feed;    % 当前时刻偏差</span><br><span class="line"></span><br><span class="line">	delta_u &#x3D; kp*x(1) + ki*x(2) + kd*x(3);</span><br><span class="line">	% 位置式 PID算法</span><br><span class="line">	% u(k) &#x3D; u_prev1 + delta_u;</span><br><span class="line">	% 增量式 PID算法</span><br><span class="line">	u(k) &#x3D; delta_u;</span><br><span class="line"></span><br><span class="line">	% 对输出限幅</span><br><span class="line">	if u(k) &gt;&#x3D; 10</span><br><span class="line">		u(k) &#x3D; 10</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	if u(k) &lt;&#x3D; -10</span><br><span class="line">		u(k) &#x3D; -10</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	y_out(k) &#x3D; -den(2)*y_prev1- den(3)*y_prev2 + num(2)*u_prev1 + num(3)*u_prev2;  % 系统输出序列</span><br><span class="line">	y_feed &#x3D; y_out(k);	    % 反馈值</span><br><span class="line"></span><br><span class="line">	u_prev2 &#x3D; u_prev1;      % 更新控制器输出</span><br><span class="line">	u_prev1 &#x3D; u(k);</span><br><span class="line">	y_prev2 &#x3D; y_prev1;      % 更新系统输出</span><br><span class="line">	y_prev1 &#x3D; y_out(k);</span><br><span class="line"></span><br><span class="line">	x(1) &#x3D; e(k) - e_prev1;</span><br><span class="line">	x(2) &#x3D; e(k);</span><br><span class="line">	x(3) &#x3D; e(k) - 2*e_prev1 + e_prev2;</span><br><span class="line">	e_prev2 &#x3D; e_prev1;      % 更新偏差</span><br><span class="line">	e_prev1 &#x3D; e(k);</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 画图</span><br><span class="line">figure(1);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, y_out, &#39;r&#39;); </span><br><span class="line">axis([0, 3, 0, 1.5]);                           % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, y_out&#39;);   		% 系统输出和系统输入的曲线</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, u, &#39;--k&#39;); </span><br><span class="line">axis([0, 3, -0.2, 2.5]);                        % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, u_out&#39;);   		% 控制器输出和系统输入的曲线</span><br></pre></td></tr></table></figure>
-
-<p><strong>仿真结果：</strong></p>
-<p>增量式pid——系统食输出和系统输入曲线图</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221745687.png" alt="r&y" title="">
-                </div>
-                <div class="image-caption">r&y</div>
-            </figure>
-
-<p>增量式pid——控制器输出和系统输入曲线图</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221803911.png" alt="r&u" title="">
-                </div>
-                <div class="image-caption">r&u</div>
-            </figure>
-
-
+</li>
+<li><p>嵌入式操作系统</p>
 <blockquote>
-<p>关于位置式pid算法，在代码中也有标注，只需要加前一时刻控制器输出即可，至于参数的整定，在这里不详细说明。</p>
+<p>运行在嵌入式（计算机）环境中、对整个系统及所有操作的各种部件、装置等资源进行统一协调、处理、指挥和控制的系统软件</p>
 </blockquote>
+<p>特点：</p>
+<ul>
+<li><strong>微型化：</strong>内存少（<strong>1M</strong>以内）、无外存、微处理器字长短（<strong>8b</strong>、<strong>16b</strong>）、运行速度有限、能提供的能源少、外设千变万化</li>
+<li><strong>可定制：</strong>能运行在不同微处理器平台上，能针对硬件变化进行结构与功能上的配置</li>
+<li><strong>实时性：</strong>硬实时、软实时、非实时</li>
+<li><strong>开发环境：</strong>通常提供代码编辑器、编译器和链接器、程序调试器、系统配置器和系统仿真器</li>
+</ul>
+</li>
+<li><p>智能化操作系统</p>
+</li>
+</ul>
+<h2 id="3-操作系统的功能"><a href="#3-操作系统的功能" class="headerlink" title="3. 操作系统的功能"></a>3. 操作系统的功能</h2><h3 id="3-1-处理器管理"><a href="#3-1-处理器管理" class="headerlink" title="3.1 处理器管理"></a>3.1 处理器管理</h3><ul>
+<li><p>完成<strong>处理机资源的分配、调度和回收</strong>等功能。处理机调度的单位可为<strong>进程</strong>或<strong>线程</strong>。</p>
+</li>
+<li><p>由于处理机调度策略不同，出现不同类型的操作系统，如批处理系统、分时系统、实时系统</p>
+</li>
+</ul>
+<h3 id="3-2-存储管理"><a href="#3-2-存储管理" class="headerlink" title="3.2 存储管理"></a>3.2 存储管理</h3><blockquote>
+<p><strong>管理目标：</strong>提高利用率、方便用户使用、提供足够的存储空间、方便进程并发运行。内存的分配、保护和扩充。</p>
+</blockquote>
+<ul>
+<li><p><strong>存储器分配与回收</strong></p>
+</li>
+<li><p><strong>地址映射（变换）：</strong>逻辑地址到内存物理地址映射</p>
+</li>
+<li><p><strong>存储保护：</strong>保证进程间互不干扰、相互保密</p>
+</li>
+<li><p><strong>内存扩充（覆盖、交换和虚拟存储）：</strong>提高内存利用率、扩大进程的内存空间</p>
+</li>
+</ul>
+<h3 id="3-3-设备管理"><a href="#3-3-设备管理" class="headerlink" title="3.3 设备管理"></a>3.3 设备管理</h3><blockquote>
+<p><strong>管理目标：</strong>方便设备的使用、提高<strong>CPU</strong>与<strong>I/O</strong>设备利用率</p>
+</blockquote>
+<ul>
+<li><p><strong>设备操作：</strong>利用设备驱动程序完成对设备的操作</p>
+</li>
+<li><p><strong>设备独立性(device independence)：</strong>提供统一的<strong>I/O</strong>设备接口，使应用程序独立于物理设备，提高可适应性；在同样的接口和操作下完成不同的内容</p>
+</li>
+<li><p><strong>设备分配与回收：</strong>在多用户间共享<strong>I/O</strong>设备资源</p>
+</li>
+<li><p><strong>缓冲区管理：</strong>匹配<strong>CPU</strong>和外设的速度，提高两者的利用率。主机与外设并行</p>
+</li>
+</ul>
+<h3 id="3-4-信息管理"><a href="#3-4-信息管理" class="headerlink" title="3.4 信息管理"></a>3.4 信息管理</h3><blockquote>
+<p><strong>管理目标：</strong>解决软件资源的存储、共享、保密和保护</p>
+</blockquote>
+<ul>
+<li><p><strong>文件存储空间管理：</strong>解决如何存放信息，以提高空间利用率和读写性能</p>
+</li>
+<li><p><strong>目录管理：</strong>解决信息检索问题。文件的属性（如文件名）、单一副本赋予多文件名</p>
+</li>
+<li><p><strong>文件的读写管理和存取控制：</strong>解决信息安全问题。系统设口令 “哪个用户”、用户分类 “哪个用户组”、文件权限 “针对用户或用户组的读写权”</p>
+</li>
+</ul>
+<h3 id="3-5-用户接口"><a href="#3-5-用户接口" class="headerlink" title="3.5 用户接口"></a>3.5 用户接口</h3><blockquote>
+<p><strong>管理目标：</strong>提供一个友好的用户访问操作系统的接口。操作系统向上提供两种接口</p>
+</blockquote>
+<ul>
+<li><p><strong>系统命令：</strong>供用户用于组织和控制自己的作业运行。命令行、菜单式或<strong>GUI “联机”</strong> ；命令脚本 <strong>“脱机”</strong></p>
+</li>
+<li><p><strong>编程接口：</strong>供用户程序和系统程序调用操作系统功能。系统调用和高级语言库函数</p>
+</li>
+<li><p>通过这些命令和调用，向OS提出申请，由OS调用内部功能来完成</p>
+</li>
+</ul>
+<h2 id="4-操作系统的特征"><a href="#4-操作系统的特征" class="headerlink" title="4. 操作系统的特征"></a>4. 操作系统的特征</h2><h3 id="4-1-并发（concurrency）"><a href="#4-1-并发（concurrency）" class="headerlink" title="4.1 并发（concurrency）"></a>4.1 并发（concurrency）</h3><blockquote>
+<p><strong>并发性：</strong>并发是指在内存中放多道作业， 在一个时间段上来看，每一道作业都能不同程度地向前推进。但在任何一个时间点上只能有一道占用CPU。</p>
+</blockquote>
+<ul>
+<li><strong>并发：</strong>又称<strong>伪并行</strong>，指多个事件在<strong>同一时间</strong>段内发生。操作系统是一个并发系统，各进程间的并发，系统与应用间的并发。操作系统要完成这些并发过程的管理。</li>
+<li><strong>并行：</strong>是指在<strong>同一时刻</strong>发生，指当系统有<strong>一个以上CPU</strong>时，一个CPU执行一个进程，另一个CPU执行另一个进程，两者互不干涉，互不抢占资源，同时进行</li>
+</ul>
+<hr>
+<ul>
+<li><strong>串行：</strong>在内存中每次只能放一道作业，只有它完全执行完后别的作业才能进入内存执行。</li>
+<li>*<em>并行： *</em>存在于有多个CPU的环境中， 在内存中放多道作业，在任一时间点上都可能有多道作业在不同的CPU上同时执行。 </li>
+</ul>
+<h3 id="4-2-共享（sharing）"><a href="#4-2-共享（sharing）" class="headerlink" title="4.2 共享（sharing）"></a>4.2 共享（sharing）</h3><blockquote>
+<p>多个进程共享有限的计算机系统资源。操作系统要对系统资源进行合理分配和使用。<strong>资源在一个时间段内交替被多个进程所用</strong></p>
+</blockquote>
+<ul>
+<li><p><strong>互斥共享</strong>（如音频设备、打印机）：资源分配后到释放前，不能被其他进程所用</p>
+</li>
+<li><p><strong>同时访问</strong>（如磁盘文件）：一个时间段内同时资源分配难以达到最优化</p>
+</li>
+</ul>
+<hr>
+<p><strong>并发和共享是OS的两个最基本的特性，二者互为条件！</strong></p>
+<hr>
+<h3 id="4-3-虚拟（virtual）"><a href="#4-3-虚拟（virtual）" class="headerlink" title="4.3 虚拟（virtual）"></a>4.3 虚拟（virtual）</h3><blockquote>
+<p>一个物理实体映射为若干个对应的逻辑实体——采用<strong>时分复用（分时使用）</strong>或<strong>空分复用（分空间使用）</strong></p>
+</blockquote>
+<p><strong>虚拟是操作系统管理系统资源的重要手段，可提高资源利用率：</strong></p>
+<ul>
+<li><strong>CPU</strong>——每个用户（进程）的“虚处理机”。利用多道处理技术，多道程序并发执行，分时使用一台处理机。</li>
+<li><strong>存储器</strong>——每个进程都占有的地址空间（指令＋数据＋堆栈）（空分复用存储器）“虚拟存储器”。虚拟存储技术——内存分时复用，一道程序通过时分复用内存，可以在远小于它的内存空间运行。</li>
+<li><strong>显示设备</strong>——多窗口或虚拟终端（virtual terminal）</li>
+<li><strong>独享设备</strong>—— 假脱机技术（Spooling），虚设备</li>
+</ul>
+<h3 id="4-4-异步性（asynchronism）"><a href="#4-4-异步性（asynchronism）" class="headerlink" title="4.4 异步性（asynchronism）"></a>4.4 异步性（asynchronism）</h3><blockquote>
+<p>也称<strong>不确定性</strong>：指进程的执行顺序和执行时间的不确定性</p>
+</blockquote>
+<ul>
+<li><p><strong>进程的运行速度不可预知：</strong>分时系统中，多个进程并发执行，“时走时停”，不可预知每个进程的运行推进快慢</p>
+</li>
+<li><p>难以重现系统在某个时刻的状态（包括重现运行中的错误）</p>
+</li>
+<li><p>无论快慢，应该结果相同——通过进程互斥和同步手段来保证</p>
+</li>
+<li><p>因为不确定性，在设计<strong>OS</strong>时，要充分考虑各种<strong>可能性</strong>，以便稳定、安全、高效地达到并发和资源共享</p>
+</li>
+</ul>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706170351956.png" alt="summary" title="">
+                </div>
+                <div class="image-caption">summary</div>
+            </figure>
+
+
+
 ]]></content>
       <categories>
-        <category>控制学科</category>
+        <category>操作系统</category>
       </categories>
       <tags>
-        <tag>控制学科</tag>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>线性代数</title>
+    <url>/2020/07/07/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="1-行列式"><a href="#1-行列式" class="headerlink" title="1. 行列式"></a>1. 行列式</h2><h3 id="1-1-知识点"><a href="#1-1-知识点" class="headerlink" title="1.1 知识点"></a>1.1 知识点</h3><ul>
+<li><p>二阶行列式是由两个2维向量组成的，其（运算规则的）结果为以这两个向量为邻边的平行四边形的面积</p>
+</li>
+<li><p>三阶行列式是由三个个3维向量组成的，其（运算规则的）结果为以这三个向量为邻边的平行六面体的体积</p>
+</li>
+<li><p>n阶行列式是由n个n维向量组成的，其（运算规则的）结果为以这n个向量为邻边的n维图形的体积</p>
+</li>
+<li><p><strong>行列式的单行可拆性：</strong></p>
+<ul>
+<li>行列式中某行（列）元素均是两个元素之和，则可拆成两个行列式之和</li>
+<li>如果两个行列式的其他元素对应相等，只有一行（列）不同时，可以相加，相加时其他元素不变，不同元素的行（列）对象相加即可。</li>
+</ul>
+</li>
+<li><p>余子式和代数余子式的关系：<strong>Aij = （-1）^(i+j) * Mij</strong></p>
+</li>
+<li><p><strong>几个重要的行列式：</strong></p>
+<ul>
+<li>主对角线行列式：主对角线元素乘积</li>
+<li>副对角线行列式：副对角线元素乘积 * <strong>(-1)^[n(n-1)/2]</strong></li>
+<li>拉普拉斯展开式：</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">设A为m阶矩阵，B为n阶矩阵：</span><br><span class="line">| A  O |   | A  C |   | A  O |</span><br><span class="line">|      | = |      | = |      | = |A| * |B|</span><br><span class="line">| O  B |   | O  B |   | C  B | </span><br><span class="line">    </span><br><span class="line">| O  A |   | C  A |   | O  A |</span><br><span class="line">|      | = |      | = |      | = <span class="number">-1</span>^(m*n) * |A| * |B|</span><br><span class="line">| B  O |   | B  O |   | B  C |</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>范德蒙德行列式：</p>
+<p><img src="C:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200716235115866.png" alt="image-20200716235115866"></p>
+<p>只需要看第二行，结果等于<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200716235137211.png" alt="image-20200716235137211" title="">
+                </div>
+                <div class="image-caption">image-20200716235137211</div>
+            </figure></p>
+<p><strong>巧记：高年级欺负低年级</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2-相关解题技巧"><a href="#1-2-相关解题技巧" class="headerlink" title="1.2 相关解题技巧"></a>1.2 相关解题技巧</h3><h4 id="1-2-1-具体型行列式的计算"><a href="#1-2-1-具体型行列式的计算" class="headerlink" title="1.2.1 具体型行列式的计算"></a>1.2.1 具体型行列式的计算</h4><ul>
+<li><p>化为基本型：</p>
+<ul>
+<li><p>直接展开：矩阵中含有足够多的0，或者矩阵阶数较低可以直接展开</p>
+</li>
+<li><p><strong>爪形：</strong></p>
+<p>只有第一列，第一行及主对角线元素不为0，其余元素全为0的行列式为<strong>爪形行列式</strong></p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/1B38EC7D02D8BDF2392B3BD32FD5125B.jpg" alt="A3300B061C5119D40ACF0219198B578D"></p>
+<p><strong>做法：将对角线元素提取出来，使对角线元素为全为1，然后化为上三角或者下三角，即可</strong></p>
+<p>本例题是左上爪形，对于其他方向的，操作类似。</p>
+</li>
+<li><p><strong>异爪形：</strong></p>
+<p>非规则的爪形为<strong>异爪形行列式</strong></p>
+<p><strong>异爪形式1：</strong>（<strong>按非零元素行进行展开</strong>）</p>
+<ul>
+<li><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/1B38EC7D02D8BDF2392B3BD32FD5125B.jpg" alt="1B38EC7D02D8BDF2392B3BD32FD5125B" title="">
+                </div>
+                <div class="image-caption">1B38EC7D02D8BDF2392B3BD32FD5125B</div>
+            </figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>**异爪形式2：**
+
+![image-20200717231617467](https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200717231617467.png)
+
++ 方法1：看行与行之间是否存在关系，如果有，则利用倍加性质消0
++ 方法2：对行列式进行展开，**建立Dn和低阶行列式的关系**，如Dn和Dn-1的关系等等</code></pre><ul>
+<li><p><strong>行（列）和相等：所有行（列）可加到第一列（行），提取公因式</strong></p>
+</li>
+<li><p>消零化基本形：消零化三角形</p>
+</li>
+<li><p>拉普拉斯展开</p>
+<p><strong>做法：将大部分0放一堆，构成分块矩阵，根据拉普拉斯展开式原则计算</strong></p>
+<p>![1B38EC7D02D8BDF2392B3BD32FD5125B - 副本](<a href="https://gitee.com/BambooWine/MyPhotos/raw/master/img/1B38EC7D02D8BDF2392B3BD32FD5125B" target="_blank" rel="noopener">https://gitee.com/BambooWine/MyPhotos/raw/master/img/1B38EC7D02D8BDF2392B3BD32FD5125B</a> - 副本.jpg)</p>
+</li>
+<li><p>范德蒙德行列式</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>递推法（难点）</strong></p>
+<ul>
+<li>递推法主要运用于<strong>异爪形式2</strong>，建立Dn与Dn-1或者Dn-2等关系</li>
+<li>对行列式进行展开，<strong>建立Dn和低阶行列式的关系</strong>，如Dn和Dn-1的关系等等 ，张宇36讲 <strong>P299</strong></li>
+</ul>
+</li>
+<li><p>行列式表示的函数和方程：这个直接计算行列式，再根据题计算就好，一般会分析<strong>方程的根或重根</strong></p>
+</li>
+</ul>
+<h4 id="1-2-2-抽象行列式的计算"><a href="#1-2-2-抽象行列式的计算" class="headerlink" title="1.2.2 抽象行列式的计算"></a>1.2.2 抽象行列式的计算</h4><ul>
+<li>利用行列式的性质将未知行列式化成行列式是解决此问题的关键</li>
+<li>常用方法：<ol>
+<li><strong>熟练将线性组合表示成矩阵乘积的形式</strong>，|AB| = |A| * |B|</li>
+<li>用行列式的<strong>倍加性质</strong>将未知行列式化成已知行列式的关系式</li>
+</ol>
+</li>
+</ul>
+<h4 id="1-2-3-余子式和代数余子式的线性组合计算"><a href="#1-2-3-余子式和代数余子式的线性组合计算" class="headerlink" title="1.2.3 余子式和代数余子式的线性组合计算"></a>1.2.3 余子式和代数余子式的线性组合计算</h4><ul>
+<li><p>余子式和代数余子式的关系：<strong>Aij = （-1）^(i+j) * Mij</strong></p>
+</li>
+<li><pre><code class="cpp">K1*Ai1 + K2*Ai2 + ... + Kn*Ain = 
+    |      *     |
+    |             |
+    |K1 K2 ... Kn|
+    |             |
+    |       *     |
+
+<span class="comment">// 第i行的元素换成K1，K2，...，Kn，再计算行列式 </span></code></pre>
+</li>
+<li><p>如果是余子式的线性组合，先将余子式换成对应代数余子式，再写成行列式，计算</p>
+</li>
+</ul>
+<h2 id="2-矩阵"><a href="#2-矩阵" class="headerlink" title="2. 矩阵"></a>2. 矩阵</h2><h3 id="2-1-知识点"><a href="#2-1-知识点" class="headerlink" title="2.1 知识点"></a>2.1 知识点</h3><h4 id="2-1-1-矩阵的基本运算"><a href="#2-1-1-矩阵的基本运算" class="headerlink" title="2.1.1 矩阵的基本运算"></a>2.1.1 矩阵的基本运算</h4><ul>
+<li><p>矩阵乘法注意事项：对于AB，<strong>A的列数必须与矩阵B的行数相等</strong></p>
+</li>
+<li><p>矩阵乘法注意事项：<strong>一般情况不满足交换律，即AB ≠ BA</strong></p>
+</li>
+<li><p>内积概念，正交概念</p>
+</li>
+<li><p>规范正交基</p>
+</li>
+<li><p><strong>施密特标准正交化</strong>（张宇36讲 P311）</p>
+<ol>
+<li><p>正交化：</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718154635575.png" alt="image-20200718154635575" style="zoom:67%;" />
+
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718154706160.png" alt="image-20200718154706160" style="zoom:67%;" />
+</li>
+<li><p>单位化：</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718154911416.png" alt="image-20200718154911416" style="zoom:67%;" />
+
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718154948802.png" alt="image-20200718154948802" style="zoom:67%;" />
+</li>
+</ol>
+</li>
+<li><p>几个重要矩阵：</p>
+<ol>
+<li><p>零矩阵</p>
+</li>
+<li><p>单位矩阵</p>
+</li>
+<li><p>数量矩阵</p>
+</li>
+<li><p>对角矩阵</p>
+</li>
+<li><p>上（下）三角矩阵</p>
+</li>
+<li><p>对称和反对称矩阵</p>
+</li>
+<li><p><strong>正交矩阵：</strong></p>
+<ul>
+<li><p><strong>矩阵A是由规范正交基组成</strong></p>
+</li>
+<li><p><strong>正交矩阵的判定</strong>：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/clip_image002.png" alt="img" title="">
+                </div>
+                <div class="image-caption">img</div>
+            </figure></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>分块矩阵的基本运算：</p>
+<ul>
+<li><p>加法：对应分块矩阵直接相加即可</p>
+</li>
+<li><p>数乘：直接乘</p>
+</li>
+<li><p>乘法：</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718155344690.png" alt="image-20200718155344690" style="zoom:67%;" />
+</li>
+<li><p>幂：</p>
+</li>
+</ul>
+</li>
+</ul>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718155650549.png" alt="image-20200718155650549" style="zoom:67%;" />
+
+<ul>
+<li><strong>转置，伴随，求逆的公式</strong>：</li>
+</ul>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/6EA87E7BA44BB1813661EC913FD146E4 - 副本.jpg" alt="6EA87E7BA44BB1813661EC913FD146E4 - 副本" style="zoom: 50%;" />
+
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718160030279.png" alt="image-20200718160030279" style="zoom: 80%;" />
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718160059445.png" alt="image-20200718160059445" title="">
+                </div>
+                <div class="image-caption">image-20200718160059445</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200719183600603.png" alt="image-20200719183600603" title="">
+                </div>
+                <div class="image-caption">image-20200719183600603</div>
+            </figure>
+
+
+
+<ul>
+<li>矩阵求逆方法：<ul>
+<li>定义法<ol>
+<li>根据定义</li>
+<li>将A分解成若干个可逆矩阵的乘积</li>
+<li>分块矩阵的求逆</li>
+</ol>
+</li>
+<li>伴随矩阵</li>
+<li>初等变换</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>伴随矩阵：</li>
+</ul>
+<ul>
+<li>初等变换和初等矩阵：<ul>
+<li>初等变换：<strong>互换、倍乘、倍加</strong></li>
+<li>初等矩阵：由单位矩阵经过<strong>一次初等变换</strong>得到的矩阵为<strong>初等矩阵</strong></li>
+<li>初等矩阵性质：<ol>
+<li><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200718162828301.png" alt="image-20200718162828301" title="">
+                </div>
+                <div class="image-caption">image-20200718162828301</div>
+            </figure></li>
+<li><strong>可逆矩阵一定可以经过有限次初等变换化成同阶单位矩阵E</strong></li>
+<li><strong>对矩阵A进行初等变换，相当于矩阵A左乘相应的初等矩阵</strong></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-相关解题技巧"><a href="#2-2-相关解题技巧" class="headerlink" title="2.2 相关解题技巧"></a>2.2 相关解题技巧</h3><ul>
+<li><p>求矩阵A的n次幂</p>
+<ul>
+<li><p>当<strong>r(A) = 1</strong>时，如A = 列向量 * 行向量，求A的n次幂</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200719184820284.png" alt="image-20200719184820284" style="zoom: 67%;" />
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>试算法</strong>：矩阵分布有明显的规律，经过试算，可以找到一定规律</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200719184912870.png" alt="image-20200719184912870" style="zoom: 67%;" />
+
+
+
+</li>
+</ul>
+<ul>
+<li><p><strong>二项式展开</strong>：假如试算没有找到规律，可以考虑将矩阵进行分解，如<strong>A = E + B</strong>，然后<strong>二项式展开</strong></p>
+<blockquote>
+<p>因为<strong>单位矩阵和任何同阶方针可交换</strong>，故可以将A分解为<strong>A = E + B</strong>，再简化计算</p>
+</blockquote>
+<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200719185819166.png" alt="image-20200719185819166" style="zoom:80%;" />
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>求矩阵的逆矩阵：</p>
+<ul>
+<li><p>数值矩阵的逆：<strong>注意验算</strong></p>
+<ol>
+<li><p>运用公式：</p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200719190309010.png" alt="image-20200719190309010" style="zoom: 67%;" />
+
+<blockquote>
+<p>(1) 不要忘记A*要除以 |A|</p>
+<p>(2) A<em>的元素是|A|中元素的代数余子式，*</em>注意正负号**</p>
+<p>(3) Aij位于矩阵A<em>中相对于矩阵A的元素aji的位置上*</em>（尤其重要）**</p>
+<p>(4) 对于二阶矩阵，<strong>主对调，副变号</strong></p>
+</blockquote>
+</li>
+<li><p>初等行变换</p>
+</li>
+</ol>
+</li>
+<li><p>抽象矩阵的逆：</p>
+<ol>
+<li><strong>凑：</strong>题目要求证明某个矩阵可逆，可以根据题目已知条件，凑出两个矩阵乘积为E的等式</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>2. **分解：**有时候不能直接凑出矩阵乘积为E的等式，但是可以通过**将矩阵分为若干个可逆矩阵的乘积**
+
+
+
+3. **凑矩阵方程：**AB = 0，若B为非零矩阵，则A不可逆**（AX = 0有非零解，即A不满秩）**</code></pre><ul>
+<li><p>分块矩阵的逆：（证明在张宇36讲 P324）</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200719192852850.png" alt="image-20200719192852850"></p>
+<p>值得注意的是，这里并不是公式，可以自己推导，不用死记硬背</p>
+</li>
+</ul>
+<h2 id="3-向量组"><a href="#3-向量组" class="headerlink" title="3. 向量组"></a>3. 向量组</h2><h3 id="3-1-知识点"><a href="#3-1-知识点" class="headerlink" title="3.1 知识点"></a>3.1 知识点</h3><h3 id="3-2-相关解题技巧"><a href="#3-2-相关解题技巧" class="headerlink" title="3.2 相关解题技巧"></a>3.2 相关解题技巧</h3><h2 id="4-线性方程组"><a href="#4-线性方程组" class="headerlink" title="4. 线性方程组"></a>4. 线性方程组</h2><h2 id="5-特征值和特征向量"><a href="#5-特征值和特征向量" class="headerlink" title="5. 特征值和特征向量"></a>5. 特征值和特征向量</h2><h2 id="6-二次型"><a href="#6-二次型" class="headerlink" title="6. 二次型"></a>6. 二次型</h2>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数学</tag>
       </tags>
   </entry>
   <entry>
@@ -1583,7 +2297,67 @@
 </ul>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">persistent	持续的，不断的</span><br><span class="line">president	总统</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><strong>50.</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">nation		民族</span><br><span class="line">notion		概念，想法</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>51.</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">idea	想法</span><br><span class="line">ideal	理想的</span><br><span class="line">idle	懒惰的</span><br><span class="line">idol	偶像</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>52.</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">arrow	箭头</span><br><span class="line">narrow	狭窄的</span><br></pre></td></tr></table></figure>
+
 ]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>考研英语写作</title>
+    <url>/2020/07/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="考研英语写作"><a href="#考研英语写作" class="headerlink" title="考研英语写作"></a>考研英语写作</h1><h2 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1. 基础篇"></a>1. 基础篇</h2><h3 id="1-1-关联词"><a href="#1-1-关联词" class="headerlink" title="1.1 关联词"></a>1.1 关联词</h3><p><strong>启：</strong>启动观点，开篇点题</p>
+<blockquote>
+<p>第一段和每一段第一句话是启</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nowadays, at present</span><br></pre></td></tr></table></figure>
+
+<p><strong>承：</strong>观点承接，正面论证</p>
+<blockquote>
+<p>第二段和每段中间是承</p>
+</blockquote>
+<ul>
+<li>分类论证</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">first(ly), in the first place, first <span class="keyword">and</span> foremost, above all, to begin with</span><br><span class="line">    </span><br><span class="line">on the one hand, <span class="keyword">for</span> one thing, second(ly), in the second place,</span><br><span class="line"></span><br><span class="line">besides, furthermore(而且此外), moreover(而且), in addition, what<span class="number">'</span>s more, </span><br><span class="line">    </span><br><span class="line">on the other hand, <span class="keyword">for</span> another, last(ly), last but <span class="keyword">not</span> least, <span class="function">even <span class="title">worse</span><span class="params">(更糟糕的是)</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>举例论证：<code>for example, for instance, a case in point is</code></li>
+<li>解释论证：<code>indeed, in fact, certainly, obviously, truely, in other words(换句话说)</code></li>
+</ul>
+<p><strong>转：</strong>观点转折，反面论证</p>
+<blockquote>
+<p> 第二段和每段中间也可以是启</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">yet, instead, whereas, otherwise(不然，否则), by contrast, conversely, nevertheless(仍然)</span><br><span class="line"></span><br><span class="line">unfortunately, on the contrary</span><br></pre></td></tr></table></figure>
+
+<p><strong>合：</strong>文章结尾，合并归纳</p>
+<blockquote>
+<p>第三段和每段最后一句是合</p>
+</blockquote>
+<ul>
+<li>因此：<code>thus, hence, therefore, consequently, as a result/consequence</code></li>
+<li>总之：<code>in conclusion, in general, generally speaking, on the whole</code></li>
+<li>简言之：<code>in short/brief, briefly speaking, in a word</code></li>
+</ul>
+<h3 id="1-2-同义词替换"><a href="#1-2-同义词替换" class="headerlink" title="1.2 同义词替换"></a>1.2 同义词替换</h3>]]></content>
       <categories>
         <category>考研</category>
       </categories>
@@ -1959,7 +2733,7 @@
 <ul>
 <li><strong>87. 不礼貌的，粗鲁的</strong></li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">rude, impolite,</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">rude, impolite, coarse, crude</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><strong>88. 招致</strong></li>
@@ -2331,6 +3105,36 @@
 </ul>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">moderate, alleviate, diminish</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><strong>152. 充分的，足够的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">adequate, sufficient</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>153. 无法避免的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">unavoidable, inevitable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>154. 繁荣</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">thrive, flourish</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>155. 数字的</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">digital		<span class="comment">// 数值的，用数字表示的</span></span><br><span class="line">numerical	<span class="comment">// 数码的，数字信息的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>156. 木材</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">timber, lumber, word</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>157. 估价，评价</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">assess, appraise, estimate, evaluate</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>考研</category>
@@ -2340,43 +3144,154 @@
       </tags>
   </entry>
   <entry>
-    <title>考研英语写作</title>
-    <url>/2020/07/14/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="考研英语写作"><a href="#考研英语写作" class="headerlink" title="考研英语写作"></a>考研英语写作</h1><h2 id="1-基础篇"><a href="#1-基础篇" class="headerlink" title="1. 基础篇"></a>1. 基础篇</h2><h3 id="1-1-关联词"><a href="#1-1-关联词" class="headerlink" title="1.1 关联词"></a>1.1 关联词</h3><p><strong>启：</strong>启动观点，开篇点题</p>
-<blockquote>
-<p>第一段和每一段第一句话是启</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nowadays, at present</span><br></pre></td></tr></table></figure>
-
-<p><strong>承：</strong>观点承接，正面论证</p>
-<blockquote>
-<p>第二段和每段中间是承</p>
+    <title>英语语法及长难句分析</title>
+    <url>/2020/07/11/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%8F%8A%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="英语语法及长难句分析"><a href="#英语语法及长难句分析" class="headerlink" title="英语语法及长难句分析"></a>英语语法及长难句分析</h1><h2 id="1-简单句"><a href="#1-简单句" class="headerlink" title="1. 简单句"></a>1. 简单句</h2><h3 id="1-1-简单句的核心"><a href="#1-1-简单句的核心" class="headerlink" title="1.1 简单句的核心"></a>1.1 简单句的核心</h3><h4 id="1-1-1-简单句的核心构成"><a href="#1-1-1-简单句的核心构成" class="headerlink" title="1.1.1 简单句的核心构成"></a>1.1.1 简单句的核心构成</h4><blockquote>
+<p>简单句的五类核心构成：主谓，主谓宾，主谓双宾，主谓宾补，主系表</p>
 </blockquote>
 <ul>
-<li>分类论证</li>
+<li>谓语动词<ul>
+<li>实义动词：swim、dance<ul>
+<li>及物动词：lose(失败)，survive(幸存)</li>
+<li>非及物动词：love(喜爱)，need(需要)</li>
+<li>两者区别：<strong>是否后接宾语</strong>，或者说<strong>是否可以由主语独立完成</strong></li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">first(ly), in the first place, first <span class="keyword">and</span> foremost, above all, to begin with</span><br><span class="line">    </span><br><span class="line">on the one hand, <span class="keyword">for</span> one thing, second(ly), in the second place,</span><br><span class="line"></span><br><span class="line">besides, furthermore(而且此外), moreover(而且), in addition, what<span class="number">'</span>s more, </span><br><span class="line">    </span><br><span class="line">on the other hand, <span class="keyword">for</span> another, last(ly), last but <span class="keyword">not</span> least, <span class="function">even <span class="title">worse</span><span class="params">(更糟糕的是)</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li>非实义动词：be、seem</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ol>
+<li><p><strong>主谓 = 主语 + 不及物动词（vi.）</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Everybody <span class="keyword">else</span> loses.        <span class="comment">// 其余的每个人都失败了</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> Smaller species survived.    <span class="comment">// 较小的物种存活下来了</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>主谓宾 = 主语 + 及物动词（vt.）+ 宾语</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Everybody loves a fat pay rise.    <span class="comment">// 每个人都喜欢丰厚的加薪</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> In both cases, we need a rebalancing of power.   <span class="comment">// 在这两种情况下，我们需要权力的再平衡</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> Yet science has cultural history.  <span class="comment">// 然而科学也有文化历史</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> Several of his staff members have military-intelligence backgrounds.  <span class="comment">// 他的一些职员有军事情报工作的背景</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>组成句子的单词无论如何变换，结构都是万变不离其宗的！</strong></p>
+</li>
+</ol>
+<ol start="3">
+<li><p><strong>主谓双宾 = 主语 + 及物动词（vt.）+ 两个宾语（人+物）</strong></p>
+<blockquote>
+<p>及物动词有时需要涉及两个对象，就需要后接两个宾语（通常双宾语是 “人 + 物”）</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> They gave jutices permanent positions.    <span class="comment">// 他们给予法官们终身任期</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> Railroads charged all customers the same average rate.  <span class="comment">// 铁路公司向所有顾客收取同样的平均费率</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>补充：</strong></p>
+<p>主谓双宾的两个宾语的前后顺序可以是调换的，既可以是 “ 人+物 ”，也可以是 “ 物+人”，因此<strong>主谓双宾结构的句子有两种写法，且表意相同</strong>。如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">They gave justices permanent positions...</span><br><span class="line"></span><br><span class="line">&#x3D; They gave permanent positions to justices...</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意在” 物+人 “的情况下，中间要加介词，通常为to或者for，to强调动作的方向，for强调动作的目的</strong></p>
+<p>无论是“ 人+物 ”，还是 “ 物+人”，“物”永远都是直接宾语，“人“永远是间接宾语。</p>
+</li>
+</ol>
+<ol start="4">
+<li><p><strong>主谓宾补 = 主语 + 及物动词（vt.）+ 宾语 + 宾语补足语</strong></p>
+<blockquote>
+<p>有时 ”主谓宾“ 结构完整了，但是意思有残缺，就需要加入补充的成分。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> You always keep your eyes open.   <span class="comment">// 你总要保持你的眼睛睁开，open就是补足语</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> The spooks call it <span class="string">"open source intelligence"</span>.   <span class="comment">// 间谍们称它为“公开来源的情报”</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> ...changes in the economy...make gainful employment increasingly difficult.</span><br><span class="line"><span class="comment">// ...经济变化...使找到薪水丰厚的工作越来越困难，difficult就是补足语</span></span><br></pre></td></tr></table></figure>
+
+<p>可以作宾补的词有：形容词，名词，介词短语，doing或to do等</p>
+</li>
+</ol>
+<ol start="5">
+<li><p><strong>主系表 = 主语 + 系动词+ 表语</strong></p>
+<blockquote>
+<p>无实义，但是可以把句子前后 “连系” 起来——这类动词简称 “系动词”。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> This is a dangerous game.    <span class="comment">// 这是一个危险的游戏</span></span><br></pre></td></tr></table></figure>
+
+<p>考研真题中常出现的系动词：</p>
+<ul>
+<li>be：是</li>
+<li>get、become、turn、go、grow：变得，成为</li>
+<li>look、sound、smell、taste、feel：看/听/闻/尝/感觉起来…（感官动词）</li>
+<li>seem、appear、keep、remain、prove：似乎、保持、证明</li>
+</ul>
+</li>
+</ol>
+<p><strong>内容小结：</strong></p>
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/C0C1DF1DB111581D96242324EDFE01F3.jpg" alt="内容小结" style="zoom: 50%;" />
+
+<p><strong>真题演练</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> These views of arguments also undermine reason. <span class="comment">// undermine 及物动词 主谓宾</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> More apparent reasonableness followed. <span class="comment">// followed 不及物动词 主谓</span></span><br><span class="line"> </span><br><span class="line"><span class="number">3.</span> ...even the word <span class="string">"habit"</span> carries a negative implication. <span class="comment">// carried 及物动词 主谓宾</span></span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span> The humiliation continues. <span class="comment">// continues 不及物动词 主谓</span></span><br><span class="line">    </span><br><span class="line"><span class="number">5.</span> ...they suddenly become extinct. <span class="comment">// become 系动词 主系表</span></span><br><span class="line">    </span><br><span class="line"><span class="number">6.</span> ...poetry of many kinds gave him great pleasure. <span class="comment">// gave 及物动词 主谓双宾</span></span><br><span class="line">    </span><br><span class="line"><span class="number">7.</span> ...our president calls himself <span class="string">"the Decider"</span>. <span class="comment">// calls 及物动词 主谓宾补</span></span><br><span class="line">    </span><br><span class="line"><span class="number">8.</span> The computer is the <span class="number">21</span>st century<span class="number">'</span>s culture machine. <span class="comment">// is 系动词 主系表</span></span><br><span class="line">    </span><br><span class="line"><span class="number">9.</span> Such characteristics make them perfect candidates. <span class="comment">// make 及物动词 主谓宾补</span></span><br><span class="line">    </span><br><span class="line"><span class="number">10.</span> Such advances offer the aging population a quality of life. <span class="comment">// offer 及物动词 主谓双宾</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="1-1-2-简单句的核心变化"><a href="#1-1-2-简单句的核心变化" class="headerlink" title="1.1.2 简单句的核心变化"></a>1.1.2 简单句的核心变化</h4><blockquote>
+<p>谓语动词的变化共有四种——“三态加一否”，其中 “三态” 指的是时态、情态、语态，“一否”指的是否定。</p>
+</blockquote>
+<h5 id="1-1-2-1-谓语动词的时态"><a href="#1-1-2-1-谓语动词的时态" class="headerlink" title="1.1.2.1 谓语动词的时态"></a>1.1.2.1 谓语动词的时态</h5><blockquote>
+<p>时态是表达事情发生的 “时间” 和 “状态”，通过把谓语动词变成不同形式来体现。谓语动词的四种变化中，<strong>只有时态是每一个谓语动词必有的</strong>。</p>
+</blockquote>
+<p><strong>时态的划分：</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">四种时间：过去、现在、将来、过去将来</span><br><span class="line">四种状态：一般、进行、完成、完成进行</span><br><span class="line">四种时间 * 四种状态 = <span class="number">16</span>种时态</span><br></pre></td></tr></table></figure>
+
+<p><strong>一般时态</strong></p>
+<blockquote>
+<p>一般，指不特殊，没有任何的特殊强调；只表达事情发生在这个时间段内。</p>
+</blockquote>
+<ul>
+<li>一般过去时：<strong>谓语动词 = did</strong></li>
+</ul>
+<blockquote>
+<p>表示发生在过去的事情（通常表示<strong>完全发生在过去的事</strong>）</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> India released its AI ethics strategy <span class="keyword">this</span> spring.   <span class="comment">// released </span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> This scale gave numerous factors into consideration.    <span class="comment">// gave</span></span><br><span class="line">    </span><br><span class="line"><span class="number">3.</span> ...<span class="keyword">this</span> city was one of the largest human settlements in the world.    <span class="comment">// was</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：一般过去时的句子不一定非要搭配明确的过去的时间，只要动作时过去发生即可</strong></p>
+<ul>
+<li>一般现在时：<strong>谓语动词 = do/does</strong></li>
+</ul>
+<blockquote>
+<p>可以表示现在的状态，也可以表示<strong>现在经常性，习惯性发生的事</strong>。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> So far the results are inconclusive.	<span class="comment">// are 迄今为止没有确定的答案</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> The goal is <span class="keyword">new</span>-search,<span class="keyword">not</span> re-search.	<span class="comment">// is 科学的目标是新研究而不是重复研究</span></span><br><span class="line">    </span><br><span class="line"><span class="number">3.</span> But most law graduates never get a big-firm job.	<span class="comment">// get 表示现在经常性的</span></span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span> Today it makes almost no difference.	<span class="comment">// makes 第三人称单数形式</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：小心第三人称单数形式</strong></p>
+<ul>
+<li>一般将来时：<strong>谓语动词 = will + do 或 am/is/are going to + do</strong></li>
+</ul>
+<blockquote>
+<p>表示发生在将来的事，注意是<strong>现在的将来</strong>，即现在的之后</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> We will have a less civil society.	<span class="comment">// will have 我们将有一个文明程度降低的社会</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> I don<span class="number">'</span>t konw <span class="keyword">if</span> other clients are going to abandon me.	<span class="comment">// are going to abandon</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> The problems will be differernt.		<span class="comment">// will be</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：如果谓语动词是be动词，那么放在will或者am/is/were going to后面，则用动词原形be</strong></p>
+<ul>
+<li>一般过去将来时：<strong>谓语动词 = would + do 或 was/were going to + do</strong></li>
+</ul>
+<blockquote>
+<p>表示事情发生在过去的将来，即过去的之后。此时态通常与上下文的一般过去时搭配，表示在其之后发生的事情。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> They gave justices permenant positions so they would be <span class="built_in">free</span> to upset those in power.</span><br><span class="line"><span class="comment">// 他们（过去）给予法官们终身任期，以便法官（之后）将可以自由打击当权者  would be为过去将来时</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> it simply didn<span class="number">'</span>t foresee what would happen next.	<span class="comment">// would happen</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注：过去将来时可以用 “would + 动词原形” 或者 “was/were going to + 动词原形”；一般将来时和过去将来时的差别在于出发点不同。</strong></p>
+<p><strong>进行时态：</strong></p>
+<blockquote>
+<p>进行时态强调在某个时间段内正在进行或持续进行的事情，有统一的谓语动词公式 “be going”</p>
+</blockquote>
+<ul>
+<li>过去进行时：<strong>谓语动词 = was/were + doing</strong></li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> He was searching <span class="keyword">for</span> tiny engraved seals...</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>举例论证：<code>for example, for instance, a case in point is</code></li>
-<li>解释论证：<code>indeed, in fact, certainly, obviously, truely, in other words(换句话说)</code></li>
+<li>现在进行时：<strong>谓语动词 = am/is/are + doing</strong></li>
 </ul>
-<p><strong>转：</strong>观点转折，反面论证</p>
-<blockquote>
-<p> 第二段和每段中间也可以是启</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">yet, instead, whereas, otherwise(不然，否则), by contrast, conversely, nevertheless(仍然)</span><br><span class="line"></span><br><span class="line">unfortunately, on the contrary</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Home prices are holding steady in most regions.</span><br></pre></td></tr></table></figure>
 
-<p><strong>合：</strong>文章结尾，合并归纳</p>
-<blockquote>
-<p>第三段和每段最后一句是合</p>
-</blockquote>
 <ul>
-<li>因此：<code>thus, hence, therefore, consequently, as a result/consequence</code></li>
-<li>总之：<code>in conclusion, in general, generally speaking, on the whole</code></li>
-<li>简言之：<code>in short/brief, briefly speaking, in a word</code></li>
+<li>将来进行时：<strong>谓语动词 = will be+ doing</strong></li>
 </ul>
-<h3 id="1-2-同义词替换"><a href="#1-2-同义词替换" class="headerlink" title="1.2 同义词替换"></a>1.2 同义词替换</h3>]]></content>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Now, rivals will be charging sales tax.</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>完成时态：</strong></p>
+<h5 id="1-1-2-2-谓语动词的情态"><a href="#1-1-2-2-谓语动词的情态" class="headerlink" title="1.1.2.2 谓语动词的情态"></a>1.1.2.2 谓语动词的情态</h5><h5 id="1-1-2-3-谓语动词的语态"><a href="#1-1-2-3-谓语动词的语态" class="headerlink" title="1.1.2.3 谓语动词的语态"></a>1.1.2.3 谓语动词的语态</h5><h5 id="1-1-2-4-谓语动词的否定"><a href="#1-1-2-4-谓语动词的否定" class="headerlink" title="1.1.2.4 谓语动词的否定"></a>1.1.2.4 谓语动词的否定</h5><h5 id="1-1-2-5-谓语动词的强调"><a href="#1-1-2-5-谓语动词的强调" class="headerlink" title="1.1.2.5 谓语动词的强调"></a>1.1.2.5 谓语动词的强调</h5>]]></content>
       <categories>
         <category>考研</category>
       </categories>
@@ -2454,7 +3369,7 @@
 </li>
 <li>最后再设极限为A，根据数列递推式，求极限</li>
 </ul>
-<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/D4BEF271ACF23770E53203C98C0BBD69.jpg" style="zoom: 67%;" />
+<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/D4BEF271ACF23770E53203C98C0BBD69.jpg" style="zoom: 50%;" />
 
 <h2 id="3-一元函数微分学"><a href="#3-一元函数微分学" class="headerlink" title="3 . 一元函数微分学"></a>3 . 一元函数微分学</h2><ul>
 <li><p>导数定义，以及<strong>证明：</strong>偶函数的导数是奇函数；奇函数的导数是偶函数；周期函数的导函数是周期函数。</p>
@@ -2502,7 +3417,12 @@
 <li>判别极值的第三充分条件：</li>
 </ul>
 </li>
-<li></li>
+<li>凹凸性判别：<ul>
+<li>第一充分条件：</li>
+<li>第二充分条件：</li>
+<li>第三充分条件：</li>
+</ul>
+</li>
 </ul>
 <h3 id="4-2-一元函数微分学的几何应用的解题技巧"><a href="#4-2-一元函数微分学的几何应用的解题技巧" class="headerlink" title="4.2 一元函数微分学的几何应用的解题技巧"></a>4.2 一元函数微分学的几何应用的解题技巧</h3><ul>
 <li><p>求函数的极值点，先求一阶导数，令其为0，求解参数；再求<strong>二阶导检查不为0</strong>；根据一阶导数，分析极小还是极大值点。</p>
@@ -2667,168 +3587,20 @@
 </ul>
 </li>
 </ol>
-]]></content>
+<h2 id="7-一元函数积分学的概念与计算"><a href="#7-一元函数积分学的概念与计算" class="headerlink" title="7. 一元函数积分学的概念与计算"></a>7. 一元函数积分学的概念与计算</h2><h3 id="7-1-知识点"><a href="#7-1-知识点" class="headerlink" title="7.1 知识点"></a>7.1 知识点</h3><h4 id="7-1-1-点火公式（很重要）"><a href="#7-1-1-点火公式（很重要）" class="headerlink" title="7.1.1 点火公式（很重要）"></a>7.1.1 <strong>点火公式（很重要）</strong></h4><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200717171251184.png" alt="image-20200717171251184" style="zoom:67%;" />
+
+
+
+<h4 id="7-1-2-诱导公式"><a href="#7-1-2-诱导公式" class="headerlink" title="7.1.2 诱导公式"></a>7.1.2 诱导公式</h4><p>奇变偶不变，符号看象限</p>
+<ul>
+<li><strong>区间在线公式</strong></li>
+</ul>
+<h2 id="8-一元函数积分学的几何应用"><a href="#8-一元函数积分学的几何应用" class="headerlink" title="8. 一元函数积分学的几何应用"></a>8. 一元函数积分学的几何应用</h2><h3 id="8-1-知识点"><a href="#8-1-知识点" class="headerlink" title="8.1 知识点"></a>8.1 知识点</h3><h4 id="8-1-1-平面图形的面积"><a href="#8-1-1-平面图形的面积" class="headerlink" title="8.1.1 平面图形的面积"></a>8.1.1 平面图形的面积</h4><h4 id="8-1-2-旋转体的体积"><a href="#8-1-2-旋转体的体积" class="headerlink" title="8.1.2 旋转体的体积"></a>8.1.2 旋转体的体积</h4><h4 id="8-1-3-函数的平均值"><a href="#8-1-3-函数的平均值" class="headerlink" title="8.1.3 函数的平均值"></a>8.1.3 函数的平均值</h4>]]></content>
       <categories>
         <category>考研</category>
       </categories>
       <tags>
         <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语语法及长难句分析</title>
-    <url>/2020/07/11/%E8%80%83%E7%A0%94%E7%A7%91%E7%9B%AE/%E8%8B%B1%E8%AF%AD%E8%AF%AD%E6%B3%95%E5%8F%8A%E9%95%BF%E9%9A%BE%E5%8F%A5%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="英语语法及长难句分析"><a href="#英语语法及长难句分析" class="headerlink" title="英语语法及长难句分析"></a>英语语法及长难句分析</h1><h2 id="1-简单句"><a href="#1-简单句" class="headerlink" title="1. 简单句"></a>1. 简单句</h2><h3 id="1-1-简单句的核心"><a href="#1-1-简单句的核心" class="headerlink" title="1.1 简单句的核心"></a>1.1 简单句的核心</h3><h4 id="1-1-1-简单句的核心构成"><a href="#1-1-1-简单句的核心构成" class="headerlink" title="1.1.1 简单句的核心构成"></a>1.1.1 简单句的核心构成</h4><blockquote>
-<p>简单句的五类核心构成：主谓，主谓宾，主谓双宾，主谓宾补，主系表</p>
-</blockquote>
-<ul>
-<li>谓语动词<ul>
-<li>实义动词：swim、dance<ul>
-<li>及物动词：lose(失败)，survive(幸存)</li>
-<li>非及物动词：love(喜爱)，need(需要)</li>
-<li>两者区别：<strong>是否后接宾语</strong>，或者说<strong>是否可以由主语独立完成</strong></li>
-</ul>
-</li>
-<li>非实义动词：be、seem</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ol>
-<li><p><strong>主谓 = 主语 + 不及物动词（vi.）</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Everybody <span class="keyword">else</span> loses.        <span class="comment">// 其余的每个人都失败了</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> Smaller species survived.    <span class="comment">// 较小的物种存活下来了</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>主谓宾 = 主语 + 及物动词（vt.）+ 宾语</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Everybody loves a fat pay rise.    <span class="comment">// 每个人都喜欢丰厚的加薪</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> In both cases, we need a rebalancing of power.   <span class="comment">// 在这两种情况下，我们需要权力的再平衡</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> Yet science has cultural history.  <span class="comment">// 然而科学也有文化历史</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> Several of his staff members have military-intelligence backgrounds.  <span class="comment">// 他的一些职员有军事情报工作的背景</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>组成句子的单词无论如何变换，结构都是万变不离其宗的！</strong></p>
-</li>
-</ol>
-<ol start="3">
-<li><p><strong>主谓双宾 = 主语 + 及物动词（vt.）+ 两个宾语（人+物）</strong></p>
-<blockquote>
-<p>及物动词有时需要涉及两个对象，就需要后接两个宾语（通常双宾语是 “人 + 物”）</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> They gave jutices permanent positions.    <span class="comment">// 他们给予法官们终身任期</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> Railroads charged all customers the same average rate.  <span class="comment">// 铁路公司向所有顾客收取同样的平均费率</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>补充：</strong></p>
-<p>主谓双宾的两个宾语的前后顺序可以是调换的，既可以是 “ 人+物 ”，也可以是 “ 物+人”，因此<strong>主谓双宾结构的句子有两种写法，且表意相同</strong>。如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">They gave justices permanent positions...</span><br><span class="line"></span><br><span class="line">&#x3D; They gave permanent positions to justices...</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意在” 物+人 “的情况下，中间要加介词，通常为to或者for，to强调动作的方向，for强调动作的目的</strong></p>
-<p>无论是“ 人+物 ”，还是 “ 物+人”，“物”永远都是直接宾语，“人“永远是间接宾语。</p>
-</li>
-</ol>
-<ol start="4">
-<li><p><strong>主谓宾补 = 主语 + 及物动词（vt.）+ 宾语 + 宾语补足语</strong></p>
-<blockquote>
-<p>有时 ”主谓宾“ 结构完整了，但是意思有残缺，就需要加入补充的成分。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> You always keep your eyes open.   <span class="comment">// 你总要保持你的眼睛睁开，open就是补足语</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> The spooks call it <span class="string">"open source intelligence"</span>.   <span class="comment">// 间谍们称它为“公开来源的情报”</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> ...changes in the economy...make gainful employment increasingly difficult.</span><br><span class="line"><span class="comment">// ...经济变化...使找到薪水丰厚的工作越来越困难，difficult就是补足语</span></span><br></pre></td></tr></table></figure>
-
-<p>可以作宾补的词有：形容词，名词，介词短语，doing或to do等</p>
-</li>
-</ol>
-<ol start="5">
-<li><p><strong>主系表 = 主语 + 系动词+ 表语</strong></p>
-<blockquote>
-<p>无实义，但是可以把句子前后 “连系” 起来——这类动词简称 “系动词”。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> This is a dangerous game.    <span class="comment">// 这是一个危险的游戏</span></span><br></pre></td></tr></table></figure>
-
-<p>考研真题中常出现的系动词：</p>
-<ul>
-<li>be：是</li>
-<li>get、become、turn、go、grow：变得，成为</li>
-<li>look、sound、smell、taste、feel：看/听/闻/尝/感觉起来…（感官动词）</li>
-<li>seem、appear、keep、remain、prove：似乎、保持、证明</li>
-</ul>
-</li>
-</ol>
-<p><strong>内容小结：</strong></p>
-<img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/C0C1DF1DB111581D96242324EDFE01F3.jpg" alt="内容小结" style="zoom: 50%;" />
-
-<p><strong>真题演练</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> These views of arguments also undermine reason. <span class="comment">// undermine 及物动词 主谓宾</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> More apparent reasonableness followed. <span class="comment">// followed 不及物动词 主谓</span></span><br><span class="line"> </span><br><span class="line"><span class="number">3.</span> ...even the word <span class="string">"habit"</span> carries a negative implication. <span class="comment">// carried 及物动词 主谓宾</span></span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span> The humiliation continues. <span class="comment">// continues 不及物动词 主谓</span></span><br><span class="line">    </span><br><span class="line"><span class="number">5.</span> ...they suddenly become extinct. <span class="comment">// become 系动词 主系表</span></span><br><span class="line">    </span><br><span class="line"><span class="number">6.</span> ...poetry of many kinds gave him great pleasure. <span class="comment">// gave 及物动词 主谓双宾</span></span><br><span class="line">    </span><br><span class="line"><span class="number">7.</span> ...our president calls himself <span class="string">"the Decider"</span>. <span class="comment">// calls 及物动词 主谓宾补</span></span><br><span class="line">    </span><br><span class="line"><span class="number">8.</span> The computer is the <span class="number">21</span>st century<span class="number">'</span>s culture machine. <span class="comment">// is 系动词 主系表</span></span><br><span class="line">    </span><br><span class="line"><span class="number">9.</span> Such characteristics make them perfect candidates. <span class="comment">// make 及物动词 主谓宾补</span></span><br><span class="line">    </span><br><span class="line"><span class="number">10.</span> Such advances offer the aging population a quality of life. <span class="comment">// offer 及物动词 主谓双宾</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="1-1-2-简单句的核心变化"><a href="#1-1-2-简单句的核心变化" class="headerlink" title="1.1.2 简单句的核心变化"></a>1.1.2 简单句的核心变化</h4><blockquote>
-<p>谓语动词的变化共有四种——“三态加一否”，其中 “三态” 指的是时态、情态、语态，“一否”指的是否定。</p>
-</blockquote>
-<h5 id="1-1-2-1-谓语动词的时态"><a href="#1-1-2-1-谓语动词的时态" class="headerlink" title="1.1.2.1 谓语动词的时态"></a>1.1.2.1 谓语动词的时态</h5><blockquote>
-<p>时态是表达事情发生的 “时间” 和 “状态”，通过把谓语动词变成不同形式来体现。谓语动词的四种变化中，<strong>只有时态是每一个谓语动词必有的</strong>。</p>
-</blockquote>
-<p><strong>时态的划分：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">四种时间：过去、现在、将来、过去将来</span><br><span class="line">四种状态：一般、进行、完成、完成进行</span><br><span class="line">四种时间 * 四种状态 = <span class="number">16</span>种时态</span><br></pre></td></tr></table></figure>
-
-<p><strong>一般时态</strong></p>
-<blockquote>
-<p>一般，指不特殊，没有任何的特殊强调；只表达事情发生在这个时间段内。</p>
-</blockquote>
-<ul>
-<li>一般过去时：<strong>谓语动词 = did</strong></li>
-</ul>
-<blockquote>
-<p>表示发生在过去的事情（通常表示<strong>完全发生在过去的事</strong>）</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> India released its AI ethics strategy <span class="keyword">this</span> spring.   <span class="comment">// released </span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> This scale gave numerous factors into consideration.    <span class="comment">// gave</span></span><br><span class="line">    </span><br><span class="line"><span class="number">3.</span> ...<span class="keyword">this</span> city was one of the largest human settlements in the world.    <span class="comment">// was</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注：一般过去时的句子不一定非要搭配明确的过去的时间，只要动作时过去发生即可</strong></p>
-<ul>
-<li>一般现在时：<strong>谓语动词 = do/does</strong></li>
-</ul>
-<blockquote>
-<p>可以表示现在的状态，也可以表示<strong>现在经常性，习惯性发生的事</strong>。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> So far the results are inconclusive.	<span class="comment">// are 迄今为止没有确定的答案</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> The goal is <span class="keyword">new</span>-search,<span class="keyword">not</span> re-search.	<span class="comment">// is 科学的目标是新研究而不是重复研究</span></span><br><span class="line">    </span><br><span class="line"><span class="number">3.</span> But most law graduates never get a big-firm job.	<span class="comment">// get 表示现在经常性的</span></span><br><span class="line">    </span><br><span class="line"><span class="number">4.</span> Today it makes almost no difference.	<span class="comment">// makes 第三人称单数形式</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注：小心第三人称单数形式</strong></p>
-<ul>
-<li>一般将来时：<strong>谓语动词 = will + do 或 am/is/are going to + do</strong></li>
-</ul>
-<blockquote>
-<p>表示发生在将来的事，注意是<strong>现在的将来</strong>，即现在的之后</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> We will have a less civil society.	<span class="comment">// will have 我们将有一个文明程度降低的社会</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> I don<span class="number">'</span>t konw <span class="keyword">if</span> other clients are going to abandon me.	<span class="comment">// are going to abandon</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> The problems will be differernt.		<span class="comment">// will be</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注：如果谓语动词是be动词，那么放在will或者am/is/were going to后面，则用动词原形be</strong></p>
-<ul>
-<li>一般过去将来时：<strong>谓语动词 = would + do 或 was/were going to + do</strong></li>
-</ul>
-<blockquote>
-<p>表示事情发生在过去的将来，即过去的之后。此时态通常与上下文的一般过去时搭配，表示在其之后发生的事情。</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> They gave justices permenant positions so they would be <span class="built_in">free</span> to upset those in power.</span><br><span class="line"><span class="comment">// 他们（过去）给予法官们终身任期，以便法官（之后）将可以自由打击当权者  would be为过去将来时</span></span><br><span class="line">    </span><br><span class="line"><span class="number">2.</span> it simply didn<span class="number">'</span>t foresee what would happen next.	<span class="comment">// would happen</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>注：过去将来时可以用 “would + 动词原形” 或者 “was/were going to + 动词原形”；一般将来时和过去将来时的差别在于出发点不同。</strong></p>
-<p><strong>进行时态：</strong></p>
-<blockquote>
-<p>进行时态强调在某个时间段内正在进行或持续进行的事情，有统一的谓语动词公式 “be going”</p>
-</blockquote>
-<ul>
-<li>过去进行时：<strong>谓语动词 = was/were + doing</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> He was searching <span class="keyword">for</span> tiny engraved seals...</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>现在进行时：<strong>谓语动词 = am/is/are + doing</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Home prices are holding steady in most regions.</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将来进行时：<strong>谓语动词 = will be+ doing</strong></li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Now, rivals will be charging sales tax.</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>完成时态：</strong></p>
-<h5 id="1-1-2-2-谓语动词的情态"><a href="#1-1-2-2-谓语动词的情态" class="headerlink" title="1.1.2.2 谓语动词的情态"></a>1.1.2.2 谓语动词的情态</h5><h5 id="1-1-2-3-谓语动词的语态"><a href="#1-1-2-3-谓语动词的语态" class="headerlink" title="1.1.2.3 谓语动词的语态"></a>1.1.2.3 谓语动词的语态</h5><h5 id="1-1-2-4-谓语动词的否定"><a href="#1-1-2-4-谓语动词的否定" class="headerlink" title="1.1.2.4 谓语动词的否定"></a>1.1.2.4 谓语动词的否定</h5><h5 id="1-1-2-5-谓语动词的强调"><a href="#1-1-2-5-谓语动词的强调" class="headerlink" title="1.1.2.5 谓语动词的强调"></a>1.1.2.5 谓语动词的强调</h5>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
       </tags>
   </entry>
   <entry>
@@ -3272,383 +4044,6 @@
 </ol>
 </blockquote>
 <h3 id="3-3-Unix的进程管理"><a href="#3-3-Unix的进程管理" class="headerlink" title="3.3 Unix的进程管理"></a>3.3 Unix的进程管理</h3><h2 id="4-线程（Thread）概念与多线程模型"><a href="#4-线程（Thread）概念与多线程模型" class="headerlink" title="4. 线程（Thread）概念与多线程模型"></a>4. 线程（Thread）概念与多线程模型</h2><h3 id="4-1-进程与线程的关系"><a href="#4-1-进程与线程的关系" class="headerlink" title="4.1 进程与线程的关系"></a>4.1 进程与线程的关系</h3><h3 id="4-2-线程的引入"><a href="#4-2-线程的引入" class="headerlink" title="4.2 线程的引入"></a>4.2 线程的引入</h3><h3 id="4-3-线程的属性"><a href="#4-3-线程的属性" class="headerlink" title="4.3 线程的属性"></a>4.3 线程的属性</h3><h3 id="4-4-多线程OS中的进程"><a href="#4-4-多线程OS中的进程" class="headerlink" title="4.4 多线程OS中的进程"></a>4.4 多线程OS中的进程</h3><h3 id="4-5-线程与进程的比较"><a href="#4-5-线程与进程的比较" class="headerlink" title="4.5 线程与进程的比较"></a>4.5 线程与进程的比较</h3><h3 id="4-6-线程的优点"><a href="#4-6-线程的优点" class="headerlink" title="4.6 线程的优点"></a>4.6 线程的优点</h3><h3 id="4-7-线程的适用范围"><a href="#4-7-线程的适用范围" class="headerlink" title="4.7 线程的适用范围"></a>4.7 线程的适用范围</h3><h3 id="4-8-线程的状态"><a href="#4-8-线程的状态" class="headerlink" title="4.8 线程的状态"></a>4.8 线程的状态</h3><h3 id="4-9-OS对线程的实现方式"><a href="#4-9-OS对线程的实现方式" class="headerlink" title="4.9 OS对线程的实现方式"></a>4.9 OS对线程的实现方式</h3><h3 id="4-10-线程举例"><a href="#4-10-线程举例" class="headerlink" title="4.10 线程举例"></a>4.10 线程举例</h3>]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>第一章——操作系统引论</title>
-    <url>/2020/07/05/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/</url>
-    <content><![CDATA[<h1 id="第一章——操作系统引论"><a href="#第一章——操作系统引论" class="headerlink" title="第一章——操作系统引论"></a>第一章——操作系统引论</h1><blockquote>
-<p>搬运文章：<a href="https://blog.csdn.net/qq_41261490/article/details/80872072?utm_source=app" target="_blank" rel="noopener">操作系统（第四版）期末复习总结（上）</a></p>
-</blockquote>
-<h2 id="1-操作系统是什么？"><a href="#1-操作系统是什么？" class="headerlink" title="1. 操作系统是什么？"></a>1. 操作系统是什么？</h2><blockquote>
-<p>操作系统为用户完成所有“硬件相关，应用无关“的工作，以给用户方便、高效、安全的使用环境。</p>
-</blockquote>
-<h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>​    操作系统是一个大型的<strong>程序系统</strong>，它负责计算机的<strong>全部软、硬件资源的分配</strong>、<strong>调度</strong>工作，<strong>控制并协调多个任务的活动</strong>，实现<strong>信息的存取和保护</strong>。它提供<strong>用户接口</strong>，使用户获得良好的工作环境。</p>
-<h3 id="1-2-目标"><a href="#1-2-目标" class="headerlink" title="1.2 目标"></a>1.2 目标</h3><ul>
-<li><strong>方便性：</strong>配置OS后计算机系统更容易使用</li>
-<li><strong>有效性：</strong>改善资源利用率；提高系统 吞吐量</li>
-<li><strong>可扩充性</strong>：OS的结构（如层次化的结构：无结构发展-&gt;模快化结构-&gt;层次化结构-&gt;<strong>微内核</strong>结构）【微内核后续解释】</li>
-<li><strong>开放性：</strong>OS遵循世界标准范围。</li>
-</ul>
-<h3 id="1-3-作用"><a href="#1-3-作用" class="headerlink" title="1.3 作用"></a>1.3 作用</h3><h4 id="1-3-1-OS作为用户与计算机硬件系统之间的接口"><a href="#1-3-1-OS作为用户与计算机硬件系统之间的接口" class="headerlink" title="1.3.1 OS作为用户与计算机硬件系统之间的接口"></a>1.3.1 OS作为用户与计算机硬件系统之间的接口</h4><p>如API／CUI／GUI</p>
-<p>即：OS处于用户与计算机硬件系统之间，用户通过OS来使用计算机系统。</p>
-<h4 id="1-3-2-OS是计算机系统资源的管理者"><a href="#1-3-2-OS是计算机系统资源的管理者" class="headerlink" title="1.3.2  OS是计算机系统资源的管理者"></a>1.3.2  OS是计算机系统资源的管理者</h4><ul>
-<li><p><strong>处理机</strong>管理是用于分配和控制处理机</p>
-</li>
-<li><p><strong>存储器</strong>管理是负责内存的分配与回收</p>
-</li>
-<li><p><strong>I/O设备</strong>管理是负责I/O设备的分配（回收）与操纵</p>
-</li>
-<li><p><strong>文件</strong>管理是用于实现文件的存取、共享和保护</p>
-</li>
-</ul>
-<h4 id="1-3-3-OS实现了对计算机资源的抽象"><a href="#1-3-3-OS实现了对计算机资源的抽象" class="headerlink" title="1.3.3 OS实现了对计算机资源的抽象"></a>1.3.3 OS实现了对计算机资源的抽象</h4><h2 id="2-操作系统的发展过程"><a href="#2-操作系统的发展过程" class="headerlink" title="2. 操作系统的发展过程"></a>2. 操作系统的发展过程</h2><h3 id="2-1-未配置操作系统的计算机系统（40年代-手工操作阶段）"><a href="#2-1-未配置操作系统的计算机系统（40年代-手工操作阶段）" class="headerlink" title="2.1 未配置操作系统的计算机系统（40年代 手工操作阶段）"></a>2.1 未配置操作系统的计算机系统（40年代 手工操作阶段）</h3><ul>
-<li>工作方式：<ul>
-<li>用户：用户既是程序员，又是操作员；用户是计算机专业人员</li>
-<li>编程语言：为机器语言</li>
-<li>输入输出：纸带或卡片</li>
-</ul>
-</li>
-<li>计算机的工作特点：<ul>
-<li>用户独占全机：不出现资源被其他用户占用，资源利用率低</li>
-<li>CPU等待用户：计算前，手工装入纸带或卡片；计算完成后，手工卸取纸带或卡片；CPU利用率低</li>
-</ul>
-</li>
-<li>缺点：<ul>
-<li>手工装卸、人工判断、手工修改与调试内存指令等造成CPU空闲；</li>
-<li>提前完成造成剩余预约时间内的CPU完全空闲；</li>
-<li>I/O设备的慢速与CPU的速度不匹配造成的CPU空闲等待时间</li>
-</ul>
-</li>
-</ul>
-<p><strong>简言之，资源利用率低；CPU利用率低</strong></p>
-<h3 id="2-2-单道批处理系统（50年代）"><a href="#2-2-单道批处理系统（50年代）" class="headerlink" title="2.2 单道批处理系统（50年代）"></a>2.2 单道批处理系统（50年代）</h3><blockquote>
-<p>单道批处理系统是在<strong>解决人机矛盾和CPU与I/O设备速度不匹配矛盾</strong>的过程中形成的。批处理系统旨在<strong>提高系统资源的利用率和系统的吞吐量</strong>。（但单道批处理系统仍不能充分利用资源，故现在已很少用）</p>
-</blockquote>
-<h4 id="2-2-1-联机批处理"><a href="#2-2-1-联机批处理" class="headerlink" title="2.2.1 联机批处理"></a>2.2.1 联机批处理</h4><blockquote>
-<p>I/O设备与主机直接连接，CPU直接控制作业输入输出</p>
-</blockquote>
-<ul>
-<li><strong>优点：</strong>解决了作业的自动转接，减少了人工操作时间</li>
-<li><strong>问题：</strong>作业输入和结果输出过程中，CPU处于等待状态</li>
-<li><strong>解决：</strong>增加一台不与主机直接相连而专门与I/O设备交换信息的卫星机（<strong>脱机批处理</strong>）</li>
-</ul>
-<h4 id="2-2-2-脱机批处理"><a href="#2-2-2-脱机批处理" class="headerlink" title="2.2.2 脱机批处理"></a>2.2.2 脱机批处理</h4><blockquote>
-<p>增加一台不与主机直接相连而专门与I/O设备交换信息的卫星机，由卫星机控制作业输入输出</p>
-</blockquote>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706000357598.png" alt="脱机批处理"></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706000427605.png" alt="indicate" title="">
-                </div>
-                <div class="image-caption">indicate</div>
-            </figure>
-
-
-
-<ul>
-<li><p>缺点：系统资源利用率低（<strong>因为内存中只存在一道程序，I/O请求成功前CPU都处于空闲状态</strong>）</p>
-</li>
-<li><p>特征：</p>
-<ul>
-<li><strong>自动性：</strong>正常情况下，一批作业能自动依次运行，无需人工干预</li>
-<li><strong>顺序性：</strong>各道作业是顺序进入内存</li>
-<li><strong>单道性：</strong>内存中任何时候只能有一道作业</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-3-多道批处理系统（60年代初）"><a href="#2-3-多道批处理系统（60年代初）" class="headerlink" title="2.3 多道批处理系统（60年代初）"></a>2.3 多道批处理系统（60年代初）</h3><blockquote>
-<p>单道运行每次只调一个用户作业程序进入内存并运行，CPU利用率低，为了进一步提高资源利用率和系统吞吐量，引入多道批处理</p>
-</blockquote>
-<p><strong>多道程序</strong></p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706133354742.png" alt="多道批处理" title="">
-                </div>
-                <div class="image-caption">多道批处理</div>
-            </figure> 
-
-<ul>
-<li><p>优点：</p>
-<ul>
-<li><strong>资源利用率高</strong>（资源指CPU、存储器、设备、数据）</li>
-<li><strong>系统吞吐量大</strong>（系统吞吐量指系统在单位时间完成的总工作量（作业数量））</li>
-</ul>
-</li>
-<li><p>缺点：</p>
-<ul>
-<li>平均周转时间长（作业的周转时间是指从作业进入系统开始，直至其完成并退出系统为止所经历的时间），<strong>短作业的周转时间显著增长</strong></li>
-<li>无交互能力，<strong>整个作业完成后或中间出错时，才与用户交互，不利于调试和修改</strong></li>
-</ul>
-</li>
-<li><p>特点：</p>
-<ul>
-<li><strong>多道：</strong>内存同时存在多个作业</li>
-<li><strong>宏观上并行：</strong>同时有多道程序在内存运行，某一时间段上，各道程序不同程度地向前推进</li>
-<li><strong>微观上串行：</strong>任一时刻最多只有一道作业占用CPU，多道程序交替使用CPU </li>
-</ul>
-</li>
-</ul>
-<p><strong>在当前运行的作业需作I/O处理时，CPU转而执行另一个作业</strong></p>
-<p><strong>单道批处理系统与多道批处理系统的特点比较：</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th><strong>单道批处理系统</strong></th>
-<th><strong>多道批处理系统</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>内存中驻留程序数目</strong></td>
-<td><strong>一道</strong></td>
-<td><strong>多道</strong></td>
-</tr>
-<tr>
-<td><strong>占用CPU的情况</strong></td>
-<td><strong>独占</strong></td>
-<td><strong>交替占用</strong></td>
-</tr>
-<tr>
-<td><strong>是否需要作业和进程调度</strong></td>
-<td><strong>不需要</strong></td>
-<td><strong>需要</strong></td>
-</tr>
-<tr>
-<td><strong>程序完成次序与其进入内存次序间的关系</strong></td>
-<td><strong>严格对应</strong></td>
-<td><strong>不严格对应</strong></td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>相关技术问题：</p>
-<ul>
-<li><strong>处理机管理问题：</strong>如何分配，使CPU满足要求</li>
-<li><strong>内存管理问题：</strong>为每道程序分配内存空间</li>
-<li><strong>I/O设备管理问题：</strong>如何分配<strong>I/O</strong>设备</li>
-<li><strong>文件管理问题：</strong>如何组织程序和数据</li>
-<li><strong>作业管理问题：</strong>如何组织作业</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-4-分时系统（60年代中）"><a href="#2-4-分时系统（60年代中）" class="headerlink" title="2.4 分时系统（60年代中）"></a>2.4 分时系统（60年代中）</h3><blockquote>
-<p>分时系统是指在一台主机上连接多个带有显示器和键盘的终端，同时允许多个用户通过自己的键盘，以交互的方式使用计算机，<strong>分时共享硬件和软件资源。</strong></p>
-</blockquote>
-<h4 id="2-4-1-分时的定义"><a href="#2-4-1-分时的定义" class="headerlink" title="2.4.1 分时的定义"></a>2.4.1 分时的定义</h4><p><strong>分时的定义：</strong> 把计算机的系统资源（尤其是<strong>CPU时间</strong>）进行时间上的分割，每个时间段称为一个<strong>时间片</strong>（time slice），每个用户依次轮流使用时间片。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706150632805.png" alt="分时系统" title="">
-                </div>
-                <div class="image-caption">分时系统</div>
-            </figure>
-
-<ul>
-<li><p>关键问题：</p>
-<ul>
-<li><strong>通常按时间片分配：</strong>各个程序在<strong>CPU</strong>上执行的轮换时间。把处理器的运行时间分成很短的时间片，按<strong>时间片</strong>轮流把处理机分配给各作业使用。</li>
-<li><strong>多个用户分时：</strong>单个用户使用计算机的效率低，因而允许多个应用程序同时在内存中，分别服务于不同的用户</li>
-<li><strong>前台和后台程序分时：</strong>后台程序不占用终端输入输出，不与用户交互——现在的图形用户界面（GUI），除当前交互的程序（输入焦点）之外，其他程序均作为后台</li>
-</ul>
-</li>
-<li><p>特点：</p>
-<ul>
-<li><strong>人机交互性：</strong>用户可以通过终端与系统进行广泛的对话</li>
-<li><strong>多路性：</strong>允许在一台主机上同时连接多台联机终端，系统按分时原则为每个用户服务</li>
-<li><strong>用户独立性：</strong>对每个用户而言好像独占主机，每个用户各占一个终端，彼此独立工作</li>
-<li><strong>及时性：</strong>用户的请求在很短的时间内能够获得响应</li>
-</ul>
-</li>
-</ul>
-<p><strong>现在的许多操作系统都具有分时处理的功能，在分时系统的基础上，操作系统的发展开始分化，如实时系统、通用系统、个人系统等。</strong></p>
-<h3 id="2-5-实时操作系统"><a href="#2-5-实时操作系统" class="headerlink" title="2.5 实时操作系统"></a>2.5 实时操作系统</h3><blockquote>
-<p> 实时系统（Real－Time System）是指系统能<strong>及时响应外部事件的请求</strong>，在规定的时间内完成对该事件的处理，并控制所有实时任务协调一致地运行。</p>
-</blockquote>
-<p><strong>实时操作系统有硬实时和软实时之分：</strong></p>
-<ul>
-<li><p>硬实时要求在规定的时间内必须完成操作，这是在操作系统设计时保证的</p>
-</li>
-<li><p>软实时则只要按照任务的优先级，尽可能快地完成操作即可</p>
-</li>
-</ul>
-<p><strong>实时系统与分时系统特征的比较：</strong></p>
-<ul>
-<li><p><strong>设计目标：</strong>分时系统为给多用户提供通用的交互型开发运行环境，实时系统为特殊用途提供专用系统</p>
-</li>
-<li><p><strong>交互性：</strong>分时系统交互性强，实时系统较弱</p>
-</li>
-<li><p><strong>响应时间：</strong>分时系统以用户能够接受的响应时间为准，实时系统与受控对象及应用场合有关</p>
-</li>
-</ul>
-<h3 id="2-6-操作系统的进一步发展"><a href="#2-6-操作系统的进一步发展" class="headerlink" title="2.6 操作系统的进一步发展"></a>2.6 操作系统的进一步发展</h3><ul>
-<li><p>通用操作系统</p>
-<blockquote>
-<p>如果一个操作系统兼有批处理、分时或实时处理的全部或两种功能，该操作系统为通用操作系统</p>
-</blockquote>
-</li>
-<li><p>微内核操作系统</p>
-<p>采用微内核结构：提供基本支持功能的<strong>内核很小</strong>，大部分功能由内核之外的服务程序完成——<strong>进程（线程）管理</strong>、<strong>低级存储管理</strong>、<strong>中断和陷入管理</strong>、<strong>进程通信</strong></p>
-</li>
-<li><p>网络操作系统</p>
-<blockquote>
-<p>能够控制计算机在网络中方便地传送信息和共享资源，并能为网络用户提供各种所需的服务</p>
-</blockquote>
-<ul>
-<li>功能：<ul>
-<li><strong>网络通信：</strong>在源计算机和目标计算机之间实现无差错的数据传送</li>
-<li><strong>资源管理：</strong>对网络中的硬、软件资源实施管理</li>
-<li><strong>网络管理：</strong>安全控制、性能监测、维护功能</li>
-<li><strong>网络服务：</strong>如e-mail、文件传输、共享设备服务、远程作业录入等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>分布式操作系统</p>
-<blockquote>
-<p><strong>集中式计算机系统：</strong>处理和控制能力都高度集中在一台计算机上，所有任务均由它完成。</p>
-<p><strong>分布式计算机系统：</strong>由多台分散的计算机经互联网络连接而成的系统，各台计算机没有主从之分。任何工作都可以分布在几台计算机上，由它们并行工作、协同完成。</p>
-</blockquote>
-<p><strong>分布式计算机系统与单机集中式操作系统区别：</strong></p>
-<ul>
-<li><strong>进程通信：</strong>集中式简单，分布式涉及机构、规程和路径算法</li>
-<li><strong>资源管理：</strong>集中式，一类资源由一个管理程序管理；分布式，一类资源由多个管理程序管理，这些程序必须协调一致工作</li>
-<li><strong>系统结构：</strong>分布式，有若干相对独立的部分，分布在各台计算</li>
-</ul>
-</li>
-<li><p>嵌入式操作系统</p>
-<blockquote>
-<p>运行在嵌入式（计算机）环境中、对整个系统及所有操作的各种部件、装置等资源进行统一协调、处理、指挥和控制的系统软件</p>
-</blockquote>
-<p>特点：</p>
-<ul>
-<li><strong>微型化：</strong>内存少（<strong>1M</strong>以内）、无外存、微处理器字长短（<strong>8b</strong>、<strong>16b</strong>）、运行速度有限、能提供的能源少、外设千变万化</li>
-<li><strong>可定制：</strong>能运行在不同微处理器平台上，能针对硬件变化进行结构与功能上的配置</li>
-<li><strong>实时性：</strong>硬实时、软实时、非实时</li>
-<li><strong>开发环境：</strong>通常提供代码编辑器、编译器和链接器、程序调试器、系统配置器和系统仿真器</li>
-</ul>
-</li>
-<li><p>智能化操作系统</p>
-</li>
-</ul>
-<h2 id="3-操作系统的功能"><a href="#3-操作系统的功能" class="headerlink" title="3. 操作系统的功能"></a>3. 操作系统的功能</h2><h3 id="3-1-处理器管理"><a href="#3-1-处理器管理" class="headerlink" title="3.1 处理器管理"></a>3.1 处理器管理</h3><ul>
-<li><p>完成<strong>处理机资源的分配、调度和回收</strong>等功能。处理机调度的单位可为<strong>进程</strong>或<strong>线程</strong>。</p>
-</li>
-<li><p>由于处理机调度策略不同，出现不同类型的操作系统，如批处理系统、分时系统、实时系统</p>
-</li>
-</ul>
-<h3 id="3-2-存储管理"><a href="#3-2-存储管理" class="headerlink" title="3.2 存储管理"></a>3.2 存储管理</h3><blockquote>
-<p><strong>管理目标：</strong>提高利用率、方便用户使用、提供足够的存储空间、方便进程并发运行。内存的分配、保护和扩充。</p>
-</blockquote>
-<ul>
-<li><p><strong>存储器分配与回收</strong></p>
-</li>
-<li><p><strong>地址映射（变换）：</strong>逻辑地址到内存物理地址映射</p>
-</li>
-<li><p><strong>存储保护：</strong>保证进程间互不干扰、相互保密</p>
-</li>
-<li><p><strong>内存扩充（覆盖、交换和虚拟存储）：</strong>提高内存利用率、扩大进程的内存空间</p>
-</li>
-</ul>
-<h3 id="3-3-设备管理"><a href="#3-3-设备管理" class="headerlink" title="3.3 设备管理"></a>3.3 设备管理</h3><blockquote>
-<p><strong>管理目标：</strong>方便设备的使用、提高<strong>CPU</strong>与<strong>I/O</strong>设备利用率</p>
-</blockquote>
-<ul>
-<li><p><strong>设备操作：</strong>利用设备驱动程序完成对设备的操作</p>
-</li>
-<li><p><strong>设备独立性(device independence)：</strong>提供统一的<strong>I/O</strong>设备接口，使应用程序独立于物理设备，提高可适应性；在同样的接口和操作下完成不同的内容</p>
-</li>
-<li><p><strong>设备分配与回收：</strong>在多用户间共享<strong>I/O</strong>设备资源</p>
-</li>
-<li><p><strong>缓冲区管理：</strong>匹配<strong>CPU</strong>和外设的速度，提高两者的利用率。主机与外设并行</p>
-</li>
-</ul>
-<h3 id="3-4-信息管理"><a href="#3-4-信息管理" class="headerlink" title="3.4 信息管理"></a>3.4 信息管理</h3><blockquote>
-<p><strong>管理目标：</strong>解决软件资源的存储、共享、保密和保护</p>
-</blockquote>
-<ul>
-<li><p><strong>文件存储空间管理：</strong>解决如何存放信息，以提高空间利用率和读写性能</p>
-</li>
-<li><p><strong>目录管理：</strong>解决信息检索问题。文件的属性（如文件名）、单一副本赋予多文件名</p>
-</li>
-<li><p><strong>文件的读写管理和存取控制：</strong>解决信息安全问题。系统设口令 “哪个用户”、用户分类 “哪个用户组”、文件权限 “针对用户或用户组的读写权”</p>
-</li>
-</ul>
-<h3 id="3-5-用户接口"><a href="#3-5-用户接口" class="headerlink" title="3.5 用户接口"></a>3.5 用户接口</h3><blockquote>
-<p><strong>管理目标：</strong>提供一个友好的用户访问操作系统的接口。操作系统向上提供两种接口</p>
-</blockquote>
-<ul>
-<li><p><strong>系统命令：</strong>供用户用于组织和控制自己的作业运行。命令行、菜单式或<strong>GUI “联机”</strong> ；命令脚本 <strong>“脱机”</strong></p>
-</li>
-<li><p><strong>编程接口：</strong>供用户程序和系统程序调用操作系统功能。系统调用和高级语言库函数</p>
-</li>
-<li><p>通过这些命令和调用，向OS提出申请，由OS调用内部功能来完成</p>
-</li>
-</ul>
-<h2 id="4-操作系统的特征"><a href="#4-操作系统的特征" class="headerlink" title="4. 操作系统的特征"></a>4. 操作系统的特征</h2><h3 id="4-1-并发（concurrency）"><a href="#4-1-并发（concurrency）" class="headerlink" title="4.1 并发（concurrency）"></a>4.1 并发（concurrency）</h3><blockquote>
-<p><strong>并发性：</strong>并发是指在内存中放多道作业， 在一个时间段上来看，每一道作业都能不同程度地向前推进。但在任何一个时间点上只能有一道占用CPU。</p>
-</blockquote>
-<ul>
-<li><strong>并发：</strong>又称<strong>伪并行</strong>，指多个事件在<strong>同一时间</strong>段内发生。操作系统是一个并发系统，各进程间的并发，系统与应用间的并发。操作系统要完成这些并发过程的管理。</li>
-<li><strong>并行：</strong>是指在<strong>同一时刻</strong>发生，指当系统有<strong>一个以上CPU</strong>时，一个CPU执行一个进程，另一个CPU执行另一个进程，两者互不干涉，互不抢占资源，同时进行</li>
-</ul>
-<hr>
-<ul>
-<li><strong>串行：</strong>在内存中每次只能放一道作业，只有它完全执行完后别的作业才能进入内存执行。</li>
-<li>*<em>并行： *</em>存在于有多个CPU的环境中， 在内存中放多道作业，在任一时间点上都可能有多道作业在不同的CPU上同时执行。 </li>
-</ul>
-<h3 id="4-2-共享（sharing）"><a href="#4-2-共享（sharing）" class="headerlink" title="4.2 共享（sharing）"></a>4.2 共享（sharing）</h3><blockquote>
-<p>多个进程共享有限的计算机系统资源。操作系统要对系统资源进行合理分配和使用。<strong>资源在一个时间段内交替被多个进程所用</strong></p>
-</blockquote>
-<ul>
-<li><p><strong>互斥共享</strong>（如音频设备、打印机）：资源分配后到释放前，不能被其他进程所用</p>
-</li>
-<li><p><strong>同时访问</strong>（如磁盘文件）：一个时间段内同时资源分配难以达到最优化</p>
-</li>
-</ul>
-<hr>
-<p><strong>并发和共享是OS的两个最基本的特性，二者互为条件！</strong></p>
-<hr>
-<h3 id="4-3-虚拟（virtual）"><a href="#4-3-虚拟（virtual）" class="headerlink" title="4.3 虚拟（virtual）"></a>4.3 虚拟（virtual）</h3><blockquote>
-<p>一个物理实体映射为若干个对应的逻辑实体——采用<strong>时分复用（分时使用）</strong>或<strong>空分复用（分空间使用）</strong></p>
-</blockquote>
-<p><strong>虚拟是操作系统管理系统资源的重要手段，可提高资源利用率：</strong></p>
-<ul>
-<li><strong>CPU</strong>——每个用户（进程）的“虚处理机”。利用多道处理技术，多道程序并发执行，分时使用一台处理机。</li>
-<li><strong>存储器</strong>——每个进程都占有的地址空间（指令＋数据＋堆栈）（空分复用存储器）“虚拟存储器”。虚拟存储技术——内存分时复用，一道程序通过时分复用内存，可以在远小于它的内存空间运行。</li>
-<li><strong>显示设备</strong>——多窗口或虚拟终端（virtual terminal）</li>
-<li><strong>独享设备</strong>—— 假脱机技术（Spooling），虚设备</li>
-</ul>
-<h3 id="4-4-异步性（asynchronism）"><a href="#4-4-异步性（asynchronism）" class="headerlink" title="4.4 异步性（asynchronism）"></a>4.4 异步性（asynchronism）</h3><blockquote>
-<p>也称<strong>不确定性</strong>：指进程的执行顺序和执行时间的不确定性</p>
-</blockquote>
-<ul>
-<li><p><strong>进程的运行速度不可预知：</strong>分时系统中，多个进程并发执行，“时走时停”，不可预知每个进程的运行推进快慢</p>
-</li>
-<li><p>难以重现系统在某个时刻的状态（包括重现运行中的错误）</p>
-</li>
-<li><p>无论快慢，应该结果相同——通过进程互斥和同步手段来保证</p>
-</li>
-<li><p>因为不确定性，在设计<strong>OS</strong>时，要充分考虑各种<strong>可能性</strong>，以便稳定、安全、高效地达到并发和资源共享</p>
-</li>
-</ul>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200706170351956.png" alt="summary" title="">
-                </div>
-                <div class="image-caption">summary</div>
-            </figure>
-
-
-
-]]></content>
       <categories>
         <category>操作系统</category>
       </categories>
