@@ -252,46 +252,147 @@
       </tags>
   </entry>
   <entry>
-    <title>indigo主题添加友链页面</title>
-    <url>/2020/06/18/hexo/indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/</url>
-    <content><![CDATA[<h1 id="indigo主题添加友链页面"><a href="#indigo主题添加友链页面" class="headerlink" title="indigo主题添加友链页面"></a>indigo主题添加友链页面</h1><h2 id="1-添加友链界面"><a href="#1-添加友链界面" class="headerlink" title="1. 添加友链界面"></a>1. 添加友链界面</h2><ul>
-<li><p>git bash here弹出命令行窗口</p>
+    <title>Typora+PicGo+Gitee实现markdown高效创作</title>
+    <url>/2020/06/13/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="Typora-PicGo-Gitee实现markdown高效创作"><a href="#Typora-PicGo-Gitee实现markdown高效创作" class="headerlink" title="Typora+PicGo+Gitee实现markdown高效创作"></a>Typora+PicGo+Gitee实现markdown高效创作</h1><h2 id="Why-Typora"><a href="#Why-Typora" class="headerlink" title="Why Typora"></a>Why Typora</h2><p>Typora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。</p>
+<h2 id="Why-PicGo"><a href="#Why-PicGo" class="headerlink" title="Why PicGo"></a>Why PicGo</h2><p>对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。</p>
+<p><strong>PicGo</strong>这个工具很好地解决了这个问题，只需拖动图片，就可以完成图床上传，并且把想要的链接格式复制到剪贴板。</p>
+<h2 id="Why-Gitee"><a href="#Why-Gitee" class="headerlink" title="Why Gitee"></a>Why Gitee</h2><p>Gitee可以说是国内的Github，没有Github那么全能，但是比Github快很多。做一个图床，Gitee应该是更好的选择。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><p><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora下载</a></p>
 </li>
-<li><p>输入以下命令新建 “友链“ 文件夹</p>
-<p><code>hexo new page links</code></p>
-</li>
-<li><p>执行完之后，会在<code>source</code>文件夹下创建<code>links</code>文件夹，其中会有一个<code>index.md</code>文件，打开后，对其添加：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">layout: links</span><br></pre></td></tr></table></figure>
-
-<p>这一步主要是为了，确定<strong>友链界面的布局</strong>，使用的是<code>links</code>的布局文件，在下面进行添加</p>
-</li>
-<li><p>在自己的主题文件下，找到<code>layout</code>文件夹，新建两个文件<code>link.ejs</code>，<code>links.ejs</code>，然后复制下面的代码。（虽然都是indigo主题，但是可能这里的文件后缀名还是不一样，大家可以根据不同文件自行修改，基本差不多）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- link.ejs --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">links</span>', &#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">title:</span> <span class="attr">theme.links_title</span> + '<span class="attr">:</span> '+ <span class="attr">page.link</span></span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- links.ejs --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">header</span>', &#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">title:</span> <span class="attr">locals.title</span> || <span class="attr">theme.links_title</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">hdClass:</span> '<span class="attr">links-header</span>'</span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container body-wrap fade"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.links</span> &amp;&amp; <span class="attr">theme.links.length</span>) &#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"archive-separator"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%=theme.links_title%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"waterfall"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">theme.links.forEach</span>(<span class="attr">function</span>(<span class="attr">links</span>) &#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"waterfall-item"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"article-card archive-article"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"post-title"</span> <span class="attr">itemprop</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- links.url %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">links.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%&#125;)%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;%&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-content"</span> <span class="attr">id</span>=<span class="string">"page-content"</span> <span class="attr">itemprop</span>=<span class="string">"pageContent"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    	<span class="selector-class">.page-content</span>&#123;</span></span><br><span class="line"><span class="css">    		<span class="selector-tag">background</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="css">    		<span class="selector-tag">box-shadow</span>: 0 0 4<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.2</span>);</span></span><br><span class="line">    		border-radius: 4px;</span><br><span class="line">    		padding: 12px;</span><br><span class="line">    		margin: 40px 0;</span><br><span class="line">    	&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 实在不会这个语法，所以直接把Valine的加载搬过来了，这里是作者添加评论的方式 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">plugins</span>/<span class="attr">valine</span>') %&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">paginator</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
+<li><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载</a></p>
 </li>
 </ul>
-<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h2><ul>
-<li><p>打开主题的配置文件<code>_config.yml</code>，在menu菜单中添加<code>友链item</code></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:</span><br><span class="line">    text: 主页</span><br><span class="line">    url: /</span><br><span class="line"><span class="comment">&lt;!-- 添加link item --&gt;</span></span><br><span class="line">  link:</span><br><span class="line">    text: 友情链接</span><br><span class="line">    url: /links</span><br></pre></td></tr></table></figure>
+<p>选择适应自己的版本，安装过程一路next即可。</p>
+<h2 id="PicGo安装插件"><a href="#PicGo安装插件" class="headerlink" title="PicGo安装插件"></a>PicGo安装插件</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png" alt="插件设置" title="">
+                </div>
+                <div class="image-caption">插件设置</div>
+            </figure>
+
+
+
+<p>搜索“gitee”，写这篇文章的时候有这两个插件，我选了右边的gitee-uploader，应该都是可以的，本文以gitee-uploader为例。点击“安装”。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG" alt="安装插件" title="">
+                </div>
+                <div class="image-caption">安装插件</div>
+            </figure>
+
+
+
+<h2 id="配置Gitee"><a href="#配置Gitee" class="headerlink" title="配置Gitee"></a>配置Gitee</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><ul>
+<li><p>访问 gitee.com，注册或登录。点击右上角的“＋”，点击“新建仓库”。</p>
 </li>
-<li><p>现在友链的界面就做好了，可以试一下</p>
+<li><p>名称、路径自定，介绍随意。</p>
 </li>
-<li><p>然后添加需要的友链，还是在主题的配置文件<code>_config.yml</code>，找一块地方，添加下面的代码：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 友情链接</span></span><br><span class="line">links:</span><br><span class="line">  - name: "百度"</span><br><span class="line">    url: https://www.baidu.com/</span><br><span class="line">  - name: "搜狗"</span><br><span class="line">    url: https://www.sogou.com/</span><br></pre></td></tr></table></figure>
+<li><p><strong>一定要选择公开！</strong></p>
 </li>
-<li><p>现在重新打开界面，看看效果</p>
+<li><p>勾选“用Readme文件初始化这个仓库”，用于创建master分支。</p>
+</li>
+<li><p>点击创建。</p>
 </li>
 </ul>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG" alt="新建仓库"></p>
+<h3 id="2-创建私人令牌"><a href="#2-创建私人令牌" class="headerlink" title="2. 创建私人令牌"></a>2. 创建私人令牌</h3><ul>
+<li>点击右上角的头像，点击“设置”</li>
+<li>安全设置 -&gt; 私人令牌 -&gt; 生成新令牌</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png" alt="生成新令牌" title="">
+                </div>
+                <div class="image-caption">生成新令牌</div>
+            </figure>
+
+<ul>
+<li>随便填一段描述</li>
+<li><strong>取消全选，只勾选“projects”</strong></li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG" alt="生成新令牌" title="">
+                </div>
+                <div class="image-caption">生成新令牌</div>
+            </figure>
+
+<ul>
+<li><p>点击“提交”</p>
+</li>
+<li><p>然后会让你输入一段密码，之后会生成一段字符串。<strong>一定要点击“复制”，不要丢失了，它只会出现一次</strong></p>
+</li>
+<li><p>至此，gitee的配置完成</p>
+</li>
+</ul>
+<h2 id="配置PicGO"><a href="#配置PicGO" class="headerlink" title="配置PicGO"></a>配置PicGO</h2><ul>
+<li><p>下载插件之后，重启应用。</p>
+</li>
+<li><p>打开“图床设置”的“gitee”（如图）</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png" alt="gitee设置"></p>
+</li>
+<li><p><strong>先把复制的字符串令牌粘贴到“token”一栏</strong></p>
+</li>
+<li><p>repo：填写你的仓库对于gitee.com的相对路径。一般是：YourName/YourRepo</p>
+</li>
+<li><p>branch：master</p>
+</li>
+<li><p>path：img</p>
+</li>
+<li><p>后面两个不必填写</p>
+</li>
+<li><p>点击“确定”并设置为默认图床。</p>
+</li>
+<li><p><strong>至此，PicGo已经配置完成，拖动一张图片到PicGo的上传区后，待上传完成，会将图片链接复制到剪切板，只要Ctrl+V粘贴即可。</strong></p>
+</li>
+</ul>
+<h2 id="关联Typora"><a href="#关联Typora" class="headerlink" title="关联Typora"></a>关联Typora</h2><p>每次这么做还是有些麻烦，我们可以将Typora进行关联，得到复制图片到Typora即可完成上传并得到链接。</p>
+<ul>
+<li>打开typora</li>
+<li>文件→偏好设置→图像→插入图片时</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png" alt="插入图片" title="">
+                </div>
+                <div class="image-caption">插入图片</div>
+            </figure>
+
+<ul>
+<li><p>上传服务就选择PicGo（app）</p>
+</li>
+<li><p>路径填写你的picgo.exe所在的路径</p>
+</li>
+<li><p>通过“验证图片上传选项”按钮，可以检验配置是否成功</p>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png" alt="上传服务" title="">
+                </div>
+                <div class="image-caption">上传服务</div>
+            </figure>
+
+<ul>
+<li>关联Typora至此配置成功</li>
+</ul>
+<blockquote>
+<p>测试之后假如没有问题，那就说明大功告成了。妈妈再也不担心我markdown创作时没有图床了，请开始你的创作之旅吧~</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>工具教程</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -531,6 +632,49 @@
       </tags>
   </entry>
   <entry>
+    <title>indigo主题添加友链页面</title>
+    <url>/2020/06/18/hexo/indigo%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[<h1 id="indigo主题添加友链页面"><a href="#indigo主题添加友链页面" class="headerlink" title="indigo主题添加友链页面"></a>indigo主题添加友链页面</h1><h2 id="1-添加友链界面"><a href="#1-添加友链界面" class="headerlink" title="1. 添加友链界面"></a>1. 添加友链界面</h2><ul>
+<li><p>git bash here弹出命令行窗口</p>
+</li>
+<li><p>输入以下命令新建 “友链“ 文件夹</p>
+<p><code>hexo new page links</code></p>
+</li>
+<li><p>执行完之后，会在<code>source</code>文件夹下创建<code>links</code>文件夹，其中会有一个<code>index.md</code>文件，打开后，对其添加：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">layout: links</span><br></pre></td></tr></table></figure>
+
+<p>这一步主要是为了，确定<strong>友链界面的布局</strong>，使用的是<code>links</code>的布局文件，在下面进行添加</p>
+</li>
+<li><p>在自己的主题文件下，找到<code>layout</code>文件夹，新建两个文件<code>link.ejs</code>，<code>links.ejs</code>，然后复制下面的代码。（虽然都是indigo主题，但是可能这里的文件后缀名还是不一样，大家可以根据不同文件自行修改，基本差不多）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- link.ejs --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">links</span>', &#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">title:</span> <span class="attr">theme.links_title</span> + '<span class="attr">:</span> '+ <span class="attr">page.link</span></span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- links.ejs --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">header</span>', &#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">title:</span> <span class="attr">locals.title</span> || <span class="attr">theme.links_title</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">hdClass:</span> '<span class="attr">links-header</span>'</span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container body-wrap fade"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.links</span> &amp;&amp; <span class="attr">theme.links.length</span>) &#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"archive-separator"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%=theme.links_title%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"waterfall"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">theme.links.forEach</span>(<span class="attr">function</span>(<span class="attr">links</span>) &#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"waterfall-item"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"article-card archive-article"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">"post-title"</span> <span class="attr">itemprop</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"post-title-link"</span> <span class="attr">href</span>=<span class="string">"&lt;%- links.url %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span> <span class="attr">itemprop</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">links.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%&#125;)%</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125;%&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-content"</span> <span class="attr">id</span>=<span class="string">"page-content"</span> <span class="attr">itemprop</span>=<span class="string">"pageContent"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">page.content</span> %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    	<span class="selector-class">.page-content</span>&#123;</span></span><br><span class="line"><span class="css">    		<span class="selector-tag">background</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line"><span class="css">    		<span class="selector-tag">box-shadow</span>: 0 0 4<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.2</span>);</span></span><br><span class="line">    		border-radius: 4px;</span><br><span class="line">    		padding: 12px;</span><br><span class="line">    		margin: 40px 0;</span><br><span class="line">    	&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 实在不会这个语法，所以直接把Valine的加载搬过来了，这里是作者添加评论的方式 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">plugins</span>/<span class="attr">valine</span>') %&gt;</span></span><br><span class="line">        </span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">paginator</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h2><ul>
+<li><p>打开主题的配置文件<code>_config.yml</code>，在menu菜单中添加<code>友链item</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:</span><br><span class="line">    text: 主页</span><br><span class="line">    url: /</span><br><span class="line"><span class="comment">&lt;!-- 添加link item --&gt;</span></span><br><span class="line">  link:</span><br><span class="line">    text: 友情链接</span><br><span class="line">    url: /links</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在友链的界面就做好了，可以试一下</p>
+</li>
+<li><p>然后添加需要的友链，还是在主题的配置文件<code>_config.yml</code>，找一块地方，添加下面的代码：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 友情链接</span></span><br><span class="line">links:</span><br><span class="line">  - name: "百度"</span><br><span class="line">    url: https://www.baidu.com/</span><br><span class="line">  - name: "搜狗"</span><br><span class="line">    url: https://www.sogou.com/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>现在重新打开界面，看看效果</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于hexo搭建博客</title>
     <url>/2020/06/16/hexo/%E5%9F%BA%E4%BA%8Ehexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="基于hexo搭建博客"><a href="#基于hexo搭建博客" class="headerlink" title="基于hexo搭建博客"></a>基于hexo搭建博客</h1><blockquote>
@@ -657,6 +801,208 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>看懂PID控制器</title>
+    <url>/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
+    <content><![CDATA[<p>[toc]</p>
+<h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
+<p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
+<p>举两个实例：</p>
+<h3 id="1-1-电机速度控制系统"><a href="#1-1-电机速度控制系统" class="headerlink" title="1.1 电机速度控制系统"></a>1.1 电机速度控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221429670.png" alt="电机速度" title="">
+                </div>
+                <div class="image-caption">电机速度</div>
+            </figure>
+
+<ol>
+<li>当出现扰动而使得电机的转速偏离设定值时，测速电动机充当检测变送环节的角色，而它的输出和设定值之间就会出现一个偏差信号（电压信号）</li>
+<li>这个偏差信号通常是比较小的，所以需要放大器对其进行放大</li>
+<li>而这个放大后的电压信号则是触发器的控制电压，控制晶闸管的关断时间，进而调节电动机的电枢电压，从而调节转速直到等于设定值</li>
+</ol>
+<p>在这个控制系统中，电动机显然是被控对象，而它的转速变化规律是可以抽象为一个数学模型的，也就是传递函数；而其他的环节，则是为了共同产生一个控制信号来作为电动机的输入。</p>
+<p>我们可以把比较器称为本文中的<strong>调节器</strong>，或者将比较器+放大器称为<strong>调节器</strong>，这不是重点，无伤大雅。</p>
+<p>值得注意的是：这个系统中的所有环节，其控制规律都可以抽象为若干个传递函数</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221459922.png" alt="电机调速" title="">
+                </div>
+                <div class="image-caption">电机调速</div>
+            </figure>
+<ul>
+<li>Un*为设定值，Un为测量变送的反馈值</li>
+<li>两者偏差去调节触发器控制电压Uct，控制规律为<code>Kp</code></li>
+<li>通过晶闸管控制电动机回路总电压Ud0，控制规律为<code>Ks</code></li>
+<li>Ud0 - 电枢总电阻电压即为电动机电动势E</li>
+<li>E = Ceφn，得到输出转速；测速发电机根据转速反馈电压信号，控制规律<code>α</code></li>
+</ul>
+<h3 id="1-2-温度或水位控制系统"><a href="#1-2-温度或水位控制系统" class="headerlink" title="1.2 温度或水位控制系统"></a>1.2 温度或水位控制系统</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221521103.png" alt="水位控制" title="">
+                </div>
+                <div class="image-caption">水位控制</div>
+            </figure>
+
+<p>这个应该是比较简单的过程控制，实际水位低于设定水位时，控制器则作用于执行机构去增大调节阀开度，增加进水流量。</p>
+<h3 id="1-3-小小总结"><a href="#1-3-小小总结" class="headerlink" title="1.3 小小总结"></a>1.3 小小总结</h3><blockquote>
+<p>不要总是孤立控制器，它们是控制被控对象的必要环节。</p>
+</blockquote>
+<p>这里给出一般的闭环控制系统框图</p>
+<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221545700.png" alt="闭环控制框图"></p>
+<blockquote>
+<p>不要单纯的认为只有被控对象才有传递函数，每一个环节都有其相应的控制规律，都可以抽象为一个数学模型，用对应的传递函数来表达。就像最小拍控制器设计中，我们根据输入信号选择整个系统的闭环传函，进而确定控制器的脉冲传递函数。</p>
+</blockquote>
+<p><strong>总结：对于闭环系统来说，控制器的输入是偏差信号，输出则是控制信号，去控制执行机构，进而调节被控对象</strong>。</p>
+<p><strong>而闭环控制系统，设计目的就是系统输出对输入的跟随能力</strong>。</p>
+<h2 id="2-PID"><a href="#2-PID" class="headerlink" title="2. PID"></a>2. PID</h2><ul>
+<li>P：比例控制器，对系统产生的偏差能够迅速做出反应；但是比例控制器不能消除余差，不过随着比例系数的增大，余差会减小，同时系统输出振荡次数增加，稳定性也会下降，调节时间加长</li>
+</ul>
+<blockquote>
+<p>关于不能消除余差这一点，从数学角度是可以解释的，求一下余差即可。当然直想也是可以理解的：对于一个速度控制系统，某时刻负载减小，导致转速上升，比例控制器作用于执行机构使得转速下降，假如转速可以下降到设定转速，那么此时负载依然是小于额定负载的，转速依然会上升；所以反证得，最后余差是肯定会存在的。</p>
+</blockquote>
+<ul>
+<li>I：积分控制器，积分控制是可以消除余差的，体现于偏差消失后，积分控制器的输出是可以<strong>保持</strong>前时刻的输出；但是积分控制器的控制动作比较缓慢，一般不单独使用；随着积分系数的增大（时间常数的减小），系统的稳定性下降。</li>
+</ul>
+<ul>
+<li>D：微分控制器，够体现出当前误差的变化趋势，在偏差出现或变化的瞬间，立即产生强烈的调节作用，从而加快系统的动作速度，减少调节时间；但是由于微分对静态偏差毫无控制能力（偏差存在，但是不变化，控制器输出为0），所以一般不单独使用。并且在纯比例作用的基础上增加微分作用可以提高系统稳定性。</li>
+</ul>
+<p><strong>总结：讲比例，积分，微分三种控制规律结合在一起，只要三项控制作用的强度配合得当，就既能快速调节，又能消除余差，从而得到满意的控制效果。</strong></p>
+<h2 id="3-模拟式PID"><a href="#3-模拟式PID" class="headerlink" title="3. 模拟式PID"></a>3. 模拟式PID</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221607032.png" alt="一般pid框图" title="">
+                </div>
+                <div class="image-caption">一般pid框图</div>
+            </figure>
+
+<p>模拟pid控制器的算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221621725.png" alt="模拟pid算法" title="">
+                </div>
+                <div class="image-caption">模拟pid算法</div>
+            </figure>
+
+<ul>
+<li>u(t) 为控制器输出，e(t) 为控制器输入，即偏差信号：<code>e(t) = r(t) - y(t)</code></li>
+<li>Kp 为比例系数，Ti 为积分时间常数，Td 为微分时间常数</li>
+</ul>
+<p>给出一个简单的matlab模拟pid仿真：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221633752.png" alt="模拟pid仿真" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真</div>
+            </figure>
+
+<p>参数设置：<code>Kp = 0.5, Ki = 0.2, Kd = 1</code>；输出结果：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221650331.png" alt="模拟pid仿真结果" title="">
+                </div>
+                <div class="image-caption">模拟pid仿真结果</div>
+            </figure>
+
+<p><strong>模拟pid局限性</strong></p>
+<ul>
+<li>功能单一，灵活性差</li>
+<li>信息分散，所用仪表多，且监视不方便</li>
+<li>接线过多，系统维护难度大</li>
+</ul>
+<p>随着计算机等技术的发展，数字控制器日益成为工业生产中占据主导地位的控制器。</p>
+<h2 id="4-数字式PID"><a href="#4-数字式PID" class="headerlink" title="4. 数字式PID"></a>4. 数字式PID</h2><p>对模拟pid控制器进行离散化处理，用<strong>后向差分</strong>代替微分得：（具体细节不细说）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221709929.png" alt="离散化pid算法" title="">
+                </div>
+                <div class="image-caption">离散化pid算法</div>
+            </figure>
+
+
+<h3 id="4-1-位置式PID算法"><a href="#4-1-位置式PID算法" class="headerlink" title="4.1 位置式PID算法"></a>4.1 位置式PID算法</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221726139.png" alt="位置式pid" title="">
+                </div>
+                <div class="image-caption">位置式pid</div>
+            </figure>
+
+<ul>
+<li>Kp，Ki，Kd为比例，积分，微分的三个重要参数</li>
+<li>k是采样序列号，k=0,1,2,3…</li>
+<li>Uk第k次采样时刻<strong>控制器</strong>输出值</li>
+<li>ek第k次采样时刻偏差，e(k-1)第k-1次采样偏差值，e(k-2)第k-2次采样偏差值</li>
+<li>位置式pid控制器的输入为系统的偏差值，输出为uk，即偏差的组合</li>
+</ul>
+<h4 id="4-1-2-位置式pid算法的缺点"><a href="#4-1-2-位置式pid算法的缺点" class="headerlink" title="4.1.2 位置式pid算法的缺点"></a>4.1.2 位置式pid算法的缺点</h4><ul>
+<li>控制器输出与过去的各个状态有关，运算量大</li>
+<li>计算机出现故障，u(k)的大幅度变化会引起执行机构位置的大幅度变化</li>
+</ul>
+<h3 id="4-2-增量式PID算法"><a href="#4-2-增量式PID算法" class="headerlink" title="4.2 增量式PID算法"></a>4.2 增量式PID算法</h3><p>由位置式pid第k次输出 - 第k-1次输出 得到增量式pid算法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9nc3MwLmJhaWR1LmNvbS85NG8zZFNhZ194STRraEdrbzlXVEFuRjZoaHkvemhpZGFvL3doJTNENjAwJTJDODAwL3NpZ249NjAyYzFhOTdjOWZkZmMwM2U1MmRlYmJlZTQwZmFiYWMvZTRkZGU3MTE5MGVmNzZjNjBmM2YxNzQyOTcxNmZkZmFhZTUxNjdlZS5qcGc" alt="增量式pid算法" title="">
+                </div>
+                <div class="image-caption">增量式pid算法</div>
+            </figure>
+
+<blockquote>
+<p>增量式pid算法表示的是控制机构（阀门，步进电机等）的调节增量，即k时刻相对于k-1时刻的调节增量。</p>
+</blockquote>
+<p><strong>值得注意的是：采用增量式pid算法的控制器输出值为调节增量</strong>。</p>
+<p>从这里也可以得出<strong>位置式pid算法</strong>的另一种表示形式：<br><code>u(k) = u(k - 1) + Δu</code></p>
+<p>可以说，位置式pid算法和增量式pid算法是pid算法的两种表现形式，从本质上讲二者是一致的。</p>
+<h4 id="4-2-2-增量式pid的优点"><a href="#4-2-2-增量式pid的优点" class="headerlink" title="4.2.2 增量式pid的优点"></a>4.2.2 增量式pid的优点</h4><ul>
+<li>算式中不需要累加；控制增量Δu(k)的确定仅与最近3次的采样值有关</li>
+<li>计算机每次只输出控制增量，对应执行机构位置的变化量，不易引起过程的异常操作</li>
+<li>手动—自动切换时冲击小。当控制从手动向自动切换时，<br>可以作到无扰动切换</li>
+</ul>
+<h3 id="4-3-位置式pid和增量式pid的抉择"><a href="#4-3-位置式pid和增量式pid的抉择" class="headerlink" title="4.3 位置式pid和增量式pid的抉择"></a>4.3 位置式pid和增量式pid的抉择</h3><p>在实际使用中应该使用位置式还是增量式，关键看执行机构的特性：</p>
+<ul>
+<li>如果执行机构具有积分特性（如步进电机，具有齿轮传递特性的位置执行机构等），应该使用增量式pid算法</li>
+<li>如果执行机构没有积分特性，则应该使用位置式pid算法</li>
+</ul>
+<h3 id="4-4-位置式pid和增量式pid仿真"><a href="#4-4-位置式pid和增量式pid仿真" class="headerlink" title="4.4 位置式pid和增量式pid仿真"></a>4.4 位置式pid和增量式pid仿真</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function [] &#x3D; my_simulink_pid()</span><br><span class="line">% 离散模型</span><br><span class="line">ts &#x3D; 0.001;						    % 采样时间</span><br><span class="line">sys &#x3D; tf(400, [1, 50, 0]);		    % 传递函数</span><br><span class="line">d_sys &#x3D; c2d(sys, ts, &#39;z&#39;);		    % 传递函数离散化</span><br><span class="line">[num, den] &#x3D; tfdata(d_sys, &#39;v&#39;);	% 提取分子分母</span><br><span class="line"></span><br><span class="line">% pid参数</span><br><span class="line">kp &#x3D; 10; ki &#x3D; 2; kd &#x3D; 15;</span><br><span class="line"></span><br><span class="line">% 初始化信号值</span><br><span class="line">y_feed &#x3D; 0;	    % 当前反馈值</span><br><span class="line">y_prev1 &#x3D; 0;    % 前一次输出值</span><br><span class="line">y_prev2 &#x3D; 0;    % 前前一次输出值</span><br><span class="line"></span><br><span class="line">u_prev1 &#x3D; 0;    % 前一次控制器输出值</span><br><span class="line">u_prev2 &#x3D; 0;    % 前前一次控制器输出值</span><br><span class="line"></span><br><span class="line">e_prev1 &#x3D; 0;    % 前一次偏差</span><br><span class="line">e_prev2 &#x3D; 0;    % 前前一次偏差</span><br><span class="line"></span><br><span class="line">x &#x3D; [0, 0, 0];  % p i d 分别的输出</span><br><span class="line"></span><br><span class="line">for k &#x3D; 1:1:3000</span><br><span class="line">	time(k) &#x3D; k*ts;         % 时间序列，用于画图</span><br><span class="line">	r_in(k) &#x3D; 1;            % 输入序列，单位阶跃</span><br><span class="line">	e(k) &#x3D; r_in(k) - y_feed;    % 当前时刻偏差</span><br><span class="line"></span><br><span class="line">	delta_u &#x3D; kp*x(1) + ki*x(2) + kd*x(3);</span><br><span class="line">	% 位置式 PID算法</span><br><span class="line">	% u(k) &#x3D; u_prev1 + delta_u;</span><br><span class="line">	% 增量式 PID算法</span><br><span class="line">	u(k) &#x3D; delta_u;</span><br><span class="line"></span><br><span class="line">	% 对输出限幅</span><br><span class="line">	if u(k) &gt;&#x3D; 10</span><br><span class="line">		u(k) &#x3D; 10</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	if u(k) &lt;&#x3D; -10</span><br><span class="line">		u(k) &#x3D; -10</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	y_out(k) &#x3D; -den(2)*y_prev1- den(3)*y_prev2 + num(2)*u_prev1 + num(3)*u_prev2;  % 系统输出序列</span><br><span class="line">	y_feed &#x3D; y_out(k);	    % 反馈值</span><br><span class="line"></span><br><span class="line">	u_prev2 &#x3D; u_prev1;      % 更新控制器输出</span><br><span class="line">	u_prev1 &#x3D; u(k);</span><br><span class="line">	y_prev2 &#x3D; y_prev1;      % 更新系统输出</span><br><span class="line">	y_prev1 &#x3D; y_out(k);</span><br><span class="line"></span><br><span class="line">	x(1) &#x3D; e(k) - e_prev1;</span><br><span class="line">	x(2) &#x3D; e(k);</span><br><span class="line">	x(3) &#x3D; e(k) - 2*e_prev1 + e_prev2;</span><br><span class="line">	e_prev2 &#x3D; e_prev1;      % 更新偏差</span><br><span class="line">	e_prev1 &#x3D; e(k);</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 画图</span><br><span class="line">figure(1);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, y_out, &#39;r&#39;); </span><br><span class="line">axis([0, 3, 0, 1.5]);                           % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, y_out&#39;);   		% 系统输出和系统输入的曲线</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, u, &#39;--k&#39;); </span><br><span class="line">axis([0, 3, -0.2, 2.5]);                        % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, u_out&#39;);   		% 控制器输出和系统输入的曲线</span><br></pre></td></tr></table></figure>
+
+<p><strong>仿真结果：</strong></p>
+<p>增量式pid——系统食输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221745687.png" alt="r&y" title="">
+                </div>
+                <div class="image-caption">r&y</div>
+            </figure>
+
+<p>增量式pid——控制器输出和系统输入曲线图</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221803911.png" alt="r&u" title="">
+                </div>
+                <div class="image-caption">r&u</div>
+            </figure>
+
+
+<blockquote>
+<p>关于位置式pid算法，在代码中也有标注，只需要加前一时刻控制器输出即可，至于参数的整定，在这里不详细说明。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>控制学科</category>
+      </categories>
+      <tags>
+        <tag>控制学科</tag>
       </tags>
   </entry>
   <entry>
@@ -1034,208 +1380,6 @@
       </categories>
       <tags>
         <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>看懂PID控制器</title>
-    <url>/2020/06/16/%E6%8E%A7%E5%88%B6%E7%A7%91%E5%AD%A6/%E7%9C%8B%E6%87%82PID%E6%8E%A7%E5%88%B6%E5%99%A8/</url>
-    <content><![CDATA[<p>[toc]</p>
-<h1 id="PID控制器"><a href="#PID控制器" class="headerlink" title="PID控制器"></a>PID控制器</h1><h2 id="1-控制器"><a href="#1-控制器" class="headerlink" title="1. 控制器"></a>1. 控制器</h2><p>在研究PID控制器前，必须先想一个问题，控制器的作用到底是什么？相信不少同学在学习自动控制原理的时候，接触最多的是：直接对传递函数进行分析，比如研究某个传函的阶跃响应？幅频特性？稳态误差？根据劳斯判据，根轨迹研究根的分布以判断系统的稳定型？</p>
-<p>那么控制器又是哪里冒出来的？自控中的开环系统或者闭环系统不能解决问题么？其实这是我们认识狭隘了，这句话本身就是不对的，往下看。</p>
-<p>举两个实例：</p>
-<h3 id="1-1-电机速度控制系统"><a href="#1-1-电机速度控制系统" class="headerlink" title="1.1 电机速度控制系统"></a>1.1 电机速度控制系统</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221429670.png" alt="电机速度" title="">
-                </div>
-                <div class="image-caption">电机速度</div>
-            </figure>
-
-<ol>
-<li>当出现扰动而使得电机的转速偏离设定值时，测速电动机充当检测变送环节的角色，而它的输出和设定值之间就会出现一个偏差信号（电压信号）</li>
-<li>这个偏差信号通常是比较小的，所以需要放大器对其进行放大</li>
-<li>而这个放大后的电压信号则是触发器的控制电压，控制晶闸管的关断时间，进而调节电动机的电枢电压，从而调节转速直到等于设定值</li>
-</ol>
-<p>在这个控制系统中，电动机显然是被控对象，而它的转速变化规律是可以抽象为一个数学模型的，也就是传递函数；而其他的环节，则是为了共同产生一个控制信号来作为电动机的输入。</p>
-<p>我们可以把比较器称为本文中的<strong>调节器</strong>，或者将比较器+放大器称为<strong>调节器</strong>，这不是重点，无伤大雅。</p>
-<p>值得注意的是：这个系统中的所有环节，其控制规律都可以抽象为若干个传递函数</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221459922.png" alt="电机调速" title="">
-                </div>
-                <div class="image-caption">电机调速</div>
-            </figure>
-<ul>
-<li>Un*为设定值，Un为测量变送的反馈值</li>
-<li>两者偏差去调节触发器控制电压Uct，控制规律为<code>Kp</code></li>
-<li>通过晶闸管控制电动机回路总电压Ud0，控制规律为<code>Ks</code></li>
-<li>Ud0 - 电枢总电阻电压即为电动机电动势E</li>
-<li>E = Ceφn，得到输出转速；测速发电机根据转速反馈电压信号，控制规律<code>α</code></li>
-</ul>
-<h3 id="1-2-温度或水位控制系统"><a href="#1-2-温度或水位控制系统" class="headerlink" title="1.2 温度或水位控制系统"></a>1.2 温度或水位控制系统</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221521103.png" alt="水位控制" title="">
-                </div>
-                <div class="image-caption">水位控制</div>
-            </figure>
-
-<p>这个应该是比较简单的过程控制，实际水位低于设定水位时，控制器则作用于执行机构去增大调节阀开度，增加进水流量。</p>
-<h3 id="1-3-小小总结"><a href="#1-3-小小总结" class="headerlink" title="1.3 小小总结"></a>1.3 小小总结</h3><blockquote>
-<p>不要总是孤立控制器，它们是控制被控对象的必要环节。</p>
-</blockquote>
-<p>这里给出一般的闭环控制系统框图</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221545700.png" alt="闭环控制框图"></p>
-<blockquote>
-<p>不要单纯的认为只有被控对象才有传递函数，每一个环节都有其相应的控制规律，都可以抽象为一个数学模型，用对应的传递函数来表达。就像最小拍控制器设计中，我们根据输入信号选择整个系统的闭环传函，进而确定控制器的脉冲传递函数。</p>
-</blockquote>
-<p><strong>总结：对于闭环系统来说，控制器的输入是偏差信号，输出则是控制信号，去控制执行机构，进而调节被控对象</strong>。</p>
-<p><strong>而闭环控制系统，设计目的就是系统输出对输入的跟随能力</strong>。</p>
-<h2 id="2-PID"><a href="#2-PID" class="headerlink" title="2. PID"></a>2. PID</h2><ul>
-<li>P：比例控制器，对系统产生的偏差能够迅速做出反应；但是比例控制器不能消除余差，不过随着比例系数的增大，余差会减小，同时系统输出振荡次数增加，稳定性也会下降，调节时间加长</li>
-</ul>
-<blockquote>
-<p>关于不能消除余差这一点，从数学角度是可以解释的，求一下余差即可。当然直想也是可以理解的：对于一个速度控制系统，某时刻负载减小，导致转速上升，比例控制器作用于执行机构使得转速下降，假如转速可以下降到设定转速，那么此时负载依然是小于额定负载的，转速依然会上升；所以反证得，最后余差是肯定会存在的。</p>
-</blockquote>
-<ul>
-<li>I：积分控制器，积分控制是可以消除余差的，体现于偏差消失后，积分控制器的输出是可以<strong>保持</strong>前时刻的输出；但是积分控制器的控制动作比较缓慢，一般不单独使用；随着积分系数的增大（时间常数的减小），系统的稳定性下降。</li>
-</ul>
-<ul>
-<li>D：微分控制器，够体现出当前误差的变化趋势，在偏差出现或变化的瞬间，立即产生强烈的调节作用，从而加快系统的动作速度，减少调节时间；但是由于微分对静态偏差毫无控制能力（偏差存在，但是不变化，控制器输出为0），所以一般不单独使用。并且在纯比例作用的基础上增加微分作用可以提高系统稳定性。</li>
-</ul>
-<p><strong>总结：讲比例，积分，微分三种控制规律结合在一起，只要三项控制作用的强度配合得当，就既能快速调节，又能消除余差，从而得到满意的控制效果。</strong></p>
-<h2 id="3-模拟式PID"><a href="#3-模拟式PID" class="headerlink" title="3. 模拟式PID"></a>3. 模拟式PID</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221607032.png" alt="一般pid框图" title="">
-                </div>
-                <div class="image-caption">一般pid框图</div>
-            </figure>
-
-<p>模拟pid控制器的算法：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221621725.png" alt="模拟pid算法" title="">
-                </div>
-                <div class="image-caption">模拟pid算法</div>
-            </figure>
-
-<ul>
-<li>u(t) 为控制器输出，e(t) 为控制器输入，即偏差信号：<code>e(t) = r(t) - y(t)</code></li>
-<li>Kp 为比例系数，Ti 为积分时间常数，Td 为微分时间常数</li>
-</ul>
-<p>给出一个简单的matlab模拟pid仿真：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221633752.png" alt="模拟pid仿真" title="">
-                </div>
-                <div class="image-caption">模拟pid仿真</div>
-            </figure>
-
-<p>参数设置：<code>Kp = 0.5, Ki = 0.2, Kd = 1</code>；输出结果：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221650331.png" alt="模拟pid仿真结果" title="">
-                </div>
-                <div class="image-caption">模拟pid仿真结果</div>
-            </figure>
-
-<p><strong>模拟pid局限性</strong></p>
-<ul>
-<li>功能单一，灵活性差</li>
-<li>信息分散，所用仪表多，且监视不方便</li>
-<li>接线过多，系统维护难度大</li>
-</ul>
-<p>随着计算机等技术的发展，数字控制器日益成为工业生产中占据主导地位的控制器。</p>
-<h2 id="4-数字式PID"><a href="#4-数字式PID" class="headerlink" title="4. 数字式PID"></a>4. 数字式PID</h2><p>对模拟pid控制器进行离散化处理，用<strong>后向差分</strong>代替微分得：（具体细节不细说）</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221709929.png" alt="离散化pid算法" title="">
-                </div>
-                <div class="image-caption">离散化pid算法</div>
-            </figure>
-
-
-<h3 id="4-1-位置式PID算法"><a href="#4-1-位置式PID算法" class="headerlink" title="4.1 位置式PID算法"></a>4.1 位置式PID算法</h3><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221726139.png" alt="位置式pid" title="">
-                </div>
-                <div class="image-caption">位置式pid</div>
-            </figure>
-
-<ul>
-<li>Kp，Ki，Kd为比例，积分，微分的三个重要参数</li>
-<li>k是采样序列号，k=0,1,2,3…</li>
-<li>Uk第k次采样时刻<strong>控制器</strong>输出值</li>
-<li>ek第k次采样时刻偏差，e(k-1)第k-1次采样偏差值，e(k-2)第k-2次采样偏差值</li>
-<li>位置式pid控制器的输入为系统的偏差值，输出为uk，即偏差的组合</li>
-</ul>
-<h4 id="4-1-2-位置式pid算法的缺点"><a href="#4-1-2-位置式pid算法的缺点" class="headerlink" title="4.1.2 位置式pid算法的缺点"></a>4.1.2 位置式pid算法的缺点</h4><ul>
-<li>控制器输出与过去的各个状态有关，运算量大</li>
-<li>计算机出现故障，u(k)的大幅度变化会引起执行机构位置的大幅度变化</li>
-</ul>
-<h3 id="4-2-增量式PID算法"><a href="#4-2-增量式PID算法" class="headerlink" title="4.2 增量式PID算法"></a>4.2 增量式PID算法</h3><p>由位置式pid第k次输出 - 第k-1次输出 得到增量式pid算法：</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9nc3MwLmJhaWR1LmNvbS85NG8zZFNhZ194STRraEdrbzlXVEFuRjZoaHkvemhpZGFvL3doJTNENjAwJTJDODAwL3NpZ249NjAyYzFhOTdjOWZkZmMwM2U1MmRlYmJlZTQwZmFiYWMvZTRkZGU3MTE5MGVmNzZjNjBmM2YxNzQyOTcxNmZkZmFhZTUxNjdlZS5qcGc" alt="增量式pid算法" title="">
-                </div>
-                <div class="image-caption">增量式pid算法</div>
-            </figure>
-
-<blockquote>
-<p>增量式pid算法表示的是控制机构（阀门，步进电机等）的调节增量，即k时刻相对于k-1时刻的调节增量。</p>
-</blockquote>
-<p><strong>值得注意的是：采用增量式pid算法的控制器输出值为调节增量</strong>。</p>
-<p>从这里也可以得出<strong>位置式pid算法</strong>的另一种表示形式：<br><code>u(k) = u(k - 1) + Δu</code></p>
-<p>可以说，位置式pid算法和增量式pid算法是pid算法的两种表现形式，从本质上讲二者是一致的。</p>
-<h4 id="4-2-2-增量式pid的优点"><a href="#4-2-2-增量式pid的优点" class="headerlink" title="4.2.2 增量式pid的优点"></a>4.2.2 增量式pid的优点</h4><ul>
-<li>算式中不需要累加；控制增量Δu(k)的确定仅与最近3次的采样值有关</li>
-<li>计算机每次只输出控制增量，对应执行机构位置的变化量，不易引起过程的异常操作</li>
-<li>手动—自动切换时冲击小。当控制从手动向自动切换时，<br>可以作到无扰动切换</li>
-</ul>
-<h3 id="4-3-位置式pid和增量式pid的抉择"><a href="#4-3-位置式pid和增量式pid的抉择" class="headerlink" title="4.3 位置式pid和增量式pid的抉择"></a>4.3 位置式pid和增量式pid的抉择</h3><p>在实际使用中应该使用位置式还是增量式，关键看执行机构的特性：</p>
-<ul>
-<li>如果执行机构具有积分特性（如步进电机，具有齿轮传递特性的位置执行机构等），应该使用增量式pid算法</li>
-<li>如果执行机构没有积分特性，则应该使用位置式pid算法</li>
-</ul>
-<h3 id="4-4-位置式pid和增量式pid仿真"><a href="#4-4-位置式pid和增量式pid仿真" class="headerlink" title="4.4 位置式pid和增量式pid仿真"></a>4.4 位置式pid和增量式pid仿真</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function [] &#x3D; my_simulink_pid()</span><br><span class="line">% 离散模型</span><br><span class="line">ts &#x3D; 0.001;						    % 采样时间</span><br><span class="line">sys &#x3D; tf(400, [1, 50, 0]);		    % 传递函数</span><br><span class="line">d_sys &#x3D; c2d(sys, ts, &#39;z&#39;);		    % 传递函数离散化</span><br><span class="line">[num, den] &#x3D; tfdata(d_sys, &#39;v&#39;);	% 提取分子分母</span><br><span class="line"></span><br><span class="line">% pid参数</span><br><span class="line">kp &#x3D; 10; ki &#x3D; 2; kd &#x3D; 15;</span><br><span class="line"></span><br><span class="line">% 初始化信号值</span><br><span class="line">y_feed &#x3D; 0;	    % 当前反馈值</span><br><span class="line">y_prev1 &#x3D; 0;    % 前一次输出值</span><br><span class="line">y_prev2 &#x3D; 0;    % 前前一次输出值</span><br><span class="line"></span><br><span class="line">u_prev1 &#x3D; 0;    % 前一次控制器输出值</span><br><span class="line">u_prev2 &#x3D; 0;    % 前前一次控制器输出值</span><br><span class="line"></span><br><span class="line">e_prev1 &#x3D; 0;    % 前一次偏差</span><br><span class="line">e_prev2 &#x3D; 0;    % 前前一次偏差</span><br><span class="line"></span><br><span class="line">x &#x3D; [0, 0, 0];  % p i d 分别的输出</span><br><span class="line"></span><br><span class="line">for k &#x3D; 1:1:3000</span><br><span class="line">	time(k) &#x3D; k*ts;         % 时间序列，用于画图</span><br><span class="line">	r_in(k) &#x3D; 1;            % 输入序列，单位阶跃</span><br><span class="line">	e(k) &#x3D; r_in(k) - y_feed;    % 当前时刻偏差</span><br><span class="line"></span><br><span class="line">	delta_u &#x3D; kp*x(1) + ki*x(2) + kd*x(3);</span><br><span class="line">	% 位置式 PID算法</span><br><span class="line">	% u(k) &#x3D; u_prev1 + delta_u;</span><br><span class="line">	% 增量式 PID算法</span><br><span class="line">	u(k) &#x3D; delta_u;</span><br><span class="line"></span><br><span class="line">	% 对输出限幅</span><br><span class="line">	if u(k) &gt;&#x3D; 10</span><br><span class="line">		u(k) &#x3D; 10</span><br><span class="line">	end</span><br><span class="line"></span><br><span class="line">	if u(k) &lt;&#x3D; -10</span><br><span class="line">		u(k) &#x3D; -10</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">	y_out(k) &#x3D; -den(2)*y_prev1- den(3)*y_prev2 + num(2)*u_prev1 + num(3)*u_prev2;  % 系统输出序列</span><br><span class="line">	y_feed &#x3D; y_out(k);	    % 反馈值</span><br><span class="line"></span><br><span class="line">	u_prev2 &#x3D; u_prev1;      % 更新控制器输出</span><br><span class="line">	u_prev1 &#x3D; u(k);</span><br><span class="line">	y_prev2 &#x3D; y_prev1;      % 更新系统输出</span><br><span class="line">	y_prev1 &#x3D; y_out(k);</span><br><span class="line"></span><br><span class="line">	x(1) &#x3D; e(k) - e_prev1;</span><br><span class="line">	x(2) &#x3D; e(k);</span><br><span class="line">	x(3) &#x3D; e(k) - 2*e_prev1 + e_prev2;</span><br><span class="line">	e_prev2 &#x3D; e_prev1;      % 更新偏差</span><br><span class="line">	e_prev1 &#x3D; e(k);</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% 画图</span><br><span class="line">figure(1);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, y_out, &#39;r&#39;); </span><br><span class="line">axis([0, 3, 0, 1.5]);                           % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, y_out&#39;);   		% 系统输出和系统输入的曲线</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">plot(time, r_in, &#39;b&#39;, time, u, &#39;--k&#39;); </span><br><span class="line">axis([0, 3, -0.2, 2.5]);                        % 确定坐标轴范围</span><br><span class="line">xlabel(&#39;time(s)&#39;),ylabel(&#39;r_in, u_out&#39;);   		% 控制器输出和系统输入的曲线</span><br></pre></td></tr></table></figure>
-
-<p><strong>仿真结果：</strong></p>
-<p>增量式pid——系统食输出和系统输入曲线图</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221745687.png" alt="r&y" title="">
-                </div>
-                <div class="image-caption">r&y</div>
-            </figure>
-
-<p>增量式pid——控制器输出和系统输入曲线图</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200616221803911.png" alt="r&u" title="">
-                </div>
-                <div class="image-caption">r&u</div>
-            </figure>
-
-
-<blockquote>
-<p>关于位置式pid算法，在代码中也有标注，只需要加前一时刻控制器输出即可，至于参数的整定，在这里不详细说明。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>控制学科</category>
-      </categories>
-      <tags>
-        <tag>控制学科</tag>
       </tags>
   </entry>
   <entry>
@@ -1684,150 +1828,6 @@
       </categories>
       <tags>
         <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typora+PicGo+Gitee实现markdown高效创作</title>
-    <url>/2020/06/13/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/Typora-PicGo-Gitee%E5%AE%9E%E7%8E%B0markdown%E9%AB%98%E6%95%88%E5%88%9B%E4%BD%9C/</url>
-    <content><![CDATA[<h1 id="Typora-PicGo-Gitee实现markdown高效创作"><a href="#Typora-PicGo-Gitee实现markdown高效创作" class="headerlink" title="Typora+PicGo+Gitee实现markdown高效创作"></a>Typora+PicGo+Gitee实现markdown高效创作</h1><h2 id="Why-Typora"><a href="#Why-Typora" class="headerlink" title="Why Typora"></a>Why Typora</h2><p>Typora是一款极简而功能强大的markdown写作应用，目前仍然免费，强烈推荐。</p>
-<h2 id="Why-PicGo"><a href="#Why-PicGo" class="headerlink" title="Why PicGo"></a>Why PicGo</h2><p>对于markdown创作，图片插入是不可或缺的一部分。但是，想要文章被更多人看到，图片就要上传到图床。作者以前经常使用有道云作为图床，除了使用上不方便，有时候还会遇到图片不可访问的情况，略显麻烦低效。</p>
-<p><strong>PicGo</strong>这个工具很好地解决了这个问题，只需拖动图片，就可以完成图床上传，并且把想要的链接格式复制到剪贴板。</p>
-<h2 id="Why-Gitee"><a href="#Why-Gitee" class="headerlink" title="Why Gitee"></a>Why Gitee</h2><p>Gitee可以说是国内的Github，没有Github那么全能，但是比Github快很多。做一个图床，Gitee应该是更好的选择。</p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><p><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora下载</a></p>
-</li>
-<li><p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载</a></p>
-</li>
-</ul>
-<p>选择适应自己的版本，安装过程一路next即可。</p>
-<h2 id="PicGo安装插件"><a href="#PicGo安装插件" class="headerlink" title="PicGo安装插件"></a>PicGo安装插件</h2><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613172244585.png" alt="插件设置" title="">
-                </div>
-                <div class="image-caption">插件设置</div>
-            </figure>
-
-
-
-<p>搜索“gitee”，写这篇文章的时候有这两个插件，我选了右边的gitee-uploader，应该都是可以的，本文以gitee-uploader为例。点击“安装”。</p>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/hzyangjc/tuchuang/raw/master/img/222.PNG" alt="安装插件" title="">
-                </div>
-                <div class="image-caption">安装插件</div>
-            </figure>
-
-
-
-<h2 id="配置Gitee"><a href="#配置Gitee" class="headerlink" title="配置Gitee"></a>配置Gitee</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><ul>
-<li><p>访问 gitee.com，注册或登录。点击右上角的“＋”，点击“新建仓库”。</p>
-</li>
-<li><p>名称、路径自定，介绍随意。</p>
-</li>
-<li><p><strong>一定要选择公开！</strong></p>
-</li>
-<li><p>勾选“用Readme文件初始化这个仓库”，用于创建master分支。</p>
-</li>
-<li><p>点击创建。</p>
-</li>
-</ul>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/333.PNG" alt="新建仓库"></p>
-<h3 id="2-创建私人令牌"><a href="#2-创建私人令牌" class="headerlink" title="2. 创建私人令牌"></a>2. 创建私人令牌</h3><ul>
-<li>点击右上角的头像，点击“设置”</li>
-<li>安全设置 -&gt; 私人令牌 -&gt; 生成新令牌</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173113929.png" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li>随便填一段描述</li>
-<li><strong>取消全选，只勾选“projects”</strong></li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/444.PNG" alt="生成新令牌" title="">
-                </div>
-                <div class="image-caption">生成新令牌</div>
-            </figure>
-
-<ul>
-<li><p>点击“提交”</p>
-</li>
-<li><p>然后会让你输入一段密码，之后会生成一段字符串。<strong>一定要点击“复制”，不要丢失了，它只会出现一次</strong></p>
-</li>
-<li><p>至此，gitee的配置完成</p>
-</li>
-</ul>
-<h2 id="配置PicGO"><a href="#配置PicGO" class="headerlink" title="配置PicGO"></a>配置PicGO</h2><ul>
-<li><p>下载插件之后，重启应用。</p>
-</li>
-<li><p>打开“图床设置”的“gitee”（如图）</p>
-<p><img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613173458198.png" alt="gitee设置"></p>
-</li>
-<li><p><strong>先把复制的字符串令牌粘贴到“token”一栏</strong></p>
-</li>
-<li><p>repo：填写你的仓库对于gitee.com的相对路径。一般是：YourName/YourRepo</p>
-</li>
-<li><p>branch：master</p>
-</li>
-<li><p>path：img</p>
-</li>
-<li><p>后面两个不必填写</p>
-</li>
-<li><p>点击“确定”并设置为默认图床。</p>
-</li>
-<li><p><strong>至此，PicGo已经配置完成，拖动一张图片到PicGo的上传区后，待上传完成，会将图片链接复制到剪切板，只要Ctrl+V粘贴即可。</strong></p>
-</li>
-</ul>
-<h2 id="关联Typora"><a href="#关联Typora" class="headerlink" title="关联Typora"></a>关联Typora</h2><p>每次这么做还是有些麻烦，我们可以将Typora进行关联，得到复制图片到Typora即可完成上传并得到链接。</p>
-<ul>
-<li>打开typora</li>
-<li>文件→偏好设置→图像→插入图片时</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174233428.png" alt="插入图片" title="">
-                </div>
-                <div class="image-caption">插入图片</div>
-            </figure>
-
-<ul>
-<li><p>上传服务就选择PicGo（app）</p>
-</li>
-<li><p>路径填写你的picgo.exe所在的路径</p>
-</li>
-<li><p>通过“验证图片上传选项”按钮，可以检验配置是否成功</p>
-</li>
-</ul>
-<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="https://gitee.com/BambooWine/MyPhotos/raw/master/img/image-20200613174603920.png" alt="上传服务" title="">
-                </div>
-                <div class="image-caption">上传服务</div>
-            </figure>
-
-<ul>
-<li>关联Typora至此配置成功</li>
-</ul>
-<blockquote>
-<p>测试之后假如没有问题，那就说明大功告成了。妈妈再也不担心我markdown创作时没有图床了，请开始你的创作之旅吧~</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>工具教程</category>
-      </categories>
-      <tags>
-        <tag>图床</tag>
       </tags>
   </entry>
 </search>
